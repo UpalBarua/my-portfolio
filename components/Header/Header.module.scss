@@ -1,0 +1,74 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // rec
+  padding-block: var(--spacing-200);
+
+  .Logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-200);
+    font-size: var(--fs-600);
+    font-weight: var(--fw-bold);
+
+    .Icon {
+      color: var(--color-accent-400);
+      font-size: var(--fs-800);
+    }
+  }
+
+  .NavMenu {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-500);
+    position: absolute;
+    top: 5rem;
+    right: 2.5rem;
+    padding: var(--spacing-600) var(--spacing-800);
+    // border: 2px solid lime;
+    border-radius: var(--border-radius);
+    font-size: var(--fs-500);
+    background-color: var(--color-dark-400);
+    box-shadow: var(--box-shadow);
+    transform: scale(0);
+    transform-origin: top right;
+    transition: transform 200ms ease-out;
+
+    &[data-open='true'] {
+      transform: scale(1);
+    }
+
+    @media screen and (min-width: 48em) {
+      flex-direction: row;
+      position: initial;
+      box-shadow: none;
+      padding: 0;
+      background-color: transparent;
+      transition: none;
+      transform: scale(1);
+      gap: var(--spacing-600);
+    }
+  }
+
+  .NavToggle {
+    display: inline-flex;
+    border-radius: 50%;
+    padding: var(--spacing-100);
+    font-size: var(--fs-700);
+    background-color: var(--color-accent-400);
+    color: var(--color-light-400);
+    border: 0;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-accent-500);
+    }
+
+    @media screen and (min-width: 48em) {
+      display: none;
+    }
+  }
+}

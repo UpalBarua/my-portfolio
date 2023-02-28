@@ -1,0 +1,5 @@
+.Container {
+  max-width: min(75rem, 100% - 2rem);
+  margin-inline: auto;
+  padding: var(--spacing-100);
+}
