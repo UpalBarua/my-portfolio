@@ -17,6 +17,13 @@ body {
   background-color: var(--color-dark-500);
   color: var(--color-light-400);
 
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1.1;
+  }
+
   img,
   picture {
     max-width: 100%;

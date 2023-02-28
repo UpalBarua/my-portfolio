@@ -1,0 +1,13 @@
+@mixin mq($breakpoint) {
+  @if $breakpoint == 'md' {
+    @media screen and (min-width: 48em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 'lg' {
+    @media screen and (min-width: 60em) {
+      @content;
+    }
+  }
+}
