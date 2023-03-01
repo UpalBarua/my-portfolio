@@ -4,6 +4,9 @@
   align-items: center;
   // rec
   padding-block: var(--spacing-300);
+  position: sticky;
+  top: 0;
+  background-color: var(--color-dark-500);
 
   .Logo {
     display: flex;
@@ -25,7 +28,7 @@
     gap: var(--spacing-500);
     position: absolute;
     top: 5rem;
-    right: 2.5rem;
+    right: 1rem;
     z-index: 10;
     padding: var(--spacing-600) var(--spacing-800);
     border-radius: var(--border-radius);

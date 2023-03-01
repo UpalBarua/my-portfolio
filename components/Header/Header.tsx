@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { RiCodeBoxFill } from 'react-icons/ri';
@@ -40,6 +40,15 @@ export const Header = () => {
   const handleNavToggle = () => {
     setIsNavOpen((prevIsNavOpen) => !prevIsNavOpen);
   };
+
+  const handleNavAutoHide = () => {
+    setIsNavOpen(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleNavAutoHide);
+    return () => window.removeEventListener('scroll', handleNavAutoHide);
+  }, []);
 
   return (
     <header className={styles.Header}>
