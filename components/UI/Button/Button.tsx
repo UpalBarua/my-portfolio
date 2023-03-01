@@ -4,6 +4,7 @@ import styles from './Button.module.scss';
 interface ButtonProps {
   children: ReactNode;
   type: 'primary' | 'secondary';
+  className: string;
 }
 
 export const Button = ({ children, type }: ButtonProps) => {
