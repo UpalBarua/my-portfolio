@@ -6,6 +6,7 @@ import { FaNodeJs } from 'react-icons/fa';
 import { FaLinux } from 'react-icons/fa';
 
 import { Title } from '../UI/Title/Title';
+import { SkillCard } from '../SkillCard/SkillCard';
 import styles from './Skills.module.scss';
 
 const FRONTEND_SKILLS = [
@@ -164,39 +165,31 @@ export const Skills = () => {
 
       <Tabs className={styles.Tabs}>
         <TabList className={styles.TabList}>
-          <Tab className={styles.Tab} selectedClassName={styles.active}>
-            Frontend
-          </Tab>
-          <Tab className={styles.Tab} selectedClassName={styles.active}>
-            Backend
-          </Tab>
-          <Tab className={styles.Tab} selectedClassName={styles.active}>
-            Tools
-          </Tab>
+          {['Frontend', 'Backend', 'tools'].map((category, index) => (
+            <Tab
+              key={index}
+              className={styles.Tab}
+              selectedClassName={styles.active}>
+              {category}
+            </Tab>
+          ))}
         </TabList>
 
         <TabPanel className={styles.TabPanel}>
-          {FRONTEND_SKILLS.map(({ id, title, icon }) => (
-            <div className={styles.TabCard} key={id}>
-              <i>{icon}</i>
-              <h3>{title}</h3>
-            </div>
+          {FRONTEND_SKILLS.map((skill) => (
+            <SkillCard key={skill.id} {...skill} />
           ))}
         </TabPanel>
+
         <TabPanel className={styles.TabPanel}>
-          {BACKEND_SKILLS.map(({ id, title, icon }) => (
-            <div className={styles.TabCard} key={id}>
-              <i>{icon}</i>
-              <h3>{title}</h3>
-            </div>
+          {BACKEND_SKILLS.map((skill) => (
+            <SkillCard key={skill.id} {...skill} />
           ))}
         </TabPanel>
+
         <TabPanel className={styles.TabPanel}>
-          {TOOLS.map(({ id, title, icon }) => (
-            <div className={styles.TabCard} key={id}>
-              <i>{icon}</i>
-              <h3>{title}</h3>
-            </div>
+          {TOOLS.map((skill) => (
+            <SkillCard key={skill.id} {...skill} />
           ))}
         </TabPanel>
       </Tabs>
