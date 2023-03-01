@@ -12,6 +12,7 @@
     background-color: var(--color-dark-300);
     border-radius: 50%;
     box-shadow: var(--box-shadow);
+    margin-bottom: var(--spacing-200);
   }
 
   .Title {
@@ -29,6 +30,7 @@
     font-size: var(--fs-500);
     color: hsla(0, 0%, 100%, 0.5);
     max-width: 25rem;
+    padding-bottom: var(--spacing-200);
 
     > span {
       font-weight: var(--fw-bold);

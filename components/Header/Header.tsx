@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { RiCodeBoxFill } from 'react-icons/ri';
 import { HiDotsHorizontal } from 'react-icons/hi';
 import styles from './Header.module.scss';
@@ -34,6 +35,7 @@ const NAV_OPTIONS = [
 
 export const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const { pathname } = useRouter();
 
   const handleNavToggle = () => {
     setIsNavOpen((prevIsNavOpen) => !prevIsNavOpen);
@@ -49,7 +51,10 @@ export const Header = () => {
         <ul className={styles.NavMenu} data-open={isNavOpen}>
           {NAV_OPTIONS.map(({ id, title, link }) => (
             <li key={id}>
-              <Link className={styles.NavLink} href={link}>
+              <Link
+                className={styles.NavLink}
+                href={link}
+                data-active={pathname === link}>
                 {title}
               </Link>
             </li>

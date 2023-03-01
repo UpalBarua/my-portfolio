@@ -1,0 +1,92 @@
+@use '../../styles/mixins' as *;
+
+.Skills {
+  padding-block: var(--spacing-800);
+}
+
+.Tab {
+  display: grid;
+}
+
+.TabPanel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-300);
+
+  @include mq('md') {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  @include mq('lg') {
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--spacing-400);
+  }
+}
+
+.TabList {
+  display: flex;
+  justify-content: center;
+  font-size: var(--fs-500);
+  gap: var(--spacing-200);
+  // rc
+  color: hsla(0, 0%, 100%, 0.65);
+  cursor: pointer;
+
+  // border: 2px solid lime;
+  padding-block: var(--spacing-200);
+  margin-bottom: var(--spacing-400);
+}
+
+.Tab {
+  padding: var(--spacing-100) var(--spacing-400);
+  border-radius: 100vmin;
+  transition: background-color 250ms ease-out, color 250ms ease-out;
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-dark-400);
+    color: var(--color-light-400);
+    outline: none;
+  }
+
+  &.active {
+    color: var(--color-accent-400);
+    background-color: hsla(190, 64%, 44%, 20%);
+    // rc
+    // font-weight: var(--fw-semibold);
+  }
+}
+
+.TabCard {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  background-color: var(--color-dark-400);
+  padding: var(--spacing-300);
+  box-shadow: var(--box-shadow);
+  border-radius: 6px;
+
+  @include mq('md') {
+    padding: var(--spacing-400);
+  }
+
+  > i {
+    font-size: 2.5rem;
+
+    @include mq('md') {
+      font-size: 3rem;
+    }
+
+    @include mq('lg') {
+      font-size: 4rem;
+    }
+  }
+
+  > h3 {
+    font-weight: var(--fw-semibold);
+
+    @include mq('md') {
+      font-size: var(--fs-500);
+    }
+  }
+}

@@ -12,6 +12,13 @@
   box-shadow: var(--box-shadow);
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+
   &[data-type='primary'] {
     background-color: var(--color-accent-400);
     border-color: var(--color-light-400);
