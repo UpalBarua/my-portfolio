@@ -1,0 +1,11 @@
+.UnderCon {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: var(--spacing-300);
+  padding-block: 8rem;
+
+  .Icon {
+    font-size: 8rem;
+  }
+}
