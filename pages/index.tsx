@@ -7,9 +7,9 @@ import { LatestProjects } from '@/components/LatestProjects/LatestProjects';
 export default function Home() {
   return (
     <Container>
-      {/* <Header />
+      <Header />
       <Hero />
-      <Skills /> */}
+      <Skills />
       <LatestProjects />
     </Container>
   );

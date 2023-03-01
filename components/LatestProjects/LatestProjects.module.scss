@@ -1,62 +1,22 @@
+@use '../../styles/mixins' as *;
+
 .LatestProjects {
+  display: grid;
+  place-items: center;
   padding-block: var(--spacing-800);
-}
 
-.ProjectCard {
-  background-color: var(--color-dark-400);
-  border-radius: 10px;
-  box-shadow: var(--box-shadow);
-
-  .Image {
-    height: 14rem;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 10px;
+  > button {
+    margin-top: var(--spacing-700);
   }
 
-  .Body {
+  .Grid {
     display: grid;
-    gap: var(--spacing-300);
-    padding: var(--spacing-400);
-  }
+    grid-template-columns: 1fr;
+    gap: var(--spacing-500);
+    padding-block: var(--spacing-500);
 
-  .Title {
-    font-size: var(--fs-600);
-    font-weight: var(--fw-bold);
-  }
-
-  .TechStack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-300);
-
-    > span {
-      padding: var(--spacing-100) var(--spacing-500);
-      border-radius: 100vmin;
-      font-size: var(--fs-300);
-      background-color: hsla(190, 64%, 44%, 20%);
-    }
-  }
-
-  .Footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: var(--spacing-200);
-
-    .Links {
-      display: flex;
-      gap: var(--spacing-200);
-    }
-
-    .Link {
-      display: inline-flex;
-      padding: var(--spacing-200);
-      border-radius: 50%;
-      font-size: var(--fs-600);
-      background-color: var(--color-dark-500);
-      color: var(--color-accent-400);
+    @include mq('md') {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
