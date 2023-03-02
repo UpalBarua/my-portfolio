@@ -3,6 +3,7 @@
 .LatestProjects {
   display: grid;
   place-items: center;
+  gap: var(--spacing-400);
   padding-block: var(--spacing-800);
 
   > button {
@@ -13,7 +14,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--spacing-500);
-    padding-block: var(--spacing-500);
+    // padding-block: var(--spacing-500);
 
     @include mq('md') {
       grid-template-columns: repeat(2, 1fr);

@@ -1,8 +1,18 @@
+@use '../../styles/mixins' as *;
+
 .Footer {
   display: flex;
   justify-content: space-between;
-  // border: 2px solid lime;
   padding-block: var(--spacing-400);
+  margin-top: var(--spacing-500);
+
+  .Copyright {
+    display: none;
+
+    @include mq('md') {
+      display: block;
+    }
+  }
 
   .Links {
     display: flex;

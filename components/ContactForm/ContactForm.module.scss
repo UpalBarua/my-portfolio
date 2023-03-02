@@ -1,0 +1,37 @@
+@use '../../styles/mixins' as *;
+
+.ContactForm {
+  display: grid;
+  gap: var(--spacing-400);
+  width: min(26rem, 100%);
+  padding: var(--spacing-400);
+  border-radius: 6px;
+  background-color: var(--color-dark-400);
+  box-shadow: var(--box-shadow);
+
+  @include mq('md') {
+    padding: var(--spacing-500);
+  }
+
+  .Field {
+    display: grid;
+    gap: var(--spacing-200);
+
+    > label {
+      text-transform: capitalize;
+    }
+
+    > input,
+    > textarea {
+      padding: var(--spacing-200);
+      border: 0;
+      border-radius: 6px;
+      background-color: var(--color-light-300);
+    }
+
+    > textarea {
+      height: 7.5rem;
+      resize: none;
+    }
+  }
+}
