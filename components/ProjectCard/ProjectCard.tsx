@@ -20,6 +20,7 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard = ({
+  id,
   image,
   title,
   description,
@@ -30,7 +31,7 @@ export const ProjectCard = ({
     <div className={styles.ProjectCard}>
       <Image
         className={styles.Image}
-        src={`/${image}`}
+        src={`/images/${image}`}
         alt={title}
         height={500}
         width={500}
@@ -52,12 +53,13 @@ export const ProjectCard = ({
               <BsGithub />
             </Link>
           </div>
-          <Button className={styles.Button} type="primary">
+          <Button type="primary">
             <span
               style={{
                 fontSize: '1rem',
               }}>
-              Details
+              {/* RC */}
+              <Link href={`projects/${id}`}>Details</Link>
             </span>
           </Button>
         </div>

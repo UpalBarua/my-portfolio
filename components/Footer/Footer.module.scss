@@ -1,0 +1,11 @@
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  // border: 2px solid lime;
+  padding-block: var(--spacing-400);
+
+  .Links {
+    display: flex;
+    gap: var(--spacing-500);
+  }
+}

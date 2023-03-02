@@ -7,7 +7,7 @@ export const Hero = () => {
     <main className={styles.Hero}>
       <Image
         className={styles.Avatar}
-        src="/avatar.svg"
+        src="/images/avatar.svg"
         alt="avatar"
         height={250}
         width={250}
