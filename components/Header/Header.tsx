@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { RiCodeBoxFill } from 'react-icons/ri';
 import { HiDotsHorizontal } from 'react-icons/hi';
+import { BsFillMoonStarsFill } from 'react-icons/bs';
 import styles from './Header.module.scss';
 
 const NAV_OPTIONS = [
@@ -70,6 +71,11 @@ export const Header = () => {
           ))}
         </ul>
       </nav>
+      {/* <div className={styles.ButtonGroup}>
+        <button className={styles.ThemeToggle}>
+          <BsFillMoonStarsFill />
+        </button>
+      </div> */}
       <button className={styles.NavToggle} onClick={handleNavToggle}>
         <HiDotsHorizontal />
       </button>
