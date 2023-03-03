@@ -13,7 +13,7 @@ export const Hero = () => {
         width={250}
       />
       <h1 className={styles.Title}>
-        Hi, I'm <span>Upal</span>
+        Hi, I&apos;m <span>Upal</span>
         <br />
         an enthusiastic developer
       </h1>

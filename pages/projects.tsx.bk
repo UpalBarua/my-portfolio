@@ -1,0 +1,23 @@
+import { getProjects } from '@/utils/getProjects';
+import { ProjectCard } from '@/components/ProjectCard/ProjectCard';
+
+export default function projects({ filteredProject }) {
+  console.log(filteredProject);
+
+  return (
+    <>
+      {/* rc */}
+      <ProjectCard {...filteredProject} />
+    </>
+  );
+}
+
+export const getStaticProps = async () => {
+  const projects = await getProjects();
+
+  const filteredProject = projects.find(({ id }: { id: number }) => id === 1);
+
+  return {
+    props: { filteredProject },
+  };
+};

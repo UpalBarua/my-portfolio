@@ -5,7 +5,7 @@ export default function about() {
   return (
     <>
       <AboutMe />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

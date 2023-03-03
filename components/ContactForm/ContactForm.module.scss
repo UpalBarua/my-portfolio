@@ -10,12 +10,16 @@
   box-shadow: var(--box-shadow);
 
   @include mq('md') {
-    padding: var(--spacing-500);
+    padding: var(--spacing-600);
   }
 
   .Field {
     display: grid;
     gap: var(--spacing-200);
+
+    @include mq('md') {
+      gap: var(--spacing-400);
+    }
 
     > label {
       text-transform: capitalize;
