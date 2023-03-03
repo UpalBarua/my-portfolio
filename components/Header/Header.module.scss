@@ -1,12 +1,18 @@
+@use '../../styles/mixins' as *;
+
 .Header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   // rec
-  padding-block: var(--spacing-300);
+  padding-block: var(--spacing-200);
   position: sticky;
   top: 0;
   background-color: var(--color-dark-500);
+
+  @include mq('md') {
+    padding-block: var(--spacing-300);
+  }
 
   .Logo {
     display: flex;
@@ -27,16 +33,17 @@
     flex-direction: column;
     gap: var(--spacing-500);
     position: absolute;
-    top: 5rem;
-    right: 1rem;
+    top: 4rem;
+    right: 0.5rem;
     z-index: 10;
     padding: var(--spacing-600) var(--spacing-800);
     border-radius: var(--border-radius);
     font-size: var(--fs-500);
     // rc
     // text-align: center;
-    background-color: var(--color-dark-400);
-    box-shadow: var(--box-shadow);
+    background-color: var(--color-dark-300);
+    // box-shadow: var(--box-shadow);
+    box-shadow: var(--shadow-md);
     transform: scale(0);
     transform-origin: top right;
     transition: transform 200ms ease-out;
@@ -94,7 +101,7 @@
     background-color: var(--color-accent-400);
     color: var(--color-light-400);
     border: 0;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--shadow-sm);
     cursor: pointer;
 
     &:hover,

@@ -42,7 +42,7 @@
     object-fit: cover;
     object-position: center;
     border-radius: 6px;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--shadow-sm);
 
     @include mq('lg') {
       height: 18rem;

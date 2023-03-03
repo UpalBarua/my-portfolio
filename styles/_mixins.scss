@@ -11,3 +11,43 @@
     }
   }
 }
+
+@mixin button($type) {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-500);
+  font-weight: var(--fw-semibold);
+  text-transform: capitalize;
+  text-align: center;
+  background-color: transparent;
+  padding: var(--spacing-200) var(--spacing-500);
+  border: 3px solid transparent;
+  // rc
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  color: var(--color-light-300);
+  cursor: pointer;
+  transition: box-shadow 250ms ease-out;
+
+  &:hover,
+  &:focus {
+    box-shadow: var(--shadow-lg);
+  }
+
+  @if $type == 'primary' {
+    background-color: var(--color-accent-400);
+    border-color: var(--color-light-300);
+  }
+
+  @if $type == 'secondary' {
+    border-color: var(--color-light-300);
+  }
+
+  // &[data-type='primary'] {
+  //   background-color: var(--color-accent-400);
+  //   border-color: var(--color-light-300);
+  // }
+
+  // &[data-type='secondary'] {
+  //   border-color: var(--color-light-300);
+  // }
+}

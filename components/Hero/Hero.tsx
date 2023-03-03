@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '../UI/Button/Button';
 import styles from './Hero.module.scss';
@@ -22,8 +23,17 @@ export const Hero = () => {
         <span>leaders</span> and brands all around the world.
       </p>
       <div className={styles.ButtonGroup}>
-        <Button type="primary">My Projects</Button>
-        <Button type="secondary">My Resume</Button>
+        {/* <Button type="primary">My Projects</Button>
+        <Button type="secondary">My Resume</Button> */}
+        <Link className={styles.Button} href="/projects">
+          My Projects
+        </Link>
+        <Link
+          className={styles.Button}
+          href="https://drive.google.com/file/d/1fAZLlu-XvqSaNsEETEspeyUlhd1XvMT6/view?usp=share_link"
+          target="_blank">
+          My Resume
+        </Link>
       </div>
     </main>
   );

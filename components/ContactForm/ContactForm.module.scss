@@ -7,7 +7,8 @@
   padding: var(--spacing-400);
   border-radius: 6px;
   background-color: var(--color-dark-400);
-  box-shadow: var(--box-shadow);
+  // box-shadow: var(--box-shadow);
+  box-shadow: var(--shadow-sm);
 
   @include mq('md') {
     padding: var(--spacing-600);
@@ -30,7 +31,14 @@
       padding: var(--spacing-200);
       border: 0;
       border-radius: 6px;
-      background-color: var(--color-light-300);
+      // rc
+      // background-color: var(--color-light-300);
+      background-color: var(--color-dark-300);
+      color: var(--color-light-400);
+
+      &:focus {
+        outline: 2px solid var(--color-accent-400);
+      }
     }
 
     > textarea {

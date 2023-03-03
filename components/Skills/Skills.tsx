@@ -1,79 +1,88 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-// import 'react-tabs/style/react-tabs.css';
 
-import { FaReact } from 'react-icons/fa';
+import {
+  FaBootstrap,
+  FaCss3Alt,
+  FaHtml5,
+  FaReact,
+  FaSass,
+} from 'react-icons/fa';
 import { FaNodeJs } from 'react-icons/fa';
 import { FaLinux } from 'react-icons/fa';
 
 import { Title } from '../UI/Title/Title';
 import { SkillCard } from '../SkillCard/SkillCard';
 import styles from './Skills.module.scss';
+import { BsBootstrapFill } from 'react-icons/bs';
+import { TbBrandNextjs } from 'react-icons/tb';
+
+import {
+  SiChakraui,
+  SiJavascript,
+  SiTailwindcss,
+  SiTypescript,
+} from 'react-icons/si';
 
 const FRONTEND_SKILLS = [
   {
     id: 0,
     title: 'HTML',
-    icon: <FaReact />,
+    // icon: <FaHtml5 />,
+    icon: 'html5.png',
   },
   {
     id: 1,
-    title: 'HTML',
-    icon: <FaReact />,
+    title: 'CSS',
+    // icon: <FaCss3Alt />,
+    icon: 'css3.png',
   },
   {
     id: 2,
-    title: 'HTML',
-    icon: <FaReact />,
+    title: 'SASS',
+    // icon: <FaSass />,
+    icon: 'sass.png',
   },
   {
     id: 3,
-    title: 'HTML',
-    icon: <FaReact />,
+    title: 'Bootstrap',
+    // icon: <FaBootstrap />,
+    icon: 'bootstrap.png',
   },
   {
     id: 4,
-    title: 'HTML',
-    icon: <FaReact />,
+    title: 'Tailwind',
+    // icon: <SiTailwindcss />,
+    icon: 'tailwind.png',
   },
   {
     id: 5,
-    title: 'HTML',
-    icon: <FaReact />,
+    title: 'ChakraUI',
+    // icon: <SiChakraui />,
+    icon: 'chakra-ui.png',
   },
   {
     id: 6,
-    title: 'HTML',
-    icon: <FaReact />,
-  },
-  {
-    id: 7,
-    title: 'HTML',
-    icon: <FaReact />,
-  },
-  {
-    id: 8,
-    title: 'HTML',
-    icon: <FaReact />,
+    title: 'JavaScript',
+    // icon: <SiJavascript />,
+    icon: 'javascript.png',
   },
   {
     id: 9,
-    title: 'HTML',
-    icon: <FaReact />,
+    title: 'TypeScript',
+    // icon: <SiTypescript />,
+    icon: 'typescript.png',
   },
   {
-    id: 10,
-    title: 'HTML',
-    icon: <FaReact />,
+    id: 7,
+    title: 'React',
+    // icon: <FaReact />,
+    icon: 'react.png',
   },
   {
-    id: 11,
-    title: 'HTML',
-    icon: <FaReact />,
-  },
-  {
-    id: 12,
-    title: 'HTML',
-    icon: <FaReact />,
+    id: 8,
+    title: 'Next.js',
+    // icon: <TbBrandNextjs />,
+    icon: 'next.js.png',
   },
 ];
 
@@ -81,47 +90,32 @@ const BACKEND_SKILLS = [
   {
     id: 0,
     title: 'Node.js',
-    icon: <FaNodeJs />,
+    // icon: <FaNodeJs />,
+    icon: 'node-js.png',
   },
   {
     id: 1,
-    title: 'Node.js',
-    icon: <FaNodeJs />,
+    title: 'Firebase',
+    // icon: <FaNodeJs />,
+    icon: 'firebase.png',
   },
   {
     id: 2,
-    title: 'Node.js',
-    icon: <FaNodeJs />,
+    title: 'Express.js',
+    // icon: <FaNodeJs />,
+    icon: 'express-js.png',
   },
   {
     id: 3,
-    title: 'Node.js',
-    icon: <FaNodeJs />,
+    title: 'MongoDB',
+    // icon: <FaNodeJs />,
+    icon: 'mongodb.png',
   },
   {
     id: 4,
-    title: 'Node.js',
-    icon: <FaNodeJs />,
-  },
-  {
-    id: 5,
-    title: 'Node.js',
-    icon: <FaNodeJs />,
-  },
-  {
-    id: 6,
-    title: 'Node.js',
-    icon: <FaNodeJs />,
-  },
-  {
-    id: 7,
-    title: 'Node.js',
-    icon: <FaNodeJs />,
-  },
-  {
-    id: 8,
-    title: 'Node.js',
-    icon: <FaNodeJs />,
+    title: 'Python',
+    // icon: <FaNodeJs />,
+    icon: 'python.png',
   },
 ];
 
@@ -129,32 +123,38 @@ const TOOLS = [
   {
     id: 0,
     title: 'Linux',
-    icon: <FaLinux />,
+    // icon: <FaLinux />,
+    icon: 'linux.png',
   },
   {
     id: 1,
-    title: 'Linux',
-    icon: <FaLinux />,
+    title: 'Bash',
+    // icon: <FaLinux />,
+    icon: 'bash.png',
   },
   {
     id: 2,
-    title: 'Linux',
-    icon: <FaLinux />,
+    title: 'Figma',
+    // icon: <FaLinux />,
+    icon: 'figma.png',
   },
   {
     id: 3,
-    title: 'Linux',
-    icon: <FaLinux />,
+    title: 'VSCode',
+    // icon: <FaLinux />,
+    icon: 'vscode.png',
   },
   {
     id: 4,
-    title: 'Linux',
-    icon: <FaLinux />,
+    title: 'Git',
+    // icon: <FaLinux />,
+    icon: 'git.png',
   },
   {
     id: 5,
-    title: 'Linux',
-    icon: <FaLinux />,
+    title: 'Vim',
+    // icon: <FaLinux />,
+    icon: 'vim.png',
   },
 ];
 

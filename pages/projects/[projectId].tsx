@@ -2,8 +2,6 @@ import { getProjects } from '@/utils/getProjects';
 import { ProjectCard } from '@/components/ProjectCard/ProjectCard';
 
 export default function projectId({ filteredProject }) {
-  console.log(filteredProject);
-
   return (
     <>
       {/* rc */}

@@ -3,14 +3,16 @@
 .ProjectCard {
   background-color: var(--color-dark-400);
   border-radius: 10px;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--shadow-sm);
 
   .Image {
-    height: 14rem;
+    height: 16rem;
     width: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 10px;
+    // border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 
     @include mq('lg') {
       height: 18rem;
@@ -35,13 +37,18 @@
   .TechStack {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--spacing-300);
+    gap: var(--spacing-200);
 
     > span {
-      padding: var(--spacing-100) var(--spacing-500);
+      padding: 2px var(--spacing-500);
       border-radius: 100vmin;
       font-size: var(--fs-300);
-      background-color: hsla(190, 64%, 44%, 15%);
+      // rc
+      // background-color: hsla(190, 64%, 44%, 15%);
+      // border: 2px solid var(--color-accent-400);
+      // color: var(--color-accent-400);
+
+      background-color: var(--color-dark-300);
     }
   }
 

@@ -13,7 +13,7 @@
   .Grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--spacing-500);
+    gap: var(--spacing-600);
     // padding-block: var(--spacing-500);
 
     @include mq('md') {

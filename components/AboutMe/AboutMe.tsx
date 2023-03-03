@@ -48,7 +48,9 @@ export const AboutMe = () => {
             <Link href="/">LinkedIn</Link> or send me and{' '}
             <Link href="/">email</Link>
           </p>
-          <Button type="primary">Contact Me</Button>
+          <Button type="primary" as="link" href="/contact">
+            Contact Me
+          </Button>
         </div>
       </div>
     </section>

@@ -24,7 +24,7 @@
   --color-light-500: hsl(340, 11%, 89%);
 
   --color-dark-300: hsl(210, 2%, 24%);
-  --color-dark-400: hsl(210, 3%, 15%);
+  --color-dark-400: hsl(210, 3%, 16%);
   --color-dark-500: hsl(210, 3%, 13%);
 
   --color-accent-300: hsl(190, 64%, 44%);
@@ -42,8 +42,12 @@
   --spacing-800: 3.5rem;
   --spacing-900: 4rem;
 
-  // MISCELLANEOUS
-  --box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+  // BOX SHADOW
+  --shadow-sm: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  --shadow-md: rgba(0, 0, 0, 0.19) 0px 10px 20px,
     rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  --shadow-lg: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
   --border-radius: 10px;
 }
