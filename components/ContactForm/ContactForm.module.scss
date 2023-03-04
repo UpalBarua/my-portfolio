@@ -3,16 +3,15 @@
 .ContactForm {
   display: grid;
   gap: var(--spacing-400);
-  width: min(26rem, 100%);
-  padding: var(--spacing-400);
-  border-radius: 6px;
-  background-color: var(--color-dark-400);
+  // width: min(26rem, 100%);
+  // padding: var(--spacing-400);
+  // border-radius: 6px;
   // box-shadow: var(--box-shadow);
-  box-shadow: var(--shadow-sm);
+  // box-shadow: var(--shadow-sm);
 
-  @include mq('md') {
-    padding: var(--spacing-600);
-  }
+  // @include mq('md') {
+  //   padding: var(--spacing-600);
+  // }
 
   .Field {
     display: grid;

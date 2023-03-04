@@ -53,15 +53,17 @@ export const ProjectCard = ({
               <BsGithub />
             </Link>
           </div>
-          <Button type="primary">
+          <Button type="primary" as="link" href={`projects/${id}`}>
+            Details
+          </Button>
+          {/* <Button type="primary">
             <span
               style={{
                 fontSize: '1rem',
               }}>
-              {/* RC */}
               <Link href={`projects/${id}`}>Details</Link>
             </span>
-          </Button>
+          </Button> */}
         </div>
       </div>
     </div>

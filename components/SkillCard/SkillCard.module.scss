@@ -1,25 +1,18 @@
 @use '../../styles/mixins' as *;
 
 .SkillCard {
-  * {
-    // border: 2px solid lime;
-  }
-
   display: grid;
   // justify-content: center;
   justify-items: center;
   align-items: center;
   gap: var(--spacing-200);
   background-color: var(--color-dark-400);
-  padding: var(--spacing-300);
+  padding: var(--spacing-500) var(--spacing-200);
   box-shadow: var(--shadow-sm);
   border-radius: 6px;
 
   @include mq('md') {
     padding: var(--spacing-400);
-  }
-
-  .Icon {
   }
 
   // > i {

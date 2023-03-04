@@ -16,7 +16,9 @@ export const ContactForm = () => {
         <label htmlFor="message">Message</label>
         <textarea id="" name="message"></textarea>
       </div>
-      <Button type="primary">Send</Button>
+      <Button as="button" type="primary">
+        Send
+      </Button>
     </form>
   );
 };

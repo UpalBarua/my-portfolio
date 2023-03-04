@@ -45,7 +45,10 @@ export const LatestProjects = () => {
           <ProjectCard key={project.id} {...project} />
         ))}
       </div>
-      <Button type="secondary">Find More</Button>
+      {/* <Button type="secondary">Find More</Button> */}
+      <Button type="secondary" as="link" href="/projects">
+        Find More
+      </Button>
     </section>
   );
 };

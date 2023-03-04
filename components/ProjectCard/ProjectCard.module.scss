@@ -69,8 +69,8 @@
       padding: var(--spacing-200);
       border-radius: 50%;
       font-size: var(--fs-600);
-      background-color: var(--color-dark-500);
-      color: var(--color-accent-400);
+      background-color: var(--color-dark-300);
+      color: var(--color-light-400);
       transition: color 250ms ease-out, background-color 250ms ease-out;
 
       &:hover,

@@ -25,6 +25,7 @@
     .Icon {
       color: var(--color-accent-400);
       font-size: var(--fs-800);
+      box-shadow: var(--shadow-sm);
     }
   }
 
@@ -46,7 +47,7 @@
     box-shadow: var(--shadow-md);
     transform: scale(0);
     transform-origin: top right;
-    transition: transform 200ms ease-out;
+    transition: transform 150ms ease-out;
 
     &[data-open='true'] {
       transform: scale(1);

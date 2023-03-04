@@ -1,6 +1,43 @@
+@use '../../styles/mixins' as *;
+
 .ContactMe {
   display: grid;
   justify-items: center;
   padding-block: var(--spacing-800);
   gap: var(--spacing-400);
+
+  .Grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-600);
+    background-color: var(--color-dark-400);
+    padding: var(--spacing-500);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    max-width: 30rem;
+
+    @include mq('md') {
+      grid-template-columns: repeat(2, 1fr);
+      padding: var(--spacing-600);
+
+      max-width: 50rem;
+    }
+  }
+
+  .Text {
+    font-size: var(--fs-500);
+    margin-bottom: var(--spacing-400);
+  }
+
+  .Links {
+    display: grid;
+    font-size: var(--fs-500);
+    gap: var(--spacing-200);
+
+    .Link {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-200);
+    }
+  }
 }
