@@ -3,7 +3,7 @@
     {
       "id": 0,
       "image": "project0.webp",
-      "title": "Recruit Co 0",
+      "title": "Recruit Co",
       "description": {
         "short": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, itaque accusantium commodi expedita similique porro quasi et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam",
         "long": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, itaque accusantium commodi expedita similique porro quasi et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam"
@@ -17,7 +17,7 @@
     {
       "id": 1,
       "image": "project0.webp",
-      "title": "Recruit Co 1",
+      "title": "Savvy Pulse",
       "description": {
         "short": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, itaque accusantium commodi expedita similique porro quasi et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam",
         "long": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, itaque accusantium commodi expedita similique porro quasi et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam"
@@ -31,7 +31,35 @@
     {
       "id": 2,
       "image": "project0.webp",
-      "title": "Recruit Co 2",
+      "title": "Savvy Pulse",
+      "description": {
+        "short": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, itaque accusantium commodi expedita similique porro quasi et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam",
+        "long": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, itaque accusantium commodi expedita similique porro quasi et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam"
+      },
+      "techStack": ["React", "SASS", "Firebase", "Express.js", "MongoDB"],
+      "links": {
+        "live": "/",
+        "git": "/"
+      }
+    },
+    {
+      "id": 3,
+      "image": "project0.webp",
+      "title": "Savvy Pulse",
+      "description": {
+        "short": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, itaque accusantium commodi expedita similique porro quasi et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam",
+        "long": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, itaque accusantium commodi expedita similique porro quasi et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam"
+      },
+      "techStack": ["React", "SASS", "Firebase", "Express.js", "MongoDB"],
+      "links": {
+        "live": "/",
+        "git": "/"
+      }
+    },
+    {
+      "id": 4,
+      "image": "project0.webp",
+      "title": "Savvy Pulse",
       "description": {
         "short": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, itaque accusantium commodi expedita similique porro quasi et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam",
         "long": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, itaque accusantium commodi expedita similique porro quasi et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam"

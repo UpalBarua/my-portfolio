@@ -16,15 +16,24 @@ export const ContactMe = () => {
             please don&apos;t hesitate to contact me via email below.
           </p>
           <div className={styles.Links}>
-            <Link className={styles.Link} href="upalbarua52@gmail.com">
+            <Link
+              className={styles.Link}
+              href="https://upalbarua52@gmail.com"
+              target="_blank">
               <HiOutlineMail />
               <span>upalbarua52@gmail.com</span>
             </Link>
-            <Link className={styles.Link} href="github.com">
+            <Link
+              className={styles.Link}
+              href="https://github.com/upalbarua"
+              target="_blank">
               <AiFillGithub />
               <span>github.com</span>
             </Link>
-            <Link className={styles.Link} href="linkedin">
+            <Link
+              className={styles.Link}
+              href="https://www.linkedin.com/in/upalb"
+              target="_blank">
               <AiFillLinkedin />
               <span>linkedin.com</span>
             </Link>

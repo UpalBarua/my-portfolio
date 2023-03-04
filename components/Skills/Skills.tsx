@@ -165,7 +165,7 @@ export const Skills = () => {
 
       <Tabs className={styles.Tabs}>
         <TabList className={styles.TabList}>
-          {['Frontend', 'Backend', 'tools'].map((category, index) => (
+          {['Frontend', 'Backend', 'Tools'].map((category, index) => (
             <Tab
               key={index}
               className={styles.Tab}

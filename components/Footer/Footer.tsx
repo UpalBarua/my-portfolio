@@ -6,9 +6,13 @@ export const Footer = () => {
     <footer className={styles.Footer}>
       <div className={styles.Links}>
         <Link href="/">Home</Link>
-        <Link href="/">GitHub</Link>
-        <Link href="/">Linkedin</Link>
-        <Link href="/">Contact</Link>
+        <Link href="https://github.com/upalbarua" target="_blank">
+          GitHub
+        </Link>
+        <Link href="https://www.linkedin.com/in/upalb" target="_blank">
+          Linkedin
+        </Link>
+        <Link href="/contact">Contact</Link>
       </div>
       <p className={styles.Copyright}>Made in Bangladesh 🇧🇩</p>
     </footer>

@@ -44,9 +44,18 @@ export const AboutMe = () => {
             width={500}
           />
           <p className={styles.FollowText}>
-            Follow me on <Link href="/">Github</Link> and{' '}
-            <Link href="/">LinkedIn</Link> or send me and{' '}
-            <Link href="/">email</Link>
+            Follow me on{' '}
+            <Link href="https://github.com/upalbarua" target="_blank">
+              Github
+            </Link>{' '}
+            and{' '}
+            <Link href="https://www.linkedin.com/in/upalb" target="_blank">
+              LinkedIn
+            </Link>{' '}
+            or send me and{' '}
+            <Link href="https://upalbarua52@gmail.com" target="_blank">
+              email
+            </Link>
           </p>
           <Button type="primary" as="link" href="/contact">
             Contact Me

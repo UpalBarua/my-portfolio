@@ -1,0 +1,23 @@
+@use '../../styles/mixins' as *;
+
+.MyProjects {
+  display: grid;
+  place-items: center;
+  gap: var(--spacing-400);
+  padding-block: var(--spacing-800);
+
+  > a {
+    margin-top: var(--spacing-700);
+  }
+
+  .Grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-600);
+    // padding-block: var(--spacing-500);
+
+    @include mq('md') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
