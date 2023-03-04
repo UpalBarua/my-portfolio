@@ -1,10 +1,7 @@
 import { MyProjects } from '@/components/MyProjects/MyProjects';
 import { getProjects } from '@/utils/getProjects';
-import { Title } from '@/components/UI/Title/Title';
-import { ProjectCard } from '@/components/ProjectCard/ProjectCard';
-import styles from '../../components/LatestProjects/LatestProjects.module.scss';
 
-export default function index({ projects }) {
+export default function index({ projects }: { projects: IProject[] }) {
   return <MyProjects projects={projects} />;
 }
 

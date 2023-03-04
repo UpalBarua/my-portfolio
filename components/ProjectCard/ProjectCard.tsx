@@ -4,21 +4,6 @@ import { Button } from '../UI/Button/Button';
 import { BsFillPlayFill, BsGithub } from 'react-icons/bs';
 import styles from './ProjectCard.module.scss';
 
-interface ProjectCardProps {
-  id: number;
-  image: string;
-  title: string;
-  description: {
-    short: string;
-    long: string;
-  };
-  techStack: string[];
-  links: {
-    live: string;
-    git: string;
-  };
-}
-
 export const ProjectCard = ({
   id,
   image,
@@ -26,7 +11,7 @@ export const ProjectCard = ({
   description,
   techStack,
   links,
-}: ProjectCardProps) => {
+}: IProject) => {
   return (
     <div className={styles.ProjectCard}>
       <Image
@@ -56,14 +41,6 @@ export const ProjectCard = ({
           <Button type="primary" as="link" href={`projects/${id}`}>
             Details
           </Button>
-          {/* <Button type="primary">
-            <span
-              style={{
-                fontSize: '1rem',
-              }}>
-              <Link href={`projects/${id}`}>Details</Link>
-            </span>
-          </Button> */}
         </div>
       </div>
     </div>

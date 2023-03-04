@@ -1,9 +1,9 @@
-import { Title } from '../UI/Title/Title';
 import { ProjectCard } from '../ProjectCard/ProjectCard';
+import { Title } from '../UI/Title/Title';
 import { Button } from '../UI/Button/Button';
 import styles from './LatestProjects.module.scss';
 
-export const LatestProjects = ({ projects }) => {
+export const LatestProjects = ({ projects }: { projects: IProject[] }) => {
   return (
     <section className={styles.LatestProjects}>
       <Title>Latest Projects</Title>

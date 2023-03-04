@@ -1,9 +1,30 @@
 import Link from 'next/link';
 import { Title } from '../UI/Title/Title';
 import { ContactForm } from '../ContactForm/ContactForm';
-import styles from './ContactMe.module.scss';
 import { HiOutlineMail } from 'react-icons/hi';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import styles from './ContactMe.module.scss';
+
+const LINKS = [
+  {
+    id: 0,
+    href: 'https://upalbarua52@gmail.com',
+    Icon: <HiOutlineMail />,
+    title: 'upalbarua52@gmail.com',
+  },
+  {
+    id: 1,
+    href: 'https://github.com/upalbarua',
+    Icon: <AiFillGithub />,
+    title: 'github.com',
+  },
+  {
+    id: 2,
+    href: 'https://www.linkedin.com/in/upalb',
+    Icon: <AiFillLinkedin />,
+    title: 'linkedin.com',
+  },
+];
 
 export const ContactMe = () => {
   return (
@@ -16,27 +37,16 @@ export const ContactMe = () => {
             please don&apos;t hesitate to contact me via email below.
           </p>
           <div className={styles.Links}>
-            <Link
-              className={styles.Link}
-              href="https://upalbarua52@gmail.com"
-              target="_blank">
-              <HiOutlineMail />
-              <span>upalbarua52@gmail.com</span>
-            </Link>
-            <Link
-              className={styles.Link}
-              href="https://github.com/upalbarua"
-              target="_blank">
-              <AiFillGithub />
-              <span>github.com</span>
-            </Link>
-            <Link
-              className={styles.Link}
-              href="https://www.linkedin.com/in/upalb"
-              target="_blank">
-              <AiFillLinkedin />
-              <span>linkedin.com</span>
-            </Link>
+            {LINKS.map(({ id, href, Icon, title }) => (
+              <Link
+                key={id}
+                className={styles.Link}
+                href={href}
+                target="_blank">
+                {Icon}
+                <span>{title}</span>
+              </Link>
+            ))}
           </div>
         </div>
         <ContactForm />

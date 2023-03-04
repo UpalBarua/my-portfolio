@@ -1,19 +1,18 @@
 import { getProjects } from '@/utils/getProjects';
 import { ProjectCard } from '@/components/ProjectCard/ProjectCard';
 
-export default function projectId({ filteredProject }) {
-  return (
-    <>
-      {/* rc */}
-      <ProjectCard {...filteredProject} />
-    </>
-  );
+export default function projectId({
+  filteredProject,
+}: {
+  filteredProject: IProject;
+}) {
+  return <ProjectCard {...filteredProject} />;
 }
 
 export const getStaticPaths = async () => {
   const projects = await getProjects();
 
-  const paths = projects.map((project) => {
+  const paths = projects.map((project: IProject) => {
     return {
       params: {
         projectId: project.id + '',
@@ -27,7 +26,11 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async ({
+  params,
+}: {
+  params: { projectId: string | number };
+}) => {
   const projects = await getProjects();
 
   const filteredProject = projects.find(

@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { RiCodeBoxFill } from 'react-icons/ri';
 import { HiDotsHorizontal } from 'react-icons/hi';
-import { BsFillMoonStarsFill } from 'react-icons/bs';
 import styles from './Header.module.scss';
 
 const NAV_OPTIONS = [

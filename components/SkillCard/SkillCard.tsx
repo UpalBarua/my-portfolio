@@ -1,16 +1,15 @@
-import { ReactNode } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import styles from './SkillCard.module.scss';
 
 interface SkillCardProps {
-  icon: ReactNode;
+  icon: React.ReactNode;
   title: string;
 }
 
 export const SkillCard = ({ icon, title }: SkillCardProps) => {
   return (
     <div className={styles.SkillCard}>
-      {/* <i>{icon}</i> */}
       <Image
         className={styles.Icon}
         src={`/icons/${icon}`}

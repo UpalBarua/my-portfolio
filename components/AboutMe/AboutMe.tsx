@@ -1,7 +1,7 @@
-import { Title } from '../UI/Title/Title';
-import { Button } from '../UI/Button/Button';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Title } from '../UI/Title/Title';
+import { Button } from '../UI/Button/Button';
 import styles from './AboutMe.module.scss';
 
 export const AboutMe = () => {

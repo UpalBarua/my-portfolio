@@ -1,16 +1,21 @@
 import React from 'react';
 import { Button } from '../UI/Button/Button';
 import emailjs from '@emailjs/browser';
+import { toast } from 'react-hot-toast';
 import styles from './ContactForm.module.scss';
 
 export const ContactForm = () => {
   const handleMessage = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
-    console.log(serviceId, templateId, publicKey);
+    if (!serviceId || !templateId || !publicKey) {
+      console.error('something went wrong');
+      return;
+    }
 
     const newMessage = {
       name: event.target.name.value,
@@ -18,22 +23,26 @@ export const ContactForm = () => {
       message: event.target.message.value,
     };
 
-    try {
-      const res = await emailjs.send(
-        serviceId,
-        templateId,
-        newMessage,
-        publicKey
-      );
-      if (res.status === 200) {
-        alert('Email sent.');
-        event.target.reset();
-      } else {
-        alert('Failed to send email.');
-      }
-    } catch (error) {
-      console.log(error);
+    if (!newMessage.name || !newMessage.email || !newMessage.message) {
+      toast.error('Something is missing');
+      return;
     }
+
+    toast
+      .promise(emailjs.send(serviceId, templateId, newMessage, publicKey), {
+        loading: 'Sending...',
+        success: <b>Message sent</b>,
+        error: <b>Failed to send</b>,
+      })
+      .then((data) => {
+        if (data.status === 200) {
+          event.target.reset();
+        }
+      })
+      .catch((error) => {
+        toast.error('Failed to send');
+        console.log(error);
+      });
   };
 
   return (

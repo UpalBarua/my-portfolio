@@ -1,4 +1,3 @@
-import { Button } from '../UI/Button/Button';
 import { Title } from '../UI/Title/Title';
 import { MdConstruction } from 'react-icons/md';
 import styles from './UnderConstruction.module.scss';
