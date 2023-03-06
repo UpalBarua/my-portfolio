@@ -4,7 +4,7 @@ import styles from './Button.module.scss';
 
 interface ButtonProps {
   children: ReactNode;
-  type: 'primary' | 'secondary';
+  type: 'primary' | 'secondary' | 'rounded';
   as: 'button' | 'link';
   href?: string;
   target?: string;
@@ -18,11 +18,20 @@ export const Button = ({
   target,
   ...props
 }: ButtonProps) => {
-  if (as === 'link' && href) {
+  // rc
+  if (as === 'link' && href && type === 'rounded') {
+    return (
+      <Link className={styles.RoundedLink} href={href}>
+        {children}
+      </Link>
+    );
+  }
+
+  if (as === 'link' && href && type) {
     return (
       <Link
-        href={href}
         className={styles.Button}
+        href={href}
         data-type={type}
         target={target}
         {...props}>

@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { Hero } from '@/components/Hero/Hero';
 import { Skills } from '@/components/Skills/Skills';
 import { LatestProjects } from '@/components/LatestProjects/LatestProjects';
@@ -8,6 +9,9 @@ import { getProjects } from '@/utils/getProjects';
 export default function Home({ projects }: { projects: IProject[] }) {
   return (
     <>
+      <Head>
+        <title>Upal Barua</title>
+      </Head>
       <Hero />
       <Skills />
       <LatestProjects projects={projects} />

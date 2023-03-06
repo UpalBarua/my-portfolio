@@ -1,12 +1,12 @@
 import { getProjects } from '@/utils/getProjects';
-import { ProjectCard } from '@/components/ProjectCard/ProjectCard';
+import { ProjectDetails } from '@/components/ProjectDetails/ProjectDetails';
 
 export default function projectId({
   filteredProject,
 }: {
   filteredProject: IProject;
 }) {
-  return <ProjectCard {...filteredProject} />;
+  return <ProjectDetails />;
 }
 
 export const getStaticPaths = async () => {
