@@ -1,10 +1,11 @@
 interface IProject {
-  id: number;
-  image: string;
+  id: string;
+  images: string[];
   title: string;
   description: {
     short: string;
     long: string;
+    features: string[];
   };
   techStack: string[];
   links: {

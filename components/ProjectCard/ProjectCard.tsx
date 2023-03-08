@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { Button } from '../UI/Button/Button';
 import { BsFillPlayFill, BsGithub } from 'react-icons/bs';
 import styles from './ProjectCard.module.scss';
@@ -7,24 +6,25 @@ import { TechStack } from '../UI/TechStack/TechStack';
 
 export const ProjectCard = ({
   id,
-  image,
+  images,
   title,
   description,
   techStack,
   links,
 }: IProject) => {
+  console.log(`/images/projects/${id}-00.png`);
   return (
     <div className={styles.ProjectCard}>
       <Image
         className={styles.Image}
-        src={`/images/${image}`}
+        src={`/images/projects/${id}-00.png`}
         alt={title}
         height={500}
         width={500}
       />
       <div className={styles.Body}>
         <h3 className={styles.Title}>{title}</h3>
-        <p className={styles.Description}>{description.long}</p>
+        <p className={styles.Description}>{description.short}</p>
         <TechStack techStack={techStack} />
         <div className={styles.Footer}>
           <div className={styles.Links}>

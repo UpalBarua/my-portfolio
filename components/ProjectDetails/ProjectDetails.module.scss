@@ -1,4 +1,12 @@
+@use '../../styles/mixins' as *;
+
 .ProjectDetails {
+  display: grid;
+  gap: var(--spacing-500);
+  max-width: 50rem;
+  margin-inline: auto;
+  padding-block: var(--spacing-600);
+
   .Header {
     display: flex;
     justify-content: space-between;
@@ -9,5 +17,25 @@
     display: flex;
     align-items: center;
     gap: var(--spacing-200);
+  }
+
+  .Image {
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    object-fit: cover;
+    object-position: center;
+    height: 16rem;
+  }
+
+  .Screenshots {
+    .Gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--spacing-300);
+
+      @include mq('md') {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   }
 }

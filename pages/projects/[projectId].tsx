@@ -6,7 +6,7 @@ export default function projectId({
 }: {
   filteredProject: IProject;
 }) {
-  return <ProjectDetails />;
+  return <ProjectDetails {...filteredProject} />;
 }
 
 export const getStaticPaths = async () => {

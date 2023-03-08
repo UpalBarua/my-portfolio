@@ -1,73 +1,78 @@
 {
   "projects": [
     {
-      "id": 0,
-      "image": "project0.webp",
-      "title": "Recruit Co",
+      "id": "savvy-pulse",
+      "images": ["00", "01", "02", "03", "04", "05", "06", "07"],
+      "title": "Savvy Pulse",
       "description": {
-        "short": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, itaque accusantium commodi expedita similique porro quasi et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam",
-        "long": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, itaque accusantium commodi expedita similique porro quasi et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam"
+        "short": "Savvy Pulse is an online marketplace connecting worldwide buyers and sellers of high-quality second-hand guitars. With detailed listings and wish lists, we help guitar enthusiasts find their perfect match.",
+        "long": "Introducing Savvy Pulse, the ultimate online marketplace for buying and selling high-quality, second-hand guitars. Our platform connects buyers and sellers from all around the world, creating a seamless and secure experience for guitar enthusiasts of all levels. As a seller, you can easily post ads for your guitars, with the ability to upload images and detailed descriptions of your instrument. Our platform is designed to make it easy for you to showcase your guitar's unique features and set a fair price. As a buyer, you can easily create a wish list of guitars you're interested in. At Savvy Pulse, we're committed to providing a user-friendly and transparent platform that connects guitar enthusiasts around the world. Join our community today and discover the perfect guitar for your playing style and budget.",
+        "features": [
+          "No CSS framework or library used.",
+          "Navbar and modal were created from scratch.",
+          "Fully responsive for mobile and tablet devices.",
+          "Wishlist functionality was implemented.",
+          "Two custom hooks were used."
+        ]
       },
-      "techStack": ["React", "SASS", "Firebase", "Express.js", "MongoDB"],
+      "techStack": [
+        "React",
+        "Vanilla CSS",
+        "Vite",
+        "Firebase",
+        "Express.js",
+        "MongoDB"
+      ],
       "links": {
-        "live": "/",
-        "git": "/"
+        "live": "https://savvy-pulse.web.app/",
+        "git": "https://github.com/UpalBarua/savvy-pulse-client"
       }
     },
     {
-      "id": 1,
-      "image": "project0.webp",
-      "title": "Savvy Pulse",
+      "id": "code-sage",
+      "images": ["00", "01", "02", "03", "04", "05", "06"],
+      "title": "Code Sage",
       "description": {
-        "short": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, itaque accusantium commodi expedita similique porro quasi et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam",
-        "long": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, itaque accusantium commodi expedita similique porro quasi et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam"
+        "short": "CodeSage is an online learning platform for programming and web development, with courses covering core technologies and programming languages. Our experienced instructors provide engaging content with hands-on exercises to help users master in-demand skills and advance their careers.",
+        "long": "Introducing CodeSage, the online learning platform for programming and web development enthusiasts. Our platform offers a comprehensive range of courses covering core web development technologies, designed to help users master in-demand skills and advance their careers. At CodeSage, we offer both dark and light modes to suit your preferences. Our platform is designed to make learning convenient. As a user, you can easily log in and purchase courses that align with your interests and skill level. Our courses cover topics such as HTML, CSS, JavaScript, and popular web development frameworks like React. We also offer courses on programming languages like Python, Java, and more. Our team of experienced instructors is committed to providing engaging and informative content, with hands-on exercises and projects that reinforce your learning. Join our community of learners and unlock your full potential with CodeSage. With our platform, you can gain the skills and knowledge you need to succeed in today's fast-paced tech industry.",
+        "features": [
+          "Fully responsive for mobile and tablet devices.",
+          "Navbar, Sidebar and loading spinner were created from scratch.",
+          "Form validation was implemented from scratch.",
+          "Dark mode is fully functional.",
+          "React portals was used."
+        ]
       },
-      "techStack": ["React", "SASS", "Firebase", "Express.js", "MongoDB"],
+      "techStack": [
+        "React",
+        "Vanilla CSS",
+        "Typescript",
+        "Vite",
+        "Firebase",
+        "Express.js"
+      ],
       "links": {
-        "live": "/",
-        "git": "/"
+        "live": "https://codesage-bd5cf.web.app/",
+        "git": "https://github.com/UpalBarua/code-sage-client"
       }
     },
     {
-      "id": 2,
-      "image": "project0.webp",
-      "title": "Savvy Pulse",
+      "id": "quick-quiz",
+      "images": ["00", "01", "02", "03", "04", "05"],
+      "title": "Quick Quiz",
       "description": {
-        "short": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, itaque accusantium commodi expedita similique porro quasi et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam",
-        "long": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, itaque accusantium commodi expedita similique porro quasi et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam"
+        "short": "Quick Quiz is an online platform offering quizzes on web development topics such as HTML, CSS, JavaScript, and React. It caters to beginners and experienced developers and provides interview practice. The quizzes are engaging and challenging, aiming to make learning fun while improving skills. Join now to take your skills to the next level.",
+        "long": "Introducing Quick Quiz, the ultimate platform for web development enthusiasts to test their knowledge and skills. Our website offers a range of quizzes on HTML, CSS, JavaScript, React, and more, designed to help you improve your understanding of core web development topics. Whether you're a beginner or an experienced developer, Quick Quiz has something for everyone. With our platform, you can also practice interview questions and prepare for technical interviews, giving you a competitive edge in the job market. Our quizzes are designed to be engaging and challenging, with questions that cover a wide range of topics and difficulty levels. Our aim is to make learning fun and interactive, so you can improve your knowledge and skills in web development while enjoying the process. Join our community of learners today and take your web development skills to the next level with Quick Quiz!",
+        "features": [
+          "Responsive navbar and toast notifications were created from scratch.",
+          "Quiz forms get disabled after submitting answer.",
+          "A bar at the bottom shows how many answered questions are correct or wrong."
+        ]
       },
-      "techStack": ["React", "SASS", "Firebase", "Express.js", "MongoDB"],
+      "techStack": ["React", "Vanilla CSS", "Vite"],
       "links": {
-        "live": "/",
-        "git": "/"
-      }
-    },
-    {
-      "id": 3,
-      "image": "project0.webp",
-      "title": "Savvy Pulse",
-      "description": {
-        "short": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, itaque accusantium commodi expedita similique porro quasi et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam",
-        "long": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, itaque accusantium commodi expedita similique porro quasi et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam"
-      },
-      "techStack": ["React", "SASS", "Firebase", "Express.js", "MongoDB"],
-      "links": {
-        "live": "/",
-        "git": "/"
-      }
-    },
-    {
-      "id": 4,
-      "image": "project0.webp",
-      "title": "Savvy Pulse",
-      "description": {
-        "short": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, itaque accusantium commodi expedita similique porro quasi et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam",
-        "long": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, itaque accusantium commodi expedita similique porro quasi et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam et maxime corporis laboriosam"
-      },
-      "techStack": ["React", "SASS", "Firebase", "Express.js", "MongoDB"],
-      "links": {
-        "live": "/",
-        "git": "/"
+        "live": "https://rad-custard-83f4fd.netlify.app/",
+        "git": "https://github.com/UpalBarua/quick-quiz"
       }
     }
   ]

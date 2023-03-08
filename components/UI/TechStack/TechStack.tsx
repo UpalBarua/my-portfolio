@@ -1,9 +1,7 @@
 import styles from './TechStack.module.scss';
 
 interface TechStackProps {
-  techStack: {
-    tool: string;
-  }[];
+  techStack: string[];
 }
 
 export const TechStack = ({ techStack }: TechStackProps) => {
