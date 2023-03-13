@@ -35,11 +35,11 @@ export const ProjectDetails = ({
       </div>
       <TechStack techStack={techStack} />
       <p className={styles.Description}>{description.long}</p>
-      <ul className={styles.Features}>
+      <ol className={styles.Features} style={{ listStyle: 'inside' }}>
         {description?.features.map((feature, index) => (
           <li key={index}>{feature}</li>
         ))}
-      </ul>
+      </ol>
       {/* rc */}
       <div className={styles.Screenshots}>
         <Title>Screenshots</Title>

@@ -18,8 +18,9 @@ export const Hero = () => {
         an &#123;enthusiastic&#125; developer
       </h1>
       <p className={styles.Text}>
-        I build <span>design systems</span> and code websites for{' '}
-        <span>leaders</span> and brands all around the world.
+        I bring ideas to life by crafting{' '}
+        <span>intuitive and dynamic web experience</span>
+        with an eye for design and a passion for coding
       </p>
       <div className={styles.ButtonGroup}>
         <Button type="primary" as="link" href="/projects">

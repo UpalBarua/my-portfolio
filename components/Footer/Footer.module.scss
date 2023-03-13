@@ -2,20 +2,34 @@
 
 .Footer {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   padding-block: var(--spacing-400);
   margin-top: var(--spacing-500);
+  color: var(--color-light-500);
+
+  @include mq('md') {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   .Copyright {
-    display: none;
+    padding-top: var(--spacing-300);
 
     @include mq('md') {
-      display: block;
+      padding-top: 0;
     }
   }
 
   .Links {
     display: flex;
     gap: var(--spacing-500);
+
+    > a:hover {
+      color: var(--color-light-300);
+      text-decoration: underline;
+    }
   }
 }

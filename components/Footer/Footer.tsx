@@ -14,7 +14,7 @@ export const Footer = () => {
         </Link>
         <Link href="/contact">Contact</Link>
       </div>
-      <p className={styles.Copyright}>Made in Bangladesh 🇧🇩</p>
+      <p className={styles.Copyright}>&copy; 2023 All rights reserved.</p>
     </footer>
   );
 };

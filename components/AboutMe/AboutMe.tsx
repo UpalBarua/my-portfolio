@@ -12,24 +12,26 @@ export const AboutMe = () => {
         <div className={styles.Column}>
           <h2 className={styles.Title}>Hey 👋</h2>
           <p className={styles.Text}>
-            My name is <strong>Upal Barua</strong>. I&apos;m a designer and
-            developer from <strong>Bangladesh</strong>.
+            My name is <strong>Upal Barua</strong>, and I'm a designer and
+            developer who is passionate about creating intuitive and dynamic
+            websites and web apps. Over the past 3 years, I have been dedicated
+            to learning and mastering my craft, and I am currently focused on
+            designing and developing digital solutions using the MERN stack. I
+            am particularly skilled in CSS and React.As a tech enthusiast, I am
+            always seeking to expand my knowledge and improve myself, both
+            personally and professionally.
           </p>
           <p className={styles.Text}>
-            I&apos;ve been a designer and developer for over{' '}
-            <strong>3 years</strong> now. I&apos;m currently focusing on
-            designing UIs and building applications using Javascript/React.
+            Aside from coding, I love listening to music and having deep
+            conversations with others about life, philosophy, and everything in
+            between. I believe that being able to connect with others on a
+            deeper level is essential to building strong relationships and
+            creating meaningful work.
           </p>
-          {/* <p className={styles.Text}>
-            The project I&apos;m the most proud of is{' '}
-            <strong>Flitsmeister</strong>, which started as an app I built with{' '}
-            <strong>Sjoerd</strong> and Jorn to prevent us from getting speeding
-            tickets. It&apos;s now a profitable business and has over
-            <strong>1.800.000 active users</strong> in The EU. Being able to
-            both design and develop is a lot of fun. When you have an idea,
-            there&apos;s nothing holding you back from building it. You can view
-            my previous personal website over here.
-          </p> */}
+          <p className={styles.Text}>
+            If you have a project in mind or just want to chat, feel free to get
+            in touch. I would love to hear from you!
+          </p>
         </div>
         <div className={styles.Column}>
           <Image

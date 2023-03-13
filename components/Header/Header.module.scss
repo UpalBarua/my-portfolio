@@ -1,17 +1,20 @@
 @use '../../styles/mixins' as *;
 
 .Header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  // rec
-  padding-block: var(--spacing-200);
-  position: sticky;
-  top: 0;
-  background-color: var(--color-dark-500);
+  position: fixed;
+  width: 100%;
 
-  @include mq('md') {
-    padding-block: var(--spacing-300);
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // rec
+    padding-block: var(--spacing-200);
+    background-color: var(--color-dark-500);
+
+    @include mq('md') {
+      padding-block: var(--spacing-300);
+    }
   }
 
   .Logo {
@@ -42,7 +45,7 @@
     font-size: var(--fs-500);
     // rc
     // text-align: center;
-    background-color: var(--color-dark-300);
+    background-color: var(--color-dark-400);
     // box-shadow: var(--box-shadow);
     box-shadow: var(--shadow-md);
     transform: scale(0);

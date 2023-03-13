@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { RiCodeBoxFill } from 'react-icons/ri';
 import { HiDotsHorizontal } from 'react-icons/hi';
+import { Container } from '../UI/Container/Container';
 import styles from './Header.module.scss';
 
 const NAV_OPTIONS = [
@@ -52,32 +53,34 @@ export const Header = () => {
 
   return (
     <header className={styles.Header}>
-      <Link className={styles.Logo} href="/">
-        <RiCodeBoxFill className={styles.Icon} />
-        <span>Upal Barua</span>
-      </Link>
-      <nav>
-        <ul className={styles.NavMenu} data-open={isNavOpen}>
-          {NAV_OPTIONS.map(({ id, title, link }) => (
-            <li key={id}>
-              <Link
-                className={styles.NavLink}
-                href={link}
-                data-active={pathname === link}>
-                {title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-      {/* <div className={styles.ButtonGroup}>
+      <Container>
+        <Link className={styles.Logo} href="/">
+          <RiCodeBoxFill className={styles.Icon} />
+          <span>Upal Barua</span>
+        </Link>
+        <nav>
+          <ul className={styles.NavMenu} data-open={isNavOpen}>
+            {NAV_OPTIONS.map(({ id, title, link }) => (
+              <li key={id}>
+                <Link
+                  className={styles.NavLink}
+                  href={link}
+                  data-active={pathname === link}>
+                  {title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        {/* <div className={styles.ButtonGroup}>
         <button className={styles.ThemeToggle}>
           <BsFillMoonStarsFill />
         </button>
       </div> */}
-      <button className={styles.NavToggle} onClick={handleNavToggle}>
-        <HiDotsHorizontal />
-      </button>
+        <button className={styles.NavToggle} onClick={handleNavToggle}>
+          <HiDotsHorizontal />
+        </button>
+      </Container>
     </header>
   );
 };

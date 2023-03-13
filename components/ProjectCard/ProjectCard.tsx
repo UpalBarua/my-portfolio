@@ -12,7 +12,6 @@ export const ProjectCard = ({
   techStack,
   links,
 }: IProject) => {
-  console.log(`/images/projects/${id}-00.png`);
   return (
     <div className={styles.ProjectCard}>
       <Image

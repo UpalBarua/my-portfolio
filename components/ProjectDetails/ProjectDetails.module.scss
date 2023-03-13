@@ -24,14 +24,24 @@
     box-shadow: var(--shadow-sm);
     object-fit: cover;
     object-position: center;
-    height: 16rem;
+    height: 15rem;
+
+    @include mq('md') {
+      height: 20rem;
+    }
   }
 
   .Screenshots {
+    margin-block: var(--spacing-600);
+
+    > h2 {
+      padding-bottom: var(--spacing-300);
+    }
+
     .Gallery {
       display: grid;
       grid-template-columns: 1fr;
-      gap: var(--spacing-300);
+      gap: var(--spacing-400);
 
       @include mq('md') {
         grid-template-columns: repeat(2, 1fr);

@@ -3,7 +3,7 @@
 .AboutMe {
   display: grid;
   gap: var(--spacing-400);
-  padding-block: var(--spacing-600);
+  padding-block: var(--spacing-700);
 
   @include mq('md') {
     gap: var(--spacing-700);
@@ -14,6 +14,7 @@
     grid-template-columns: 1fr;
     align-items: start;
     gap: var(--spacing-500);
+    align-items: center;
 
     @include mq('lg') {
       grid-template-columns: repeat(2, 1fr);

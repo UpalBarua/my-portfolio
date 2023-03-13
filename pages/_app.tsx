@@ -14,14 +14,16 @@ const TOASTER_STYLES = {
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Container>
+    <>
       <Header />
-      <Component {...pageProps} />
-      <Toaster
-        toastOptions={{
-          style: TOASTER_STYLES,
-        }}
-      />
-    </Container>
+      <Container style={{ paddingTop: '3.5rem' }}>
+        <Component {...pageProps} />
+        <Toaster
+          toastOptions={{
+            style: TOASTER_STYLES,
+          }}
+        />
+      </Container>
+    </>
   );
 }
