@@ -14,12 +14,12 @@ export const AboutMe = () => {
           <p className={styles.Text}>
             My name is <strong>Upal Barua</strong>, and I'm a designer and
             developer who is passionate about creating intuitive and dynamic
-            websites and web apps. Over the past 3 years, I have been dedicated
-            to learning and mastering my craft, and I am currently focused on
-            designing and developing digital solutions using the MERN stack. I
-            am particularly skilled in CSS and React.As a tech enthusiast, I am
-            always seeking to expand my knowledge and improve myself, both
-            personally and professionally.
+            websites and web apps. Over the past <strong>3 years</strong> I have
+            been dedicated to learning and mastering my craft, and I am
+            currently focused on designing and developing digital solutions
+            using the <strong>MERN stack</strong>. I am particularly skilled in
+            CSS and React. As a tech enthusiast, I am always seeking to expand
+            my knowledge and improve myself, both personally and professionally.
           </p>
           <p className={styles.Text}>
             Aside from coding, I love listening to music and having deep

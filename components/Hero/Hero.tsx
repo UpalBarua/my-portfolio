@@ -15,11 +15,11 @@ export const Hero = () => {
       <h1 className={styles.Title}>
         Hi, I&apos;m <span>Upal</span>
         <br />
-        an &#123;enthusiastic&#125; developer
+        an <span>&#123;</span>enthusiastic<span>&#125;</span> developer
       </h1>
       <p className={styles.Text}>
         I bring ideas to life by crafting{' '}
-        <span>intuitive and dynamic web experience</span>
+        <span>intuitive and dynamic web experience </span>
         with an eye for design and a passion for coding
       </p>
       <div className={styles.ButtonGroup}>
