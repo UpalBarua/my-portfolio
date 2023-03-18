@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { CSSProperties, ReactNode } from 'react';
 import styles from './Title.module.scss';
 
-export const Title = ({
-  children,
-  ...props
-}: {
-  children: React.ReactNode;
-}) => {
+interface TitleProps {
+  children: ReactNode;
+  style?: CSSProperties;
+}
+
+export const Title = ({ children, style }: TitleProps) => {
   return (
-    <h2 className={styles.Title} {...props}>
+    <h2 className={styles.Title} style={style}>
       {children}
     </h2>
   );

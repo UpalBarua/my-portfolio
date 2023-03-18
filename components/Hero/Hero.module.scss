@@ -44,12 +44,4 @@
     justify-content: center;
     gap: var(--spacing-400);
   }
-
-  .Button:first-child {
-    @include button('primary');
-  }
-
-  .Button:last-child {
-    @include button('secondary');
-  }
 }

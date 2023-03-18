@@ -20,7 +20,7 @@ interface FormEventTarget extends EventTarget {
 export const ContactForm = () => {
   const handleMessage = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const form: FormEventTarget = event.target;
+    const form = event.target as FormEventTarget;
 
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
