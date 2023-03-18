@@ -6,7 +6,6 @@ import { TechStack } from '../UI/TechStack/TechStack';
 
 export const ProjectCard = ({
   id,
-  images,
   title,
   description,
   techStack,

@@ -4,9 +4,23 @@ import emailjs from '@emailjs/browser';
 import { toast } from 'react-hot-toast';
 import styles from './ContactForm.module.scss';
 
+interface FormEventTarget extends EventTarget {
+  name: {
+    value: string;
+  };
+  email: {
+    value: string;
+  };
+  message: {
+    value: string;
+  };
+  reset(): void;
+}
+
 export const ContactForm = () => {
   const handleMessage = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const form: FormEventTarget = event.target;
 
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
@@ -18,9 +32,9 @@ export const ContactForm = () => {
     }
 
     const newMessage = {
-      name: event.target.name.value,
-      email: event.target.email.value,
-      message: event.target.message.value,
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value,
     };
 
     if (!newMessage.name || !newMessage.email || !newMessage.message) {
@@ -36,7 +50,7 @@ export const ContactForm = () => {
       })
       .then((data) => {
         if (data.status === 200) {
-          event.target.reset();
+          form.reset();
         }
       })
       .catch((error) => {
