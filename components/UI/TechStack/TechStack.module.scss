@@ -4,14 +4,9 @@
   gap: var(--spacing-200);
 
   > span {
-    padding: 2px var(--spacing-500);
     border-radius: 100vmin;
+    padding: 2px var(--spacing-500);
     font-size: var(--fs-300);
-    // rc
-    // background-color: hsla(190, 64%, 44%, 15%);
-    // border: 2px solid var(--color-accent-400);
-    // color: var(--color-accent-400);
-
     background-color: var(--color-dark-300);
   }
 }

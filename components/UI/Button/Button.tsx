@@ -18,7 +18,6 @@ export const Button = ({
   target,
   ...props
 }: ButtonProps) => {
-  // rc
   if (as === 'link' && href && type === 'rounded') {
     return (
       <Link className={styles.RoundedLink} href={href} target={target}>

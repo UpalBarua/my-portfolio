@@ -21,7 +21,6 @@
   background-color: transparent;
   padding: var(--spacing-200) var(--spacing-500);
   border: 3px solid transparent;
-  // rc
   border-radius: 8px;
   box-shadow: var(--shadow-sm);
   color: var(--color-light-300);
@@ -41,13 +40,4 @@
   @if $type == 'secondary' {
     border-color: var(--color-light-300);
   }
-
-  // &[data-type='primary'] {
-  //   background-color: var(--color-accent-400);
-  //   border-color: var(--color-light-300);
-  // }
-
-  // &[data-type='secondary'] {
-  //   border-color: var(--color-light-300);
-  // }
 }

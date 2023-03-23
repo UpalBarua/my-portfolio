@@ -2,34 +2,19 @@
 
 .SkillCard {
   display: grid;
-  // justify-content: center;
   justify-items: center;
   align-items: center;
   gap: var(--spacing-200);
-  background-color: var(--color-dark-400);
+  border-radius: 6px;
   padding: var(--spacing-500) var(--spacing-200);
   box-shadow: var(--shadow-sm);
-  border-radius: 6px;
+  background-color: var(--color-dark-400);
 
   @include mq('md') {
     padding: var(--spacing-400);
   }
 
-  // > i {
-  //   font-size: 2.5rem;
-
-  //   @include mq('md') {
-  //     font-size: 3rem;
-  //   }
-
-  //   @include mq('lg') {
-  //     font-size: 4rem;
-  //   }
-  // }
-
   > h3 {
-    // rc
-    // font-weight: var(--fw-semibold);
     font-size: var(--fs-300);
 
     @include mq('md') {

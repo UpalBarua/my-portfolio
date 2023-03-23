@@ -34,7 +34,6 @@ export const getStaticProps = async ({
   const projects = await getProjects();
 
   const filteredProject = projects.find(
-    // rc
     ({ id }: { id: number }) => id == params.projectId
   );
 

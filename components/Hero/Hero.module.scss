@@ -4,7 +4,6 @@
   display: grid;
   justify-items: center;
   gap: var(--spacing-400);
-  // rc
   padding-block: var(--spacing-700);
   text-align: center;
 
@@ -30,7 +29,7 @@
 
   .Text {
     font-size: var(--fs-500);
-    color: hsla(0, 0%, 100%, 0.5);
+    color: hsla(0, 0%, 100%, 0.65);
     max-width: 25rem;
     padding-bottom: var(--spacing-200);
 
