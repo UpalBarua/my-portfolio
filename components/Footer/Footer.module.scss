@@ -27,9 +27,21 @@
     display: flex;
     gap: var(--spacing-500);
 
-    > a:hover {
-      color: var(--color-light-300);
-      text-decoration: underline;
+    > a {
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: var(--color-light-400);
+        transform: scale(0);
+        transition: transform 250ms ease-out;
+      }
+
+      &:hover::after,
+      &:focus::after {
+        transform: scale(1);
+      }
     }
   }
 }
