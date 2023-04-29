@@ -2,6 +2,8 @@ import type { AppProps } from 'next/app';
 import { Header } from '@/components/Header/Header';
 import { Container } from '@/components/UI/Container/Container';
 import { Toaster } from 'react-hot-toast';
+
+import 'react-photo-view/dist/react-photo-view.css';
 import '@/styles/globals.scss';
 
 const TOASTER_STYLES = {

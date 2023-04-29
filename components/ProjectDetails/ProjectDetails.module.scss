@@ -25,6 +25,7 @@
     object-fit: cover;
     object-position: center;
     height: 15rem;
+    cursor: pointer;
 
     @include mq('md') {
       height: 20rem;
