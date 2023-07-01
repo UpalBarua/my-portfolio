@@ -1,7 +1,8 @@
+import { FC } from 'react';
 import Head from 'next/head';
 import { AboutMe } from '@/components/AboutMe/AboutMe';
 
-export default function about() {
+const About: FC = () => {
   return (
     <>
       <Head>
@@ -10,4 +11,6 @@ export default function about() {
       <AboutMe />
     </>
   );
-}
+};
+
+export default About;

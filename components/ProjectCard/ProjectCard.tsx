@@ -1,16 +1,18 @@
+import { FC } from 'react';
 import Image from 'next/image';
 import { Button } from '../UI/Button/Button';
 import { BsFillPlayFill, BsGithub } from 'react-icons/bs';
 import styles from './ProjectCard.module.scss';
 import { TechStack } from '../UI/TechStack/TechStack';
+import type { Project } from '@/types/project';
 
-export const ProjectCard = ({
+export const ProjectCard: FC<Project> = ({
   id,
   title,
   description,
   techStack,
   links,
-}: IProject) => {
+}) => {
   return (
     <div className={styles.ProjectCard}>
       <Image

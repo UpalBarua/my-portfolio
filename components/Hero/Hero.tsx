@@ -1,8 +1,9 @@
+import { FC } from 'react';
 import Image from 'next/image';
 import { Button } from '../UI/Button/Button';
 import styles from './Hero.module.scss';
 
-export const Hero = () => {
+export const Hero: FC = () => {
   return (
     <main className={styles.Hero}>
       <Image

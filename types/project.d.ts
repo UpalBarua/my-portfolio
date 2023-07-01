@@ -1,4 +1,4 @@
-interface IProject {
+export interface Project {
   id: string;
   images: string[];
   title: string;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Button } from '../UI/Button/Button';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-hot-toast';
@@ -14,10 +14,10 @@ interface FormEventTarget extends EventTarget {
   message: {
     value: string;
   };
-  reset(): void;
+  reset: () => void;
 }
 
-export const ContactForm = () => {
+export const ContactForm: FC = () => {
   const handleMessage = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.target as FormEventTarget;
@@ -27,8 +27,7 @@ export const ContactForm = () => {
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
     if (!serviceId || !templateId || !publicKey) {
-      console.error('something went wrong');
-      return;
+      return toast.error('something went wrong');
     }
 
     const newMessage = {
@@ -38,8 +37,7 @@ export const ContactForm = () => {
     };
 
     if (!newMessage.name || !newMessage.email || !newMessage.message) {
-      toast.error('Something is missing');
-      return;
+      return toast.error('Something is missing');
     }
 
     toast
@@ -61,18 +59,18 @@ export const ContactForm = () => {
 
   return (
     <form className={styles.ContactForm} onSubmit={handleMessage}>
-      <div className={styles.Field}>
+      <fieldset className={styles.Field}>
         <label htmlFor="name">Name</label>
         <input id="name" type="text" name="name" />
-      </div>
-      <div className={styles.Field}>
+      </fieldset>
+      <fieldset className={styles.Field}>
         <label htmlFor="email">Email</label>
         <input id="email" type="email" name="email" />
-      </div>
-      <div className={styles.Field}>
+      </fieldset>
+      <fieldset className={styles.Field}>
         <label htmlFor="message">Message</label>
         <textarea id="" name="message"></textarea>
-      </div>
+      </fieldset>
       <Button as="button" type="primary">
         Send
       </Button>

@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import Link from 'next/link';
 import { Title } from '../UI/Title/Title';
 import { ContactForm } from '../ContactForm/ContactForm';
@@ -26,7 +27,7 @@ const LINKS = [
   },
 ];
 
-export const ContactMe = () => {
+export const ContactMe: FC = () => {
   return (
     <section className={styles.ContactMe}>
       <Title>Contact Me</Title>

@@ -1,9 +1,15 @@
+import { FC } from 'react';
 import { ProjectCard } from '../ProjectCard/ProjectCard';
 import { Title } from '../UI/Title/Title';
 import { Button } from '../UI/Button/Button';
 import styles from './LatestProjects.module.scss';
+import type { Project } from '@/types/project';
 
-export const LatestProjects = ({ projects }: { projects: IProject[] }) => {
+interface LatestProjectsProps {
+  projects: Project[];
+}
+
+export const LatestProjects: FC<LatestProjectsProps> = ({ projects }) => {
   return (
     <section className={styles.LatestProjects}>
       <Title>Latest Projects</Title>

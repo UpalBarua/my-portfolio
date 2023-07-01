@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { SkillCard } from '../SkillCard/SkillCard';
 import { Title } from '../UI/Title/Title';
@@ -117,11 +118,10 @@ const TOOLS = [
   },
 ];
 
-export const Skills = () => {
+export const Skills: FC = () => {
   return (
     <section className={styles.Skills}>
       <Title>My Skills</Title>
-
       <Tabs className={styles.Tabs}>
         <TabList className={styles.TabList}>
           {['Frontend', 'Backend', 'Tools'].map((category, index) => (
@@ -133,19 +133,16 @@ export const Skills = () => {
             </Tab>
           ))}
         </TabList>
-
         <TabPanel className={styles.TabPanel}>
           {FRONTEND_SKILLS.map((skill) => (
             <SkillCard key={skill.id} {...skill} />
           ))}
         </TabPanel>
-
         <TabPanel className={styles.TabPanel}>
           {BACKEND_SKILLS.map((skill) => (
             <SkillCard key={skill.id} {...skill} />
           ))}
         </TabPanel>
-
         <TabPanel className={styles.TabPanel}>
           {TOOLS.map((skill) => (
             <SkillCard key={skill.id} {...skill} />

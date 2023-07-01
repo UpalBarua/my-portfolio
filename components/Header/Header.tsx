@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, FC } from 'react';
 import { useRouter } from 'next/router';
 import { RiCodeBoxFill } from 'react-icons/ri';
 import { HiDotsHorizontal } from 'react-icons/hi';
@@ -34,7 +34,7 @@ const NAV_OPTIONS = [
   },
 ];
 
-export const Header = () => {
+export const Header: FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const { pathname } = useRouter();
 

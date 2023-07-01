@@ -1,29 +1,36 @@
+import { FC } from 'react';
 import { getProjects } from '@/utils/getProjects';
 import { ProjectDetails } from '@/components/ProjectDetails/ProjectDetails';
+import type { Project } from '@/types/project';
 
-export default function projectId({
-  filteredProject,
-}: {
-  filteredProject: IProject;
-}) {
-  return <ProjectDetails {...filteredProject} />;
+interface ProjectProps {
+  filteredProject: Project;
 }
 
 export const getStaticPaths = async () => {
-  const projects = await getProjects();
+  try {
+    const projects = await getProjects();
 
-  const paths = projects.map((project: IProject) => {
+    const paths = projects.map((project: Project) => {
+      return {
+        params: {
+          projectId: project.id + '',
+        },
+      };
+    });
+
     return {
-      params: {
-        projectId: project.id + '',
-      },
+      paths,
+      fallback: false,
     };
-  });
+  } catch (error) {
+    console.error(error);
 
-  return {
-    paths,
-    fallback: false,
-  };
+    return {
+      paths: [],
+      fallback: false,
+    };
+  }
 };
 
 export const getStaticProps = async ({
@@ -31,13 +38,29 @@ export const getStaticProps = async ({
 }: {
   params: { projectId: string | number };
 }) => {
-  const projects = await getProjects();
+  try {
+    const projects = await getProjects();
 
-  const filteredProject = projects.find(
-    ({ id }: { id: number }) => id == params.projectId
-  );
+    const filteredProject = projects.find(
+      ({ id }: { id: number }) => id == params.projectId
+    );
 
-  return {
-    props: { filteredProject },
-  };
+    return {
+      props: { filteredProject },
+    };
+  } catch (error) {
+    console.error(error);
+
+    return {
+      props: {
+        filteredProject: {},
+      },
+    };
+  }
 };
+
+const Project: FC<ProjectProps> = ({ filteredProject }) => {
+  return <ProjectDetails {...filteredProject} />;
+};
+
+export default Project;

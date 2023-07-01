@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 import Link from 'next/link';
 import styles from './Button.module.scss';
 
@@ -10,14 +10,14 @@ interface ButtonProps {
   target?: string;
 }
 
-export const Button = ({
+export const Button: FC<ButtonProps> = ({
   children,
   type,
   as,
   href,
   target,
   ...props
-}: ButtonProps) => {
+}) => {
   if (as === 'link' && href && type === 'rounded') {
     return (
       <Link className={styles.RoundedLink} href={href} target={target}>

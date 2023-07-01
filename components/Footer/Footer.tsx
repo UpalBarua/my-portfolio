@@ -1,7 +1,8 @@
+import { FC } from 'react';
 import Link from 'next/link';
 import styles from './Footer.module.scss';
 
-const footerLinks = [
+const FOOTER_LINKS = [
   {
     id: 0,
     href: '/',
@@ -28,11 +29,11 @@ const footerLinks = [
   },
 ];
 
-export const Footer = () => {
+export const Footer: FC = () => {
   return (
     <footer className={styles.Footer}>
       <div className={styles.Links}>
-        {footerLinks.map(({ id, href, label, target }) => (
+        {FOOTER_LINKS.map(({ id, href, label, target }) => (
           <Link key={id} href={href} target={target}>
             {label}
           </Link>

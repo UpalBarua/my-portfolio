@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import Image from 'next/image';
 import { Title } from '../UI/Title/Title';
 import { Button } from '../UI/Button/Button';
@@ -5,15 +6,16 @@ import { TechStack } from '../UI/TechStack/TechStack';
 import { BsFillPlayFill, BsGithub } from 'react-icons/bs';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import styles from './ProjectDetails.module.scss';
+import type { Project } from '@/types/project';
 
-export const ProjectDetails = ({
+export const ProjectDetails: FC<Project> = ({
   id,
   images,
   title,
   description,
   techStack,
   links,
-}: IProject) => {
+}) => {
   return (
     <PhotoProvider>
       <section className={styles.ProjectDetails}>
@@ -42,7 +44,6 @@ export const ProjectDetails = ({
             <li key={index}>{feature}</li>
           ))}
         </ol>
-        {/* rc */}
         <div className={styles.Screenshots}>
           <Title>Screenshots</Title>
           <div className={styles.Gallery}>

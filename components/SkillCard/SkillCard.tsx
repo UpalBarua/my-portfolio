@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Image from 'next/image';
 import styles from './SkillCard.module.scss';
 
@@ -7,7 +7,7 @@ interface SkillCardProps {
   title: string;
 }
 
-export const SkillCard = ({ icon, title }: SkillCardProps) => {
+export const SkillCard: FC<SkillCardProps> = ({ icon, title }) => {
   return (
     <div className={styles.SkillCard}>
       <Image
