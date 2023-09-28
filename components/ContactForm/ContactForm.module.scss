@@ -30,7 +30,7 @@
       transition: border-color 200ms ease-out;
 
       &:focus {
-        border-color: var(--color-accent-400);
+        border-color: hsl(var(--color-accent-400));
       }
     }
 

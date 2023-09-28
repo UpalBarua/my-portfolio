@@ -47,7 +47,7 @@
   }
 
   &.active {
-    color: var(--color-accent-400);
+    color: hsl(var(--color-accent-400));
     background-color: hsla(190, 64%, 44%, 20%);
     box-shadow: var(--shadow-sm);
   }

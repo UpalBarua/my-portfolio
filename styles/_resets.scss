@@ -14,8 +14,8 @@ body {
   font-family: var(--ff-primary);
   font-weight: var(--fw-regular);
   line-height: 1.6;
-  background-color: var(--color-dark-500);
-  color: var(--color-light-400);
+  background-color: hsl(var(--color-primary-950));
+  color: hsl(var(--color-primary-50));
 
   h1,
   h2,

@@ -6,7 +6,7 @@ const About: FC = () => {
   return (
     <>
       <Head>
-        <title>Upal Barua | About</title>
+        <title>Upal_Barua | About</title>
       </Head>
       <AboutMe />
     </>

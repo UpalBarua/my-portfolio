@@ -6,7 +6,7 @@ const Contact: FC = () => {
   return (
     <>
       <Head>
-        <title>Upal Barua | Contact</title>
+        <title>Upal_Barua | Contact</title>
       </Head>
       <ContactMe />
     </>

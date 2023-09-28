@@ -18,7 +18,7 @@
   }
 
   &[data-type='primary'] {
-    background-color: var(--color-accent-400);
+    background-color: hsl(var(--color-accent-400));
     border-color: var(--color-light-300);
   }
 
@@ -38,7 +38,7 @@
 
   &:hover,
   &:focus {
-    background-color: var(--color-accent-400);
+    background-color: hsl(var(--color-accent-400));
     color: var(--color-light-300);
   }
 }

@@ -54,7 +54,7 @@
     font-size: var(--fs-500);
 
     > a {
-      color: var(--color-accent-400);
+      color: hsl(var(--color-accent-400));
     }
   }
 }

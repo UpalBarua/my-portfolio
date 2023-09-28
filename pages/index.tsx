@@ -36,7 +36,7 @@ const Home: FC<HomeProps> = ({ projects }) => {
   return (
     <>
       <Head>
-        <title>Upal Barua</title>
+        <title>Upal_Barua</title>
       </Head>
       <Hero />
       <Skills />
