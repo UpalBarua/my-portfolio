@@ -1,4 +1,10 @@
 @mixin mq($breakpoint) {
+  @if $breakpoint == 'sm' {
+    @media screen and (min-width: 40em) {
+      @content;
+    }
+  }
+
   @if $breakpoint == 'md' {
     @media screen and (min-width: 48em) {
       @content;
@@ -6,7 +12,19 @@
   }
 
   @if $breakpoint == 'lg' {
-    @media screen and (min-width: 60em) {
+    @media screen and (min-width: 64em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 'xl' {
+    @media screen and (min-width: 80em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == '2xl' {
+    @media screen and (min-width: 96em) {
       @content;
     }
   }

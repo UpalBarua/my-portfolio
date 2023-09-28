@@ -3,6 +3,7 @@
 .Header {
   position: fixed;
   width: 100%;
+  z-index: 10;
 
   > div {
     display: flex;
@@ -17,50 +18,34 @@
   }
 
   .Logo {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: var(--spacing-200);
     font-family: var(--ff-secondary);
-    font-size: var(--fs-600);
+    font-size: var(--fs-500);
     font-weight: var(--fw-bold);
+
+    @include mq('sm') {
+      font-size: var(--fs-600);
+    }
 
     .Icon {
       color: var(--color-accent-400);
-      font-size: var(--fs-800);
+      font-size: var(--fs-700);
+
+      @include mq('sm') {
+        font-size: var(--fs-800);
+      }
     }
   }
 
   .NavMenu {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-500);
-    position: absolute;
-    top: 4rem;
-    right: 0.5rem;
-    z-index: 10;
-    padding: var(--spacing-600) var(--spacing-800);
-    border-radius: var(--border-radius);
+    display: none;
+    gap: var(--spacing-600);
     font-size: var(--fs-500);
-    background-color: var(--color-dark-400);
-    text-align: center;
-    box-shadow: var(--shadow-md);
-    transform: scale(0);
-    transform-origin: top right;
-    transition: transform 150ms ease-out;
-
-    &[data-open='true'] {
-      transform: scale(1);
-    }
 
     @include mq('md') {
-      position: initial;
-      flex-direction: row;
-      gap: var(--spacing-600);
-      padding: 0;
-      background-color: transparent;
-      box-shadow: none;
-      transform: scale(1);
-      transition: none;
+      display: flex;
     }
   }
 
@@ -86,41 +71,5 @@
     &[data-active='true']::after {
       transform: scale(1);
     }
-  }
-
-  .ButtonGroup {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-500);
-  }
-
-  .NavToggle {
-    display: inline-flex;
-    border-radius: 50%;
-    padding: var(--spacing-100);
-    font-size: var(--fs-700);
-    background-color: var(--color-accent-400);
-    color: var(--color-light-400);
-    border: 0;
-    box-shadow: var(--shadow-sm);
-    cursor: pointer;
-
-    &:hover,
-    &:focus {
-      background-color: var(--color-accent-500);
-    }
-
-    @media screen and (min-width: 48em) {
-      display: none;
-    }
-  }
-
-  .ThemeToggle {
-    display: inline-flex;
-    font-size: var(--fs-600);
-    background-color: transparent;
-    color: var(--color-light-400);
-    border: 0;
-    cursor: pointer;
   }
 }
