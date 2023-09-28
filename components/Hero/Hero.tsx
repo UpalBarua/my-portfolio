@@ -1,18 +1,13 @@
-import { FC } from 'react';
 import Image from 'next/image';
 import { Button } from '../UI/Button/Button';
 import styles from './Hero.module.scss';
 
-export const Hero: FC = () => {
+export const Hero = () => {
   return (
     <main className={styles.Hero}>
-      <Image
-        className={styles.Avatar}
-        src="/images/avatar.svg"
-        alt="avatar"
-        height={250}
-        width={250}
-      />
+      <div className={styles.Avatar}>
+        <Image src="/images/avatar.svg" alt="avatar" fill />
+      </div>
       <h1 className={styles.Title}>
         Hi, I&apos;m <span>Upal</span>
         <br />
@@ -20,18 +15,18 @@ export const Hero: FC = () => {
       </h1>
       <p className={styles.Text}>
         I bring ideas to life by crafting{' '}
-        <span>intuitive and dynamic web experience </span>
+        <strong>intuitive and dynamic web experience </strong>
         with an eye for design and a passion for coding
       </p>
       <div className={styles.ButtonGroup}>
-        <Button type="primary" as="link" href="/projects">
+        <Button variant="primary" href="/projects" asLink>
           My Projects
         </Button>
         <Button
-          type="secondary"
-          as="link"
+          variant="secondary"
           href="https://drive.google.com/file/d/1fAZLlu-XvqSaNsEETEspeyUlhd1XvMT6/view?usp=share_link"
-          target="_blank">
+          target="_blank"
+          asLink>
           My Resume
         </Button>
       </div>

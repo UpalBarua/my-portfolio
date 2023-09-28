@@ -1,46 +1,35 @@
-import { FC, ReactNode } from 'react';
+import type { Url } from 'next/dist/shared/lib/router/router';
 import Link from 'next/link';
+import { ReactNode } from 'react';
 import styles from './Button.module.scss';
 
-interface ButtonProps {
+type ButtonProps = {
   children: ReactNode;
-  type: 'primary' | 'secondary' | 'rounded';
-  as: 'button' | 'link';
-  href?: string;
+  variant: 'primary' | 'secondary' | 'rounded';
+  href?: Url;
   target?: string;
-}
+  asLink?: boolean;
+};
 
-export const Button: FC<ButtonProps> = ({
+export const Button = ({
   children,
-  type,
-  as,
+  variant,
+  asLink,
   href,
   target,
-  ...props
-}) => {
-  if (as === 'link' && href && type === 'rounded') {
-    return (
-      <Link className={styles.RoundedLink} href={href} target={target}>
-        {children}
-      </Link>
-    );
-  }
-
-  if (as === 'link' && href && type) {
-    return (
-      <Link
-        className={styles.Button}
-        href={href}
-        data-type={type}
-        target={target}
-        {...props}>
-        {children}
-      </Link>
-    );
-  }
-
-  return (
-    <button className={styles.Button} data-type={type} {...props}>
+  ...restProps
+}: ButtonProps) => {
+  return asLink ? (
+    <Link
+      className={styles.Button}
+      href={href || '#'}
+      data-variant={variant}
+      target={target}
+      {...restProps}>
+      {children}
+    </Link>
+  ) : (
+    <button className={styles.Button} data-variant={variant} {...restProps}>
       {children}
     </button>
   );

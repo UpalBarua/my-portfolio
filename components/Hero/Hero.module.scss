@@ -4,23 +4,26 @@
   display: grid;
   justify-items: center;
   gap: var(--spacing-400);
-  padding-block: var(--spacing-700);
+  padding-block: var(--spacing-300);
   text-align: center;
 
   .Avatar {
-    background-color: var(--color-dark-300);
+    position: relative;
+    aspect-ratio: 1/1;
+    width: 12rem;
+    background-color: hsl(var(--color-primary-900));
     border-radius: 50%;
-    border: 4px solid var(--color-light-400);
+    border: 2px solid hsl(var(--color-accent-400));
     box-shadow: var(--shadow-lg);
     margin-bottom: var(--spacing-200);
   }
 
   .Title {
-    max-width: 30rem;
+    max-width: 26rem;
     font-family: var(--ff-secondary);
     font-size: var(--fs-main-title);
     font-weight: var(--fw-bold);
-    line-height: 1.3;
+    line-height: 1.4;
 
     > span {
       color: hsl(var(--color-accent-400));
@@ -28,12 +31,11 @@
   }
 
   .Text {
-    font-size: var(--fs-500);
-    color: hsla(0, 0%, 100%, 0.65);
     max-width: 25rem;
+    color: hsl(var(--color-primary-300));
     padding-bottom: var(--spacing-200);
 
-    > span {
+    > strong {
       font-weight: var(--fw-bold);
     }
   }
@@ -41,6 +43,6 @@
   .ButtonGroup {
     display: flex;
     justify-content: center;
-    gap: var(--spacing-400);
+    gap: var(--spacing-300);
   }
 }
