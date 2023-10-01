@@ -4,7 +4,8 @@
   display: grid;
   justify-items: center;
   gap: var(--spacing-400);
-  padding-block: var(--spacing-300);
+  padding-block: var(--spacing-200);
+  padding-top: 1.875rem;
   text-align: center;
 
   .Avatar {
@@ -16,6 +17,44 @@
     border: 2px solid hsl(var(--color-accent-400));
     box-shadow: var(--shadow-lg);
     margin-bottom: var(--spacing-200);
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      inset: 0;
+      border-radius: 50%;
+      background-color: hsl(var(--color-accent-400), 0.125);
+      animation: pulse 10s ease infinite;
+    }
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      scale: 1;
+      border-radius: 50%;
+      rotate: 0deg;
+    }
+
+    25% {
+      scale: 1.125;
+      border-radius: 20rem 22rem 18rem 24rem;
+      rotate: 90deg;
+    }
+
+    50% {
+      scale: 1.1875;
+      border-radius: 24rem 18rem 22rem 20rem;
+      rotate: 180deg;
+    }
+
+    75% {
+      scale: 1.25;
+      border-radius: 18rem 24rem 20rem 22rem;
+      rotate: 360deg;
+    }
   }
 
   .Title {
@@ -23,7 +62,7 @@
     font-family: var(--ff-secondary);
     font-size: var(--fs-main-title);
     font-weight: var(--fw-bold);
-    line-height: 1.4;
+    line-height: 1.2;
 
     > span {
       color: hsl(var(--color-accent-400));
@@ -31,7 +70,7 @@
   }
 
   .Text {
-    max-width: 25rem;
+    max-width: 28rem;
     color: hsl(var(--color-primary-300));
     padding-bottom: var(--spacing-200);
 

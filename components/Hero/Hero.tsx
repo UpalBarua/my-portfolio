@@ -11,7 +11,7 @@ export const Hero = () => {
       <h1 className={styles.Title}>
         Hi, I&apos;m <span>Upal</span>
         <br />
-        an <span>&#123;</span>enthusiastic<span>&#125;</span> developer
+        an <span>&#123;</span>enthusiastic<span>&#125;</span> developer!
       </h1>
       <p className={styles.Text}>
         I bring ideas to life by crafting{' '}
@@ -20,14 +20,14 @@ export const Hero = () => {
       </p>
       <div className={styles.ButtonGroup}>
         <Button variant="primary" href="/projects" asLink>
-          My Projects
+          Projects
         </Button>
         <Button
           variant="secondary"
           href="https://drive.google.com/file/d/1fAZLlu-XvqSaNsEETEspeyUlhd1XvMT6/view?usp=share_link"
           target="_blank"
           asLink>
-          My Resume
+          Resume
         </Button>
       </div>
     </main>

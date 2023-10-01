@@ -5,28 +5,38 @@
   background-color: transparent;
   padding: var(--spacing-200) var(--spacing-500);
   border: 1px solid transparent;
-  border-radius: var(--border-radius);
+  border-radius: 0.5rem;
   box-shadow: var(--shadow-sm);
   color: hsl(var(--color-primary-100));
-  color: white;
   cursor: pointer;
   transition: box-shadow 250ms ease-out;
 
   &:hover,
   &:focus {
     box-shadow: var(--shadow-lg);
+    transition: all 200ms ease;
   }
 
   &[data-variant='primary'] {
     background-color: hsl(var(--color-accent-500));
     color: #ffffff;
-    border-color: hsl(var(--color-primary-100), 0.5);
+    border-color: hsl(var(--color-accent-400));
+
+    &:hover,
+    &:focus {
+      background-color: hsl(var(--color-accent-500), 0.9);
+    }
   }
 
   &[data-variant='secondary'] {
     background-color: hsl(var(--color-primary-900));
     color: #ffffff;
     border-color: hsl(var(--color-primary-600), 0.5);
+
+    &:hover,
+    &:focus {
+      background-color: hsl(var(--color-primary-900), 0.9);
+    }
   }
 }
 
