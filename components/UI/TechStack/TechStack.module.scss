@@ -1,12 +1,14 @@
 .TechStack {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-200);
+  gap: var(--spacing-2);
+  font-size: var(--text-sm);
+  padding-top: var(--spacing-3);
 
   > span {
     border-radius: 100vmin;
-    padding: 2px var(--spacing-500);
-    font-size: var(--fs-300);
-    background-color: var(--color-dark-300);
+    padding: var(--spacing-1) var(--spacing-4);
+    background-color: hsl(var(--color-primary-900), 0.4);
+    border: 1px solid hsl(var(--color-primary-50), 0.1);
   }
 }

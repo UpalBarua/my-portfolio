@@ -41,7 +41,7 @@ const SKILLS = [
   },
   {
     title: 'Next.js',
-    icon: 'next.js.png',
+    icon: 'next-js.png',
   },
   {
     title: 'Node.js',
@@ -93,11 +93,11 @@ export const Skills = () => {
   return (
     <section className={styles.Skills}>
       <Title>My Skills</Title>
-      <div className={styles.SkillsContainer}>
+      <ul className={styles.SkillsContainer}>
         {SKILLS.map((skill) => (
           <SkillCard key={skill.icon} {...skill} />
         ))}
-      </div>
+      </ul>
     </section>
   );
 };

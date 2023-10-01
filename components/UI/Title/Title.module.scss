@@ -2,7 +2,7 @@
 
 .Title {
   font-family: var(--ff-secondary);
-  font-size: var(--fs-700);
+  font-size: var(--fs-600);
   font-weight: var(--fw-bold);
   text-transform: capitalize;
   text-align: center;
@@ -11,14 +11,14 @@
   max-width: max-content;
   margin-inline: auto;
 
-  &::after {
-    content: '';
-    position: absolute;
-    height: 0.35rem;
-    width: 100%;
-    background-color: hsl(var(--color-accent-400));
-    bottom: -50%;
-    right: 50%;
-    transform: translateX(50%);
-  }
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   height: 0.35rem;
+  //   width: 100%;
+  //   background-color: hsl(var(--color-accent-400));
+  //   bottom: -50%;
+  //   right: 50%;
+  //   transform: translateX(50%);
+  // }
 }

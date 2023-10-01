@@ -1,15 +1,14 @@
-import { FC } from 'react';
-import { ProjectCard } from '../ProjectCard/ProjectCard';
-import { Title } from '../UI/Title/Title';
-import { Button } from '../UI/Button/Button';
-import styles from './LatestProjects.module.scss';
 import type { Project } from '@/types/project';
+import { ProjectCard } from '../ProjectCard/ProjectCard';
+import { Button } from '../UI/Button/Button';
+import { Title } from '../UI/Title/Title';
+import styles from './LatestProjects.module.scss';
 
-interface LatestProjectsProps {
+type LatestProjectsProps = {
   projects: Project[];
-}
+};
 
-export const LatestProjects: FC<LatestProjectsProps> = ({ projects }) => {
+export const LatestProjects = ({ projects }: LatestProjectsProps) => {
   return (
     <section className={styles.LatestProjects}>
       <Title>Latest Projects</Title>
@@ -18,7 +17,7 @@ export const LatestProjects: FC<LatestProjectsProps> = ({ projects }) => {
           <ProjectCard key={project.id} {...project} />
         ))}
       </div>
-      <Button type="secondary" as="link" href="/projects">
+      <Button variant="secondary" href="/projects" asLink>
         Find More
       </Button>
     </section>

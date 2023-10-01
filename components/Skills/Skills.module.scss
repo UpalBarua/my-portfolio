@@ -2,27 +2,18 @@
 
 .Skills {
   padding-block: var(--spacing-800);
-}
 
-.SkillsContainer {
-  max-width: 80%;
-  margin-inline: auto;
-  // display: grid;
-  // grid-template-columns: repeat(3, 1fr);
-  // gap: var(--spacing-300);
+  .SkillsContainer {
+    max-width: min(100%, 55rem);
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-3);
 
-  // @include mq('md') {
-  //   grid-template-columns: repeat(4, 1fr);
-  // }
-
-  // @include mq('lg') {
-  //   grid-template-columns: repeat(5, 1fr);
-  //   gap: var(--spacing-400);
-  // }
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: var(--spacing-300);
+    @include mq('md') {
+      gap: var(--spacing-4);
+    }
+  }
 }

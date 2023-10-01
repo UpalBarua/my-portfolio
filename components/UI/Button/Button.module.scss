@@ -38,20 +38,20 @@
       background-color: hsl(var(--color-primary-900), 0.9);
     }
   }
-}
 
-.RoundedLink {
-  display: inline-flex;
-  padding: var(--spacing-200);
-  border-radius: 50%;
-  font-size: var(--fs-600);
-  background-color: var(--color-dark-300);
-  color: var(--color-light-400);
-  transition: color 250ms ease-out, background-color 250ms ease-out;
+  &[data-variant='rounded'] {
+    display: inline-flex;
+    padding: var(--spacing-200);
+    border-radius: 50%;
+    font-size: var(--fs-600);
+    background-color: hsl(var(--color-primary-900));
+    color: var(--color-light-400);
+    transition: color 250ms ease-out, background-color 250ms ease-out;
 
-  &:hover,
-  &:focus {
-    background-color: hsl(var(--color-accent-400));
-    color: var(--color-light-300);
+    &:hover,
+    &:focus {
+      background-color: hsl(var(--color-accent-400));
+      color: var(--color-light-300);
+    }
   }
 }

@@ -1,4 +1,3 @@
-import React, { FC } from 'react';
 import Image from 'next/image';
 import styles from './SkillCard.module.scss';
 
@@ -9,11 +8,11 @@ type SkillCardProps = {
 
 export const SkillCard = ({ icon, title }: SkillCardProps) => {
   return (
-    <div className={styles.SkillCard}>
+    <li className={styles.SkillCard}>
       <div className={styles.Icon}>
         <Image src={`/icons/${icon}`} alt={title} fill />
       </div>
       <p>{title}</p>
-    </div>
+    </li>
   );
 };
