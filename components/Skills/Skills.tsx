@@ -17,7 +17,7 @@ const SKILLS = [
   },
   {
     title: 'Bootstrap',
-    icon: 'bootstrap.png',
+    icon: 'bootstrap-5.png',
   },
   {
     title: 'Tailwind',

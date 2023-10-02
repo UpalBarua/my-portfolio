@@ -1,10 +1,10 @@
-import { FC } from 'react';
 import Link from 'next/link';
-import { Title } from '../UI/Title/Title';
-import { ContactForm } from '../ContactForm/ContactForm';
-import { HiOutlineMail } from 'react-icons/hi';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import { HiOutlineMail } from 'react-icons/hi';
+import { ContactForm } from '../ContactForm/ContactForm';
+import { Title } from '../UI/Title/Title';
 import styles from './ContactMe.module.scss';
+import Image from 'next/image';
 
 const LINKS = [
   {
@@ -27,7 +27,7 @@ const LINKS = [
   },
 ];
 
-export const ContactMe: FC = () => {
+export const ContactMe = () => {
   return (
     <section className={styles.ContactMe}>
       <Title>Contact Me</Title>

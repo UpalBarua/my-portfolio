@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Button } from '../UI/Button/Button';
 import styles from './Hero.module.scss';

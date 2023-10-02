@@ -21,8 +21,8 @@ export const ProjectCard = ({
       <div className={styles.Body}>
         <h3 className={styles.Title}>{title}</h3>
         <p className={styles.Description}>
-          {description.short.length > 130
-            ? description.short.slice(0, 130) + '...'
+          {description.short.length > 120
+            ? description.short.slice(0, 120) + '...'
             : description.short}
         </p>
         <TechStack techStack={techStack} />

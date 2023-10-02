@@ -3,41 +3,48 @@
 .ContactMe {
   display: grid;
   justify-items: center;
-  padding-block: var(--spacing-700);
-  gap: var(--spacing-400);
+  padding-block: var(--spacing-4);
+  gap: var(--spacing-4);
 
   .Grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--spacing-600);
-    background-color: var(--color-dark-400);
-    padding: var(--spacing-500);
-    border-radius: 8px;
+    gap: var(--spacing-7);
+    background-color: hsl(var(--color-primary-900), 0.5);
+    backdrop-filter: blur(1rem);
+    padding: var(--spacing-3);
+    border-radius: 10px;
     box-shadow: var(--shadow-sm);
-    max-width: 30rem;
+    border: 1px solid hsl(var(--color-primary-50), 0.1);
+    max-width: min(100%, 50rem);
 
-    @include mq('md') {
+    @include mq('sm') {
       grid-template-columns: repeat(2, 1fr);
-      padding: var(--spacing-600);
-
-      max-width: 50rem;
+      padding: var(--spacing-6);
+      gap: var(--spacing-8);
     }
   }
 
   .Text {
-    font-size: var(--fs-500);
-    margin-bottom: var(--spacing-400);
+    // font-size: var(--fs-500);
+    margin-bottom: var(--spacing-3);
   }
 
   .Links {
     display: grid;
-    font-size: var(--fs-500);
+    // font-size: var(--fs-500);
     gap: var(--spacing-200);
 
     .Link {
       display: flex;
       align-items: center;
       gap: var(--spacing-200);
+
+      &:hover,
+      &:focus-visible {
+        text-decoration: underline;
+        color: hsl(0, 0%, 100%);
+      }
     }
   }
 }

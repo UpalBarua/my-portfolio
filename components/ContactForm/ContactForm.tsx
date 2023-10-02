@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
-import { Button } from '../UI/Button/Button';
 import emailjs from '@emailjs/browser';
+import React from 'react';
 import { toast } from 'react-hot-toast';
+import { Button } from '../UI/Button/Button';
 import styles from './ContactForm.module.scss';
 
 interface FormEventTarget extends EventTarget {
@@ -17,7 +17,7 @@ interface FormEventTarget extends EventTarget {
   reset: () => void;
 }
 
-export const ContactForm: FC = () => {
+export const ContactForm = () => {
   const handleMessage = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.target as FormEventTarget;
@@ -61,19 +61,22 @@ export const ContactForm: FC = () => {
     <form className={styles.ContactForm} onSubmit={handleMessage}>
       <fieldset className={styles.Field}>
         <label htmlFor="name">Name</label>
-        <input id="name" type="text" name="name" />
+        <input id="name" type="text" name="name" placeholder="John Doe" />
       </fieldset>
       <fieldset className={styles.Field}>
         <label htmlFor="email">Email</label>
-        <input id="email" type="email" name="email" />
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="john@example.com"
+        />
       </fieldset>
       <fieldset className={styles.Field}>
         <label htmlFor="message">Message</label>
-        <textarea id="" name="message"></textarea>
+        <textarea id="message" name="message" placeholder="A simple message" />
       </fieldset>
-      <Button as="button" type="primary">
-        Send
-      </Button>
+      <Button variant="primary">Send Message</Button>
     </form>
   );
 };

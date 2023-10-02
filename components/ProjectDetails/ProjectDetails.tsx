@@ -1,21 +1,20 @@
-import { FC } from 'react';
+import type { Project } from '@/types/project';
 import Image from 'next/image';
-import { Title } from '../UI/Title/Title';
-import { Button } from '../UI/Button/Button';
-import { TechStack } from '../UI/TechStack/TechStack';
 import { BsFillPlayFill, BsGithub } from 'react-icons/bs';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
+import { Button } from '../UI/Button/Button';
+import { TechStack } from '../UI/TechStack/TechStack';
+import { Title } from '../UI/Title/Title';
 import styles from './ProjectDetails.module.scss';
-import type { Project } from '@/types/project';
 
-export const ProjectDetails: FC<Project> = ({
+export const ProjectDetails = ({
   id,
   images,
   title,
   description,
   techStack,
   links,
-}) => {
+}: Project) => {
   return (
     <PhotoProvider>
       <section className={styles.ProjectDetails}>
