@@ -13,6 +13,11 @@
   transition: transform 200ms ease;
   color: hsl(var(--color-primary-200));
 
+  &:hover,
+  &:focus-visible {
+    transform: scale(1.05);
+  }
+
   @include mq('md') {
     font-size: var(--text-base);
   }

@@ -2,33 +2,95 @@
 
 .ProjectDetails {
   display: grid;
-  gap: var(--spacing-500);
+  gap: var(--spacing-4);
   max-width: 50rem;
   margin-inline: auto;
   padding-block: var(--spacing-600);
 
   .Header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 22rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+
+    .Content {
+      width: 100%;
+      background: hsl(var(--color-primary-950));
+      background: linear-gradient(
+        0deg,
+        hsl(var(--color-primary-950), 0.9),
+        hsl(var(--color-primary-950), 0.6),
+        hsl(var(--color-primary-950), 0.3)
+      );
+      backdrop-filter: blur(1rem) brightness(90%);
+      padding: var(--spacing-3) var(--spacing-2);
+      border-radius: 0 0 10px 10px;
+
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: var(--spacing-2);
+      }
+    }
+
+    .Title {
+      font-size: var(--text-2xl);
+      font-weight: var(--fw-bold);
+
+      @include mq('sm') {
+        font-size: var(--text-3xl);
+      }
+    }
   }
 
   .Links {
     display: flex;
     align-items: center;
     gap: var(--spacing-200);
+
+    .Link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--spacing-2);
+      border-radius: 50%;
+      font-size: var(--text-xl);
+      background-color: hsl(var(--color-primary-900), 0.5);
+      border-color: hsl(var(--color-primary-50), 0.01);
+      box-shadow: none;
+      transition: color 200ms ease, background-color 200ms ease;
+
+      &:hover,
+      &:focus {
+        background-color: hsl(var(--color-accent-400));
+        color: #ffffff;
+      }
+
+      @include mq('sm') {
+        font-size: var(--text-2xl);
+      }
+    }
   }
 
   .Image {
-    border-radius: 8px;
+    position: relative;
+    border-radius: 10px;
     box-shadow: var(--shadow-sm);
-    object-fit: cover;
-    object-position: center;
     height: 15rem;
     cursor: pointer;
 
     @include mq('md') {
       height: 20rem;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
     }
   }
 

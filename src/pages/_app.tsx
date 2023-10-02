@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app';
 import { Header } from '@/components/Header/Header';
 import { Container } from '@/components/UI/Container/Container';
 import { Toaster } from 'react-hot-toast';
+import { PhotoProvider } from 'react-photo-view';
 
 import 'react-photo-view/dist/react-photo-view.css';
 import '@/styles/globals.scss';
@@ -19,12 +20,14 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Header />
       <Container style={{ paddingTop: '3.5rem' }}>
-        <Component {...pageProps} />
-        <Toaster
-          toastOptions={{
-            style: TOASTER_STYLES,
-          }}
-        />
+        <PhotoProvider>
+          <Component {...pageProps} />
+          <Toaster
+            toastOptions={{
+              style: TOASTER_STYLES,
+            }}
+          />
+        </PhotoProvider>
       </Container>
     </>
   );

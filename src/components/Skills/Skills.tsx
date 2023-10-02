@@ -92,7 +92,7 @@ const SKILLS = [
 export const Skills = () => {
   return (
     <section className={styles.Skills}>
-      <Title>My Skills</Title>
+      <Title>Tools & Technologies</Title>
       <ul className={styles.SkillsContainer}>
         {SKILLS.map((skill) => (
           <SkillCard key={skill.icon} {...skill} />

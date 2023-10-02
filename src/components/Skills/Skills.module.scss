@@ -1,7 +1,9 @@
 @use '../../styles/mixins' as *;
 
 .Skills {
-  padding-block: var(--spacing-800);
+  display: grid;
+  gap: var(--spacing-6);
+  padding-block: var(--spacing-20);
 
   .SkillsContainer {
     max-width: min(100%, 55rem);

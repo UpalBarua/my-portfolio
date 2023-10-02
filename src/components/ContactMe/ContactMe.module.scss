@@ -11,7 +11,8 @@
     grid-template-columns: 1fr;
     gap: var(--spacing-7);
     background-color: hsl(var(--color-primary-900), 0.5);
-    backdrop-filter: blur(1rem);
+    backdrop-filter: blur(1rem) brightness(90%);
+
     padding: var(--spacing-3);
     border-radius: 10px;
     box-shadow: var(--shadow-sm);

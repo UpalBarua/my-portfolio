@@ -1,12 +1,11 @@
-import { FC } from 'react';
-import Head from 'next/head';
-import { Hero } from '@/components/Hero/Hero';
-import { Skills } from '@/components/Skills/Skills';
-import { LatestProjects } from '@/components/LatestProjects/LatestProjects';
 import { ContactMe } from '@/components/ContactMe/ContactMe';
 import { Footer } from '@/components/Footer/Footer';
-import { getProjects } from '@/utils/getProjects';
+import { Hero } from '@/components/Hero/Hero';
+import { LatestProjects } from '@/components/LatestProjects/LatestProjects';
+import { Skills } from '@/components/Skills/Skills';
 import type { Project } from '@/types/project';
+import { getProjects } from '@/utils/getProjects';
+import Head from 'next/head';
 
 interface HomeProps {
   projects: Project[];
@@ -32,7 +31,7 @@ export const getStaticProps = async () => {
   }
 };
 
-const Home: FC<HomeProps> = ({ projects }) => {
+const Home = ({ projects }: HomeProps) => {
   return (
     <>
       <Head>

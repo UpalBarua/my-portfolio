@@ -41,17 +41,18 @@
 
   &[data-variant='rounded'] {
     display: inline-flex;
-    padding: var(--spacing-200);
+    padding: var(--spacing-2);
     border-radius: 50%;
-    font-size: var(--fs-600);
-    background-color: hsl(var(--color-primary-900));
-    color: var(--color-light-400);
+    font-size: var(--text-lg);
+    background-color: hsl(var(--color-primary-900), 0.5);
+    border-color: hsl(var(--color-primary-50), 0.01);
+    box-shadow: none;
     transition: color 250ms ease-out, background-color 250ms ease-out;
 
     &:hover,
     &:focus {
       background-color: hsl(var(--color-accent-400));
-      color: var(--color-light-300);
+      color: #ffffff;
     }
   }
 }
