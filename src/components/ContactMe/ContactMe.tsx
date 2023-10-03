@@ -4,23 +4,19 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { ContactForm } from '../ContactForm/ContactForm';
 import { Title } from '../UI/Title/Title';
 import styles from './ContactMe.module.scss';
-import Image from 'next/image';
 
-const LINKS = [
+const contactLinks = [
   {
-    id: 0,
     href: 'https://upalbarua52@gmail.com',
     Icon: <HiOutlineMail />,
     title: 'upalbarua52@gmail.com',
   },
   {
-    id: 1,
     href: 'https://github.com/upalbarua',
     Icon: <AiFillGithub />,
     title: 'github.com',
   },
   {
-    id: 2,
     href: 'https://www.linkedin.com/in/upalb',
     Icon: <AiFillLinkedin />,
     title: 'linkedin.com',
@@ -38,9 +34,9 @@ export const ContactMe = () => {
             please don&apos;t hesitate to contact me via email below.
           </p>
           <div className={styles.Links}>
-            {LINKS.map(({ id, href, Icon, title }) => (
+            {contactLinks.map(({ href, Icon, title }) => (
               <Link
-                key={id}
+                key={href}
                 className={styles.Link}
                 href={href}
                 target="_blank">

@@ -1,3 +1,4 @@
+import { navLinks } from '@/data/data';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import Link from 'next/link';
 import { HiDotsHorizontal } from 'react-icons/hi';
@@ -5,13 +6,9 @@ import styles from './MobileMenu.module.scss';
 
 type MobileMenuProps = {
   pathname: string;
-  navOptions: {
-    title: string;
-    link: string;
-  }[];
 };
 
-export const MobileMenu = ({ navOptions, pathname }: MobileMenuProps) => {
+export const MobileMenu = ({ pathname }: MobileMenuProps) => {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
@@ -19,10 +16,9 @@ export const MobileMenu = ({ navOptions, pathname }: MobileMenuProps) => {
           <HiDotsHorizontal />
         </button>
       </DropdownMenu.Trigger>
-
       <DropdownMenu.Portal>
         <DropdownMenu.Content className={styles.Content}>
-          {navOptions.map(({ title, link }) => (
+          {navLinks.map(({ title, link }) => (
             <DropdownMenu.Item className={styles.MenuItem} key={link}>
               <Link
                 className={styles.NavLink}
