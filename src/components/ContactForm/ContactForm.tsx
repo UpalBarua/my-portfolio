@@ -4,7 +4,7 @@ import { toast } from 'react-hot-toast';
 import { Button } from '../UI/Button/Button';
 import styles from './ContactForm.module.scss';
 
-interface FormEventTarget extends EventTarget {
+type FormEventTarget = EventTarget & {
   name: {
     value: string;
   };
@@ -15,7 +15,7 @@ interface FormEventTarget extends EventTarget {
     value: string;
   };
   reset: () => void;
-}
+};
 
 export const ContactForm = () => {
   const handleMessage = async (event: React.FormEvent<HTMLFormElement>) => {

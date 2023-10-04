@@ -1,18 +1,9 @@
-import type { Project } from '@/types/project';
-import Image from 'next/image';
-import { BsFillPlayFill, BsGithub } from 'react-icons/bs';
-import { Button } from '../UI/Button/Button';
+import type { Project } from '@/types/types';
+import Link from 'next/link';
 import { TechStack } from '../UI/TechStack/TechStack';
 import styles from './ProjectCard.module.scss';
-import Link from 'next/link';
 
-export const ProjectCard = ({
-  id,
-  title,
-  description,
-  techStack,
-  links,
-}: Project) => {
+export const ProjectCard = ({ id, title, description, techStack }: Project) => {
   return (
     <Link
       className={styles.ProjectCard}

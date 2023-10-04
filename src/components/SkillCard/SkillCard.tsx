@@ -1,10 +1,8 @@
 import Image from 'next/image';
 import styles from './SkillCard.module.scss';
+import { skillsList } from '@/data/data';
 
-type SkillCardProps = {
-  icon: string;
-  title: string;
-};
+type SkillCardProps = (typeof skillsList)[number];
 
 export const SkillCard = ({ icon, title }: SkillCardProps) => {
   return (

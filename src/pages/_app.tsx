@@ -1,11 +1,15 @@
-import type { AppProps } from 'next/app';
 import { Header } from '@/components/Header/Header';
 import { Container } from '@/components/UI/Container/Container';
+import '@/styles/globals.scss';
+import type { AppProps } from 'next/app';
+import localFont from 'next/font/local';
 import { Toaster } from 'react-hot-toast';
 import { PhotoProvider } from 'react-photo-view';
-
 import 'react-photo-view/dist/react-photo-view.css';
-import '@/styles/globals.scss';
+
+const outfit = localFont({
+  src: '../../public/fonts/Outfit.ttf',
+});
 
 const TOASTER_STYLES = {
   backgroundColor: 'hsl(210, 3%, 16%)',
@@ -17,7 +21,7 @@ const TOASTER_STYLES = {
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <main className={outfit.className}>
       <Header />
       <Container style={{ paddingTop: '3.5rem' }}>
         <PhotoProvider>
@@ -29,6 +33,6 @@ export default function App({ Component, pageProps }: AppProps) {
           />
         </PhotoProvider>
       </Container>
-    </>
+    </main>
   );
 }

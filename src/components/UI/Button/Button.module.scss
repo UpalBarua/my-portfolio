@@ -1,41 +1,54 @@
 .Button {
-  font-family: var(--ff-secondary);
-  font-weight: var(--fw-semibold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  font-weight: 500;
   text-transform: capitalize;
   background-color: transparent;
-  padding: var(--spacing-200) var(--spacing-500);
+  padding: var(--spacing-2) var(--spacing-5);
   border: 1px solid transparent;
   border-radius: 0.5rem;
   box-shadow: var(--shadow-sm);
-  color: hsl(var(--color-primary-100));
   cursor: pointer;
-  transition: box-shadow 250ms ease-out;
+  transition: all 200ms ease;
+
+  > svg {
+    font-size: var(--text-xl);
+    color: hsl(var(--color-primary-50), 0.9);
+    transition: transform 250ms ease;
+  }
 
   &:hover,
-  &:focus {
+  &:focus-visible {
+    color: #ffffff;
     box-shadow: var(--shadow-lg);
-    transition: all 200ms ease;
+
+    > svg {
+      transform: translateX(10%);
+    }
   }
 
   &[data-variant='primary'] {
     background-color: hsl(var(--color-accent-500));
+    border-color: hsl(var(--color-accent-500));
     color: #ffffff;
-    border-color: hsl(var(--color-accent-400));
 
     &:hover,
     &:focus {
       background-color: hsl(var(--color-accent-500), 0.9);
+      border-color: hsl(var(--color-accent-500), 0.9);
     }
   }
 
   &[data-variant='secondary'] {
-    background-color: hsl(var(--color-primary-900));
+    background-color: hsl(var(--color-primary-900), 0.4);
     color: #ffffff;
-    border-color: hsl(var(--color-primary-600), 0.5);
+    border-color: hsl(var(--color-primary-800));
 
     &:hover,
     &:focus {
-      background-color: hsl(var(--color-primary-900), 0.9);
+      background-color: hsl(var(--color-primary-900), 0.5);
     }
   }
 

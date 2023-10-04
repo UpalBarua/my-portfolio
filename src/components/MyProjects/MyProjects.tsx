@@ -1,14 +1,9 @@
-import { Title } from '../UI/Title/Title';
 import { ProjectCard } from '../ProjectCard/ProjectCard';
+import { Title } from '../UI/Title/Title';
 import styles from './MyProjects.module.scss';
-import type { Project } from '@/types/project';
-import { FC } from 'react';
+import { projects } from '@/data/data';
 
-interface MyProjectsProps {
-  projects: Project[];
-}
-
-export const MyProjects: FC<MyProjectsProps> = ({ projects }) => {
+export const MyProjects = () => {
   return (
     <section className={styles.MyProjects}>
       <Title>My Projects</Title>

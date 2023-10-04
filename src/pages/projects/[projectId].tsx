@@ -1,20 +1,20 @@
-import { FC } from 'react';
-import { getProjects } from '@/utils/getProjects';
 import { ProjectDetails } from '@/components/ProjectDetails/ProjectDetails';
-import type { Project } from '@/types/project';
+import { projects } from '@/data/data';
+import type { Project } from '@/types/types';
+import { FC } from 'react';
 
 interface ProjectProps {
   filteredProject: Project;
 }
 
+type projectIdType = (typeof projects)[number]['id'];
+
 export const getStaticPaths = async () => {
   try {
-    const projects = await getProjects();
-
-    const paths = projects.map((project: Project) => {
+    const paths = projects.map((project) => {
       return {
         params: {
-          projectId: project.id + '',
+          projectId: project.id.toString(),
         },
       };
     });
@@ -34,16 +34,12 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({
-  params,
+  params: { projectId },
 }: {
-  params: { projectId: string | number };
+  params: { projectId: projectIdType };
 }) => {
   try {
-    const projects = await getProjects();
-
-    const filteredProject = projects.find(
-      ({ id }: { id: number }) => id == params.projectId
-    );
+    const filteredProject = projects.find(({ id }) => id == projectId);
 
     return {
       props: { filteredProject },
@@ -59,7 +55,11 @@ export const getStaticProps = async ({
   }
 };
 
-const Project: FC<ProjectProps> = ({ filteredProject }) => {
+const Project = ({
+  filteredProject,
+}: {
+  filteredProject: (typeof projects)[number];
+}) => {
   return <ProjectDetails {...filteredProject} />;
 };
 

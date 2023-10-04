@@ -25,7 +25,7 @@ const contactLinks = [
 
 export const ContactMe = () => {
   return (
-    <section className={styles.ContactMe}>
+    <section className={styles.ContactMe} id="contact">
       <Title>Contact Me</Title>
       <div className={styles.Grid}>
         <div className={styles.Column}>

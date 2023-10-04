@@ -3,18 +3,22 @@
 .Hero {
   display: grid;
   justify-items: center;
-  gap: var(--spacing-400);
+  gap: var(--spacing-5);
   text-align: center;
+  padding-block: var(--spacing-2);
+
+  @include mq('sm') {
+    gap: var(--spacing-6);
+  }
 
   .Avatar {
     position: relative;
     aspect-ratio: 1/1;
-    width: 12rem;
+    width: min(48%, 12rem);
     background-color: hsl(var(--color-primary-900));
     border-radius: 50%;
     border: 2px solid hsl(var(--color-accent-400));
     box-shadow: var(--shadow-lg);
-    margin-bottom: var(--spacing-200);
 
     &::before {
       content: '';
@@ -28,42 +32,17 @@
     }
   }
 
-  @keyframes pulse {
-    0%,
-    100% {
-      scale: 1;
-      border-radius: 50%;
-      rotate: 0deg;
+  .Heading {
+    max-width: min(95%, 50rem);
+    line-height: 1.5;
+    font-size: clamp(var(--text-2xl), 5vw + 0.5rem, var(--text-4xl));
+
+    > strong {
+      font-weight: 700;
     }
 
-    25% {
-      scale: 1.125;
-      border-radius: 20rem 22rem 18rem 24rem;
-      rotate: 90deg;
-    }
-
-    50% {
-      scale: 1.1875;
-      border-radius: 24rem 18rem 22rem 20rem;
-      rotate: 180deg;
-    }
-
-    75% {
-      scale: 1.25;
-      border-radius: 18rem 24rem 20rem 22rem;
-      rotate: 360deg;
-    }
-  }
-
-  .Title {
-    max-width: 26rem;
-    font-family: var(--ff-secondary);
-    font-size: var(--fs-main-title);
-    font-weight: var(--fw-bold);
-    line-height: 1.2;
-
-    > span {
-      color: hsl(var(--color-accent-400));
+    > em {
+      font-style: italic;
     }
   }
 
@@ -79,7 +58,41 @@
 
   .ButtonGroup {
     display: flex;
-    justify-content: center;
-    gap: var(--spacing-300);
+    flex-direction: column;
+    width: 100%;
+
+    gap: var(--spacing-3);
+
+    @media screen and (min-width: 22em) {
+      flex-direction: row;
+      width: initial;
+    }
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    scale: 1;
+    border-radius: 50%;
+    rotate: 0deg;
+  }
+
+  25% {
+    scale: 1.125;
+    border-radius: 20rem 22rem 18rem 24rem;
+    rotate: 90deg;
+  }
+
+  50% {
+    scale: 1.1875;
+    border-radius: 24rem 18rem 22rem 20rem;
+    rotate: 180deg;
+  }
+
+  75% {
+    scale: 1.25;
+    border-radius: 18rem 24rem 20rem 22rem;
+    rotate: 360deg;
   }
 }

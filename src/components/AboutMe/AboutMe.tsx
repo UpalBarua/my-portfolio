@@ -7,7 +7,7 @@ import styles from './AboutMe.module.scss';
 
 export const AboutMe: FC = () => {
   return (
-    <section className={styles.AboutMe}>
+    <section className={styles.AboutMe} id="about">
       <Title>About Me</Title>
       <div className={styles.Grid}>
         <div className={styles.Column}>

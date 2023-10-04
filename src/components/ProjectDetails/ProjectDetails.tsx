@@ -1,12 +1,11 @@
-import type { Project } from '@/types/project';
+import type { Project } from '@/types/types';
 import Image from 'next/image';
+import Link from 'next/link';
 import { BsFillPlayFill, BsGithub } from 'react-icons/bs';
 import { PhotoView } from 'react-photo-view';
-import { Button } from '../UI/Button/Button';
 import { TechStack } from '../UI/TechStack/TechStack';
 import { Title } from '../UI/Title/Title';
 import styles from './ProjectDetails.module.scss';
-import Link from 'next/link';
 
 export const ProjectDetails = ({
   id,

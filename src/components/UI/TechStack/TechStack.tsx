@@ -1,8 +1,9 @@
 import styles from './TechStack.module.scss';
+import { Project } from '@/types/types';
 
-interface TechStackProps {
-  techStack: string[];
-}
+type TechStackProps = {
+  techStack: Project['techStack'];
+};
 
 export const TechStack = ({ techStack }: TechStackProps) => {
   return (

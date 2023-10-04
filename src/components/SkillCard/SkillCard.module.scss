@@ -12,6 +12,22 @@
   padding: var(--spacing-2) var(--spacing-3);
   transition: transform 200ms ease;
   color: hsl(var(--color-primary-200));
+  position: relative;
+
+  // &::before {
+  //   content: '';
+  //   background: rgb(221, 223, 223);
+  //   background: radial-gradient(
+  //     circle,
+  //     hsl(var(--color-primary-50), 0.1),
+  //     hsl(var(--color-primary-50), 0.2)
+  //   );
+  //   height: 100%;
+  //   width: 100%;
+  //   position: absolute;
+  //   inset: 0;
+  //   border-radius: 10px;
+  // }
 
   &:hover,
   &:focus-visible {

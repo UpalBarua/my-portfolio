@@ -1,7 +1,7 @@
 @use '../../../styles/mixins' as *;
 
 .Title {
-  font-family: var(--ff-secondary);
+  // font-family: var(--ff-secondary);
   font-size: var(--text-2xl);
   font-weight: var(--fw-bold);
   text-transform: capitalize;

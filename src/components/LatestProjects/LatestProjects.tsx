@@ -1,16 +1,12 @@
-import type { Project } from '@/types/project';
+import { projects } from '@/data/data';
 import { ProjectCard } from '../ProjectCard/ProjectCard';
 import { Button } from '../UI/Button/Button';
 import { Title } from '../UI/Title/Title';
 import styles from './LatestProjects.module.scss';
 
-type LatestProjectsProps = {
-  projects: Project[];
-};
-
-export const LatestProjects = ({ projects }: LatestProjectsProps) => {
+export const LatestProjects = () => {
   return (
-    <section className={styles.LatestProjects}>
+    <section className={styles.LatestProjects} id="projects">
       <Title>Latest Projects</Title>
       <div className={styles.Grid}>
         {projects.map((project) => (

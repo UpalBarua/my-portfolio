@@ -1,35 +1,9 @@
-import { FC } from 'react';
-import Head from 'next/head';
-import { MyProjects } from '@/components/MyProjects/MyProjects';
-import { getProjects } from '@/utils/getProjects';
 import { Footer } from '@/components/Footer/Footer';
-import type { Project } from '@/types/project';
+import { MyProjects } from '@/components/MyProjects/MyProjects';
+import { projects } from '@/data/data';
+import Head from 'next/head';
 
-interface ProjectsProps {
-  projects: Project[];
-}
-
-export const getStaticProps = async () => {
-  try {
-    const projects = await getProjects();
-
-    return {
-      props: {
-        projects,
-      },
-    };
-  } catch (error) {
-    console.error(error);
-
-    return {
-      props: {
-        projects: [],
-      },
-    };
-  }
-};
-
-const Projects: FC<ProjectsProps> = ({ projects }) => {
+const Projects = () => {
   return (
     <>
       <Head>

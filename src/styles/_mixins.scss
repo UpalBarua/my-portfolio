@@ -31,7 +31,6 @@
 }
 
 @mixin button($type) {
-  font-family: var(--ff-secondary);
   font-size: var(--fs-500);
   font-weight: var(--fw-semibold);
   text-transform: capitalize;
