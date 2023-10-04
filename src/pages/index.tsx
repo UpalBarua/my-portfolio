@@ -1,3 +1,4 @@
+import { AboutMe } from '@/components/AboutMe/AboutMe';
 import { ContactMe } from '@/components/ContactMe/ContactMe';
 import { Footer } from '@/components/Footer/Footer';
 import { Hero } from '@/components/Hero/Hero';
@@ -14,6 +15,7 @@ const Home = () => {
       <Hero />
       <Skills />
       <LatestProjects />
+      <AboutMe />
       <ContactMe />
       <Footer />
     </>

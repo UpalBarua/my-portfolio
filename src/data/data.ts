@@ -4,6 +4,10 @@ export const navLinks = [
     link: '/',
   },
   {
+    title: 'Skills',
+    link: '#skills',
+  },
+  {
     title: 'Projects',
     link: '#projects',
   },
@@ -15,10 +19,10 @@ export const navLinks = [
     title: 'Contact',
     link: '#contact',
   },
-  {
-    title: 'Articles',
-    link: '/articles',
-  },
+  // {
+  //   title: 'Articles',
+  //   link: '/articles',
+  // },
 ] as const;
 
 export const footerLinks = [
