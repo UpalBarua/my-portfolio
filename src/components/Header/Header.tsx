@@ -16,7 +16,7 @@ export const Header = () => {
       className={styles.Header}
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}>
-      <Container>
+      <div className="container">
         <Link className={styles.Logo} href="/">
           <RiCodeBoxFill className={styles.Icon} />
           <span>Upal Barua</span>
@@ -50,7 +50,7 @@ export const Header = () => {
           </ul>
         </nav>
         <MobileMenu activeSection={activeSection} />
-      </Container>
+      </div>
     </motion.header>
   );
 };

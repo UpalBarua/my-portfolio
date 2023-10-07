@@ -5,7 +5,7 @@
   justify-items: center;
   gap: var(--spacing-8);
   text-align: center;
-  padding-block: var(--spacing-8) var(--spacing-20);
+  padding-block: var(--spacing-24) var(--spacing-20);
 
   @include mq('md') {
     gap: var(--spacing-9);
@@ -15,7 +15,7 @@
   .Avatar {
     position: relative;
     aspect-ratio: 1/1;
-    width: min(50%, 11rem);
+    width: min(55%, 12rem);
     background-color: hsl(var(--color-primary-900));
     border-radius: 50%;
     border: 2px solid hsl(var(--color-accent-400));

@@ -12,7 +12,6 @@
   @include mq('md') {
     gap: var(--spacing-7);
     padding-bottom: var(--spacing-28);
-    padding-inline: var(--spacing-2);
   }
 
   p {
