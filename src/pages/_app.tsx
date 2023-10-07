@@ -8,7 +8,7 @@ import { PhotoProvider } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import { ActiveSectionContextProvider } from '@/context/ActiveSectionContext';
 
-const outfit = localFont({
+export const outfit = localFont({
   src: '../../public/fonts/Outfit.ttf',
 });
 

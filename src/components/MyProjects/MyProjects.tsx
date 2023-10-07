@@ -9,15 +9,12 @@ export const MyProjects = () => {
 
   return (
     <section className={styles.MyProjects} id="projects" ref={ref}>
-      <Title>Latest Projects</Title>
+      <Title>My Projects</Title>
       <div className={styles.Grid}>
         {projects.map((project) => (
           <ProjectCard key={project.id} {...project} />
         ))}
       </div>
-      {/* <Button variant="secondary" href="/projects" asLink>
-        Find More
-      </Button> */}
     </section>
   );
 };

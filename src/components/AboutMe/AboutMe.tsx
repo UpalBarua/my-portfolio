@@ -16,22 +16,31 @@ export const AboutMe = () => {
       ref={ref}>
       <Title>About Me</Title>
       <div className={styles.Text}>
-        <p className={styles.Text}>
-          My name is <strong>Upal Barua</strong>, and I'm a designer and
-          developer who is passionate about creating intuitive and dynamic
-          websites and web apps. Over the past <strong>3 years</strong> I have
-          been dedicated to learning and mastering my craft, and I am currently
-          focused on designing and developing digital solutions using the{' '}
-          <strong>MERN stack</strong>. I am particularly skilled in CSS and
-          React. As a tech enthusiast, I am always seeking to expand my
-          knowledge and improve myself, both personally and professionally.
+        <p>
+          Hello, I'm Upal Barua, a dedicated <strong>developer</strong>{' '}
+          passionate about creating{' '}
+          <strong>user-friendly web applications</strong>. About a year ago, I
+          made the decision to pursue a career in <strong>development</strong>{' '}
+          after exploring various aspects of technology as a hobby for years.
         </p>
-        <p className={styles.Text}>
-          Aside from coding, I love listening to music and having deep
-          conversations with others about life, philosophy, and everything in
-          between. I believe that being able to connect with others on a deeper
-          level is essential to building strong relationships and creating
-          meaningful work.
+
+        <p>
+          I've primarily been <strong>self-taught</strong>, but I also completed
+          a <strong>bootcamp</strong> to accelerate my learning. During this
+          journey, I've been intently focused on improving my skills. Currently,
+          my main focus is on developing digital solutions using the{' '}
+          <strong>MERN stack</strong>, where I have special expertise in{' '}
+          <strong>CSS and React</strong>. I've recently delved into{' '}
+          <strong>TypeScript</strong> and <strong>Next.js</strong>, expanding my
+          knowledge even further. <strong>Backend development</strong> also
+          holds my interest.
+        </p>
+
+        <p>
+          I'm actively searching for a full-time{' '}
+          <strong>software developer</strong> position to gain practical
+          experience and collaborate with like-minded individuals who share my
+          passion for <strong>coding</strong>.
         </p>
       </div>
     </motion.section>

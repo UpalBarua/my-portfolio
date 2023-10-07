@@ -17,7 +17,9 @@ export const Footer = () => {
           </Link>
         ))}
       </div>
-      <p className={styles.Copyright}>&copy; 2023 All rights reserved</p>
+      <p className={styles.Copyright}>
+        &copy; 2023 Upal Barua. All rights reserved
+      </p>
     </motion.footer>
   );
 };

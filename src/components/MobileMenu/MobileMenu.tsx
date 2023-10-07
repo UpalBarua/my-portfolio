@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { HiDotsHorizontal } from 'react-icons/hi';
 import styles from './MobileMenu.module.scss';
 import { motion } from 'framer-motion';
+import { outfit } from '@/pages/_app';
 
 type MobileMenuProps = {
   activeSection: string;
@@ -18,7 +19,9 @@ export const MobileMenu = ({ activeSection }: MobileMenuProps) => {
         </button>
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>
-        <DropdownMenu.Content className={styles.Content} asChild>
+        <DropdownMenu.Content
+          className={`${styles.Content}  ${outfit.className}`}
+          asChild>
           <motion.div
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
