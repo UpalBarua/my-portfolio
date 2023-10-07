@@ -1,23 +1,21 @@
 @use '../../styles/mixins' as *;
 
 .ContactMe {
-  display: grid;
-  justify-items: center;
-  padding-block: var(--spacing-4);
-  gap: var(--spacing-4);
+  padding-bottom: var(--spacing-28);
+  scroll-margin-top: var(--spacing-20);
+  max-width: 50rem;
+  margin-inline: auto;
 
   .Grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--spacing-7);
-    background-color: hsl(var(--color-primary-900), 0.5);
+    background-color: hsl(var(--color-primary-900), 0.4);
     backdrop-filter: blur(1rem) brightness(90%);
-
     padding: var(--spacing-3);
     border-radius: 10px;
     box-shadow: var(--shadow-sm);
-    border: 1px solid hsl(var(--color-primary-50), 0.1);
-    max-width: min(100%, 50rem);
+    border: 1px solid hsl((var(--color-primary-800)));
 
     @include mq('sm') {
       grid-template-columns: repeat(2, 1fr);
@@ -26,20 +24,15 @@
     }
   }
 
-  .Text {
-    // font-size: var(--fs-500);
-    margin-bottom: var(--spacing-3);
-  }
-
   .Links {
     display: grid;
-    // font-size: var(--fs-500);
-    gap: var(--spacing-200);
+    gap: var(--spacing-1);
+    padding-top: var(--spacing-4);
 
     .Link {
       display: flex;
       align-items: center;
-      gap: var(--spacing-200);
+      gap: var(--spacing-2);
 
       &:hover,
       &:focus-visible {

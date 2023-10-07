@@ -3,6 +3,7 @@ import React from 'react';
 import { toast } from 'react-hot-toast';
 import { Button } from '../UI/Button/Button';
 import styles from './ContactForm.module.scss';
+import { LiaTelegramPlane } from 'react-icons/lia';
 
 type FormEventTarget = EventTarget & {
   name: {
@@ -76,7 +77,9 @@ export const ContactForm = () => {
         <label htmlFor="message">Message</label>
         <textarea id="message" name="message" placeholder="A simple message" />
       </fieldset>
-      <Button variant="primary">Send Message</Button>
+      <Button variant="primary">
+        Send Message <LiaTelegramPlane />
+      </Button>
     </form>
   );
 };

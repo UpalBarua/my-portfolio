@@ -1,10 +1,15 @@
 import { footerLinks } from '@/data/data';
 import Link from 'next/link';
 import styles from './Footer.module.scss';
+import { motion } from 'framer-motion';
 
 export const Footer = () => {
   return (
-    <footer className={styles.Footer}>
+    <motion.footer
+      className={styles.Footer}
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.175 }}>
       <div className={styles.Links}>
         {footerLinks.map(({ href, label, target }) => (
           <Link key={href} href={href} target={target}>
@@ -13,6 +18,6 @@ export const Footer = () => {
         ))}
       </div>
       <p className={styles.Copyright}>&copy; 2023 All rights reserved</p>
-    </footer>
+    </motion.footer>
   );
 };

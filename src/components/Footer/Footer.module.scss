@@ -6,9 +6,7 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  padding-block: var(--spacing-400);
-  margin-top: var(--spacing-500);
-  color: var(--color-light-500);
+  padding-block: var(--spacing-5);
 
   @include mq('md') {
     flex-direction: row;
@@ -16,7 +14,7 @@
   }
 
   .Copyright {
-    padding-top: var(--spacing-300);
+    padding-top: var(--spacing-4);
 
     @include mq('md') {
       padding-top: 0;
@@ -25,22 +23,13 @@
 
   .Links {
     display: flex;
-    gap: var(--spacing-500);
+    gap: var(--spacing-5);
 
     > a {
-      &::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: var(--color-light-400);
-        transform: scale(0);
-        transition: transform 250ms ease-out;
-      }
-
-      &:hover::after,
-      &:focus::after {
-        transform: scale(1);
+      transition: color 200ms ease;
+      &:hover,
+      &:focus-visible {
+        color: hsl(var(--color-primary-300));
       }
     }
   }

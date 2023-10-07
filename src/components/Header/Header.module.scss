@@ -3,6 +3,8 @@
 .Header {
   width: 100%;
   position: fixed;
+  top: 0;
+  right: 0;
   z-index: 999;
   background-color: hsl(var(--color-primary-950), 0.8);
   backdrop-filter: blur(1rem) brightness(90%);
@@ -44,15 +46,27 @@
   .NavLink {
     padding: var(--spacing-2) var(--spacing-3);
     border-radius: 8px;
+    transition: color 200ms ease;
+    font-weight: var(--fw-medium);
+    position: relative;
+
+    > span {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      border-radius: 8px;
+      background-color: hsl(var(--color-primary-900), 0.4);
+      border: 1px solid hsl(var(--color-primary-900), 0.5);
+    }
 
     &:hover,
     &:focus-visible {
-      color: hsl(var(--color-primary-200));
+      color: hsl(var(--color-primary-300));
     }
 
     &[data-active='true'] {
-      background-color: hsl(var(--color-primary-900), 0.4);
-      border: 1px solid hsl(var(--color-primary-900), 0.5);
       color: #ffffff;
     }
   }

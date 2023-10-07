@@ -1,14 +1,15 @@
+import { useActiveSectionContext } from '@/context/ActiveSectionContext';
 import { navLinks } from '@/data/data';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { RiCodeBoxFill } from 'react-icons/ri';
 import { MobileMenu } from '../MobileMenu/MobileMenu';
 import { Container } from '../UI/Container/Container';
 import styles from './Header.module.scss';
 
 export const Header = () => {
-  const { pathname } = useRouter();
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
 
   return (
     <motion.header
@@ -18,7 +19,7 @@ export const Header = () => {
       <Container>
         <Link className={styles.Logo} href="/">
           <RiCodeBoxFill className={styles.Icon} />
-          <span>Upal_Barua</span>
+          <span>Upal Barua</span>
         </Link>
         <nav>
           <ul className={styles.NavMenu}>
@@ -27,14 +28,28 @@ export const Header = () => {
                 <Link
                   className={styles.NavLink}
                   href={link}
-                  data-active={pathname === link}>
+                  data-active={activeSection === title}
+                  onClick={() => {
+                    setActiveSection(title);
+                    setTimeOfLastClick(Date.now());
+                  }}>
                   {title}
+                  {activeSection === title && (
+                    <motion.span
+                      layoutId="activeSection"
+                      transition={{
+                        type: 'spring',
+                        stiffness: 380,
+                        damping: 30,
+                      }}
+                    />
+                  )}
                 </Link>
               </li>
             ))}
           </ul>
         </nav>
-        <MobileMenu pathname={pathname} />
+        <MobileMenu activeSection={activeSection} />
       </Container>
     </motion.header>
   );

@@ -3,44 +3,29 @@
 .SkillCard {
   display: flex;
   align-items: center;
-  gap: var(--spacing-2);
-  font-size: var(--text-sm);
+  justify-content: center;
+  gap: var(--spacing-3);
   border-radius: 10px;
-  background-color: hsl(var(--color-primary-900), 0.5);
-  border: 1px solid hsl(var(--color-primary-50), 0.05);
+  background-color: hsl(var(--color-primary-900), 0.4);
+  border: 1px solid hsl(var(--color-primary-800));
   box-shadow: var(--shadow-sm);
-  padding: var(--spacing-2) var(--spacing-3);
-  transition: transform 200ms ease;
+  padding: var(--spacing-2);
   color: hsl(var(--color-primary-200));
   position: relative;
-
-  // &::before {
-  //   content: '';
-  //   background: rgb(221, 223, 223);
-  //   background: radial-gradient(
-  //     circle,
-  //     hsl(var(--color-primary-50), 0.1),
-  //     hsl(var(--color-primary-50), 0.2)
-  //   );
-  //   height: 100%;
-  //   width: 100%;
-  //   position: absolute;
-  //   inset: 0;
-  //   border-radius: 10px;
-  // }
+  transition: transform 200ms ease;
 
   &:hover,
   &:focus-visible {
     transform: scale(1.05);
   }
 
-  @include mq('md') {
-    font-size: var(--text-base);
+  @include mq('sm') {
+    padding: var(--spacing-2) var(--spacing-4);
   }
 
   .Icon {
     position: relative;
-    width: 1.5rem;
+    width: 2.5rem;
     aspect-ratio: 1/1;
 
     img {
@@ -48,8 +33,31 @@
       object-position: center;
     }
 
-    @include mq('md') {
-      width: 1.875rem;
+    @include mq('sm') {
+      width: 2rem;
+    }
+  }
+
+  p {
+    display: none;
+
+    @media screen and (min-width: 40em) {
+      display: block;
     }
   }
 }
+
+// &::before {
+//   content: '';
+//   background: rgb(221, 223, 223);
+//   background: radial-gradient(
+//     circle,
+//     hsl(var(--color-primary-50), 0.1),
+//     hsl(var(--color-primary-50), 0.2)
+//   );
+//   height: 100%;
+//   width: 100%;
+//   position: absolute;
+//   inset: 0;
+//   border-radius: 10px;
+// }

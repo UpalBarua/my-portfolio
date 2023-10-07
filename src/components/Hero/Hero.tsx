@@ -3,14 +3,18 @@ import { Button } from '../UI/Button/Button';
 import { motion } from 'framer-motion';
 import styles from './Hero.module.scss';
 import { BsArrowRight, BsArrowUpRight } from 'react-icons/bs';
+import useSectionInView from '@/hooks/useSectionInView';
+import { IoDocumentTextOutline } from 'react-icons/io5';
 
 export const Hero = () => {
+  const { ref } = useSectionInView('Home');
+
   return (
-    <main className={styles.Hero}>
+    <section className={styles.Hero} ref={ref}>
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ type: 'tween', delay: 0.125 }}
+        transition={{ type: 'tween', delay: 0.125, duration: 0.3 }}
         className={styles.Avatar}>
         <Image src="/images/avatar.svg" alt="avatar" quality={95} fill />
       </motion.div>
@@ -37,9 +41,9 @@ export const Hero = () => {
           href="https://drive.google.com/file/d/1fAZLlu-XvqSaNsEETEspeyUlhd1XvMT6/view?usp=share_link"
           target="_blank"
           asLink>
-          My Resume <BsArrowUpRight />
+          My Resume <IoDocumentTextOutline />
         </Button>
       </motion.div>
-    </main>
+    </section>
   );
 };

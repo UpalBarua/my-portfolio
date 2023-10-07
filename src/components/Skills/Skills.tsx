@@ -1,15 +1,18 @@
+import { skillsList } from '@/data/data';
+import useSectionInView from '@/hooks/useSectionInView';
 import { SkillCard } from '../SkillCard/SkillCard';
 import { Title } from '../UI/Title/Title';
 import styles from './Skills.module.scss';
-import { skillsList } from '@/data/data';
 
 export const Skills = () => {
+  const { ref } = useSectionInView('Skills');
+
   return (
-    <section className={styles.Skills} id="skills">
-      <Title>Tools & Technologies</Title>
+    <section className={styles.Skills} id="skills" ref={ref}>
+      <Title>My Skills</Title>
       <ul className={styles.SkillsContainer}>
-        {skillsList.map((skill) => (
-          <SkillCard key={skill.icon} {...skill} />
+        {skillsList.map((skill, index) => (
+          <SkillCard key={skill.icon} index={index} {...skill} />
         ))}
       </ul>
     </section>

@@ -1,24 +1,18 @@
 import { AboutMe } from '@/components/AboutMe/AboutMe';
 import { ContactMe } from '@/components/ContactMe/ContactMe';
-import { Footer } from '@/components/Footer/Footer';
 import { Hero } from '@/components/Hero/Hero';
-import { LatestProjects } from '@/components/LatestProjects/LatestProjects';
+import { MyProjects } from '@/components/MyProjects/MyProjects';
 import { Skills } from '@/components/Skills/Skills';
-import Head from 'next/head';
 
 const Home = () => {
   return (
-    <>
-      <Head>
-        <title>Upal_Barua</title>
-      </Head>
+    <main>
       <Hero />
       <Skills />
-      <LatestProjects />
+      <MyProjects />
       <AboutMe />
       <ContactMe />
-      <Footer />
-    </>
+    </main>
   );
 };
 

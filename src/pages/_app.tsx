@@ -1,11 +1,12 @@
+import { Footer } from '@/components/Footer/Footer';
 import { Header } from '@/components/Header/Header';
-import { Container } from '@/components/UI/Container/Container';
 import '@/styles/globals.scss';
 import type { AppProps } from 'next/app';
 import localFont from 'next/font/local';
 import { Toaster } from 'react-hot-toast';
 import { PhotoProvider } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import { ActiveSectionContextProvider } from '@/context/ActiveSectionContext';
 
 const outfit = localFont({
   src: '../../public/fonts/Outfit.ttf',
@@ -21,18 +22,19 @@ const TOASTER_STYLES = {
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={outfit.className}>
-      <Header />
-      <Container style={{ paddingTop: '3.5rem' }}>
+    <ActiveSectionContextProvider>
+      <div className={outfit.className + ' container'}>
+        <Header />
         <PhotoProvider>
           <Component {...pageProps} />
-          <Toaster
-            toastOptions={{
-              style: TOASTER_STYLES,
-            }}
-          />
         </PhotoProvider>
-      </Container>
-    </main>
+        <Footer />
+        <Toaster
+          toastOptions={{
+            style: TOASTER_STYLES,
+          }}
+        />
+      </div>
+    </ActiveSectionContextProvider>
   );
 }

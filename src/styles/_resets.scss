@@ -10,11 +10,11 @@
 html,
 body {
   height: 100%;
-  font-size: var(--fs-400);
+  font-size: var(--fs-base);
   font-weight: var(--fw-regular);
   line-height: 1.6;
   background-color: hsl(var(--color-primary-950));
-  color: hsl(var(--color-primary-50));
+  color: hsl(var(--color-primary-50), 0.9);
   scroll-behavior: smooth !important;
 
   h1,

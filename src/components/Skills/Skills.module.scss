@@ -1,21 +1,16 @@
 @use '../../styles/mixins' as *;
 
 .Skills {
-  display: grid;
-  gap: var(--spacing-6);
-  padding-block: var(--spacing-20);
+  padding-bottom: var(--spacing-28);
+  scroll-margin-top: var(--spacing-20);
 
   .SkillsContainer {
-    max-width: min(100%, 55rem);
+    max-width: 54rem;
     margin-inline: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: var(--spacing-3);
-
-    @include mq('md') {
-      gap: var(--spacing-4);
-    }
   }
 }

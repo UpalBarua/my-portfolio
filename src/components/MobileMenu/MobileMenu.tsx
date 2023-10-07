@@ -6,10 +6,10 @@ import styles from './MobileMenu.module.scss';
 import { motion } from 'framer-motion';
 
 type MobileMenuProps = {
-  pathname: string;
+  activeSection: string;
 };
 
-export const MobileMenu = ({ pathname }: MobileMenuProps) => {
+export const MobileMenu = ({ activeSection }: MobileMenuProps) => {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
@@ -27,7 +27,7 @@ export const MobileMenu = ({ pathname }: MobileMenuProps) => {
               <DropdownMenu.Item
                 className={styles.MenuItem}
                 key={link}
-                data-active={pathname === link}>
+                data-active={activeSection === title}>
                 <Link href={link}>{title}</Link>
               </DropdownMenu.Item>
             ))}

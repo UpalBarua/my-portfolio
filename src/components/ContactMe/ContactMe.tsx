@@ -1,3 +1,4 @@
+import useSectionInView from '@/hooks/useSectionInView';
 import Link from 'next/link';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { HiOutlineMail } from 'react-icons/hi';
@@ -24,8 +25,10 @@ const contactLinks = [
 ];
 
 export const ContactMe = () => {
+  const { ref } = useSectionInView('Contact');
+
   return (
-    <section className={styles.ContactMe} id="contact">
+    <section className={styles.ContactMe} id="contact" ref={ref}>
       <Title>Contact Me</Title>
       <div className={styles.Grid}>
         <div className={styles.Column}>

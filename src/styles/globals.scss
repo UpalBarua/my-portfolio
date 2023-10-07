@@ -2,7 +2,11 @@
 @forward 'resets';
 @forward 'mixins';
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Outfit:wght@400;600;700&display=swap');
+.container {
+  max-width: min(70rem, 100% - 1em);
+  margin-inline: auto;
+  margin-top: var(--spacing-14);
+}
 
 * {
   // border: 1px solid lime;
