@@ -1,10 +1,15 @@
 @use '../../styles/mixins' as *;
 
 .ContactMe {
-  padding-bottom: var(--spacing-28);
+  padding-bottom: var(--spacing-20);
   scroll-margin-top: var(--spacing-20);
   max-width: 50rem;
   margin-inline: auto;
+
+  @include mq('md') {
+    gap: var(--spacing-7);
+    padding-bottom: var(--spacing-28);
+  }
 
   .Grid {
     display: grid;

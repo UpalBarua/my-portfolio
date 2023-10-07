@@ -1,8 +1,12 @@
 @use '../../styles/mixins' as *;
 
 .Skills {
-  padding-bottom: var(--spacing-28);
+  padding-bottom: var(--spacing-20);
   scroll-margin-top: var(--spacing-20);
+
+  @include mq('md') {
+    padding-bottom: var(--spacing-28);
+  }
 
   .SkillsContainer {
     max-width: 54rem;
