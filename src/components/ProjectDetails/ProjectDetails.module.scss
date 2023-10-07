@@ -5,7 +5,11 @@
   gap: var(--spacing-4);
   max-width: 50rem;
   margin-inline: auto;
-  padding-block: var(--spacing-600);
+  padding-bottom: var(--spacing-20);
+
+  @include mq('md') {
+    padding-bottom: var(--spacing-28);
+  }
 
   .Header {
     display: flex;
@@ -51,7 +55,7 @@
   .Links {
     display: flex;
     align-items: center;
-    gap: var(--spacing-200);
+    gap: var(--spacing-2);
 
     .Link {
       display: flex;
@@ -77,38 +81,36 @@
     }
   }
 
-  .Image {
-    position: relative;
-    border-radius: 10px;
-    box-shadow: var(--shadow-sm);
-    height: 15rem;
-    cursor: pointer;
-
-    @include mq('md') {
-      height: 20rem;
-    }
-
-    img {
-      object-fit: cover;
-      object-position: center;
-    }
+  p,
+  ol {
+    padding-inline: var(--spacing-2);
   }
 
   .Screenshots {
-    margin-block: var(--spacing-600);
+    margin-block: var(--spacing-6);
 
-    > h2 {
-      padding-bottom: var(--spacing-300);
+    .Image {
+      position: relative;
+      border-radius: 10px;
+      box-shadow: var(--shadow-sm);
+      height: 15rem;
+      cursor: pointer;
+
+      @include mq('md') {
+        height: 20rem;
+      }
+
+      img {
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px;
+      }
     }
 
     .Gallery {
       display: grid;
       grid-template-columns: 1fr;
-      gap: var(--spacing-400);
-
-      @include mq('md') {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      gap: var(--spacing-6);
     }
   }
 }

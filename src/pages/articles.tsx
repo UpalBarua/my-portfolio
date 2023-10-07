@@ -1,8 +1,7 @@
-import { FC } from 'react';
-import Head from 'next/head';
 import { UnderConstruction } from '@/components/UnderConstruction/UnderConstruction';
+import Head from 'next/head';
 
-const Articles: FC = () => {
+const Articles = () => {
   return (
     <>
       <Head>

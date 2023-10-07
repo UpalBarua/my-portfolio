@@ -6,6 +6,7 @@ import { PhotoView } from 'react-photo-view';
 import { TechStack } from '../UI/TechStack/TechStack';
 import { Title } from '../UI/Title/Title';
 import styles from './ProjectDetails.module.scss';
+import { motion } from 'framer-motion';
 
 export const ProjectDetails = ({
   id,
@@ -17,9 +18,11 @@ export const ProjectDetails = ({
 }: Project) => {
   return (
     <section className={styles.ProjectDetails}>
-      <div
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
         className={styles.Header}
-        style={{ backgroundImage: `url('/images/projects/${id}-00.png')` }}>
+        style={{ backgroundImage: `url('${images[0]}')` }}>
         <div className={styles.Content}>
           <div>
             <h3 className={styles.Title}>{title}</h3>
@@ -36,25 +39,21 @@ export const ProjectDetails = ({
             <TechStack techStack={techStack} />
           </div>
         </div>
-      </div>
+      </motion.div>
       <p className={styles.Description}>{description.long}</p>
       <ol className={styles.Features} style={{ listStyle: 'inside' }}>
-        {description?.features.map((feature, index) => (
-          <li key={index}>{feature}</li>
+        {description?.features.map((feature) => (
+          <li key={feature}>{feature}</li>
         ))}
       </ol>
       <div className={styles.Screenshots}>
         <Title>Screenshots</Title>
         <div className={styles.Gallery}>
-          {images.map((image, index) => (
-            <PhotoView key={index} src={`/images/projects/${id}-${image}.png`}>
-              <Image
-                className={styles.Image}
-                src={`/images/projects/${id}-${image}.png`}
-                alt={title}
-                height={350}
-                width={1200}
-              />
+          {images.map((image) => (
+            <PhotoView key={image} src={`${image}`}>
+              <div className={styles.Image}>
+                <Image src={`${image}`} alt={title} fill />
+              </div>
             </PhotoView>
           ))}
         </div>

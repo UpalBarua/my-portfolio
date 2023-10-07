@@ -138,7 +138,16 @@ export const skillsList = [
 export const projects = [
   {
     id: 'savvy-pulse',
-    images: ['00', '01', '02', '03', '04', '05', '06', '07'],
+    images: [
+      '/images/projects/savvy-pulse-00.png',
+      '/images/projects/savvy-pulse-01.png',
+      '/images/projects/savvy-pulse-02.png',
+      '/images/projects/savvy-pulse-03.png',
+      '/images/projects/savvy-pulse-04.png',
+      '/images/projects/savvy-pulse-05.png',
+      '/images/projects/savvy-pulse-06.png',
+      '/images/projects/savvy-pulse-07.png',
+    ],
     title: 'Savvy Pulse',
     description: {
       short:
@@ -167,7 +176,15 @@ export const projects = [
   },
   {
     id: 'code-sage',
-    images: ['00', '01', '02', '03', '04', '05', '06'],
+    images: [
+      '/images/projects/code-sage-00.png',
+      '/images/projects/code-sage-01.png',
+      '/images/projects/code-sage-02.png',
+      '/images/projects/code-sage-03.png',
+      '/images/projects/code-sage-04.png',
+      '/images/projects/code-sage-05.png',
+      '/images/projects/code-sage-06.png',
+    ],
     title: 'Code Sage',
     description: {
       short:
@@ -196,7 +213,14 @@ export const projects = [
   },
   {
     id: 'quick-quiz',
-    images: ['00', '01', '02', '03', '04', '05'],
+    images: [
+      '/images/projects/quick-quiz-00.png',
+      '/images/projects/quick-quiz-01.png',
+      '/images/projects/quick-quiz-02.png',
+      '/images/projects/quick-quiz-03.png',
+      '/images/projects/quick-quiz-04.png',
+      '/images/projects/quick-quiz-05.png',
+    ],
     title: 'Quick Quiz',
     description: {
       short:

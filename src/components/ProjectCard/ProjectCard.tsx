@@ -5,7 +5,13 @@ import styles from './ProjectCard.module.scss';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-export const ProjectCard = ({ id, title, description, techStack }: Project) => {
+export const ProjectCard = ({
+  id,
+  title,
+  description,
+  techStack,
+  images,
+}: Project) => {
   const ref = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -25,7 +31,7 @@ export const ProjectCard = ({ id, title, description, techStack }: Project) => {
       <Link
         className={styles.ProjectCard}
         href={`projects/${id}`}
-        style={{ backgroundImage: `url("/images/projects/${id}-00.png")` }}>
+        style={{ backgroundImage: `url("${images[0]}")` }}>
         <div className={styles.Body}>
           <h3 className={styles.Title}>{title}</h3>
           <p className={styles.Description}>

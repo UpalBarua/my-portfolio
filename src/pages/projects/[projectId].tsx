@@ -1,11 +1,6 @@
 import { ProjectDetails } from '@/components/ProjectDetails/ProjectDetails';
 import { projects } from '@/data/data';
 import type { Project } from '@/types/types';
-import { FC } from 'react';
-
-interface ProjectProps {
-  filteredProject: Project;
-}
 
 type projectIdType = (typeof projects)[number]['id'];
 

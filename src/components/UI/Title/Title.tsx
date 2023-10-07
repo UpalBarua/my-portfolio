@@ -1,12 +1,12 @@
-import React, { CSSProperties, FC, ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import styles from './Title.module.scss';
 
-interface TitleProps {
+type TitleProps = {
   children: ReactNode;
   style?: CSSProperties;
-}
+};
 
-export const Title: FC<TitleProps> = ({ children, style }) => {
+export const Title = ({ children, style }: TitleProps) => {
   return (
     <h2 className={styles.Title} style={style}>
       {children}
