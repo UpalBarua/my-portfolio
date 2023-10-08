@@ -10,14 +10,12 @@ type MyBlogProps = {
 };
 
 const MyBlog = ({ postMetadata }: MyBlogProps) => {
-  console.log(postMetadata);
-
   return (
     <motion.section
       className={styles.MyBlog}
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}>
-      <Title>My Blog Posts</Title>
+      <Title>My Blog</Title>
       <p className={styles.Subtitle}>
         Welcome to my personal blog! 🚀 I consistently share weekly posts that
         explore my ongoing projects, the valuable lessons I'm picking up, and

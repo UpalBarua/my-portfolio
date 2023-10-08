@@ -10,3 +10,14 @@ export type PostMetadata = {
   date: string;
   slug: string;
 };
+
+export type PostType = {
+  content: string;
+  data: {
+    title: string;
+    subtitle: string;
+    date: string;
+  };
+  isEmpty: boolean;
+  excerpt: string;
+};
