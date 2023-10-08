@@ -1,4 +1,5 @@
 import type { Project } from '@/types/types';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BsFillPlayFill, BsGithub } from 'react-icons/bs';
@@ -6,10 +7,8 @@ import { PhotoView } from 'react-photo-view';
 import { TechStack } from '../UI/TechStack/TechStack';
 import { Title } from '../UI/Title/Title';
 import styles from './ProjectDetails.module.scss';
-import { motion } from 'framer-motion';
 
 export const ProjectDetails = ({
-  id,
   images,
   title,
   description,

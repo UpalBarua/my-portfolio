@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import styles from './SkillCard.module.scss';
 import { skillsList } from '@/data/data';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import styles from './SkillCard.module.scss';
 
 type SkillCardProps = {
   icon: (typeof skillsList)[number]['icon'];

@@ -1,0 +1,18 @@
+@use '../../styles/mixins' as *;
+
+.MyBlog {
+  padding-block: var(--spacing-24) var(--spacing-20);
+  max-width: 50rem;
+  margin-inline: auto;
+
+  @include mq('md') {
+    padding-bottom: var(--spacing-28);
+  }
+
+  .Subtitle {
+    text-align: center;
+    line-height: 1.8;
+    max-width: min(35rem, 90%);
+    margin-inline: auto;
+  }
+}
