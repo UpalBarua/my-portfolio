@@ -1,0 +1,22 @@
+@use '../../styles/mixins' as *;
+
+.PostCard {
+  display: block;
+  border-radius: 10px;
+  background-color: hsl(var(--color-primary-900), 0.4);
+  padding: var(--spacing-4);
+  border: 1px solid hsl(var(--color-primary-800));
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  gap: var(--spacing-2);
+
+  .Date {
+    font-size: var(--text-sm);
+    color: hsl(var(--color-primary-400));
+  }
+
+  .Title {
+    font-size: var(--text-xl);
+    font-weight: var(--fw-medium);
+  }
+}

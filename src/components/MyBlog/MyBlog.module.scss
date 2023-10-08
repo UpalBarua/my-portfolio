@@ -15,4 +15,17 @@
     max-width: min(35rem, 90%);
     margin-inline: auto;
   }
+
+  .Posts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+    padding-block: var(--spacing-12);
+
+    @include mq('md') {
+      padding-block: var(--spacing-14);
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-5);
+    }
+  }
 }
