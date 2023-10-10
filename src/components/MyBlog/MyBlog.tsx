@@ -1,9 +1,8 @@
-import { Title } from '../UI/Title/Title';
-import { motion } from 'framer-motion';
-import styles from './MyBlog.module.scss';
-import getPostMetadata from '@/lib/getPostMetadta';
 import type { PostMetadata } from '@/types/types';
+import { motion } from 'framer-motion';
 import PostsCard from '../PostsCard/PostsCard';
+import { Title } from '../UI/Title/Title';
+import styles from './MyBlog.module.scss';
 
 type MyBlogProps = {
   postMetadata: PostMetadata[];

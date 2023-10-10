@@ -9,6 +9,16 @@
   box-shadow: var(--shadow-sm);
   display: grid;
   gap: var(--spacing-2);
+  transition: background-color 200ms ease;
+
+  @include mq('sm') {
+    padding: var(--spacing-5);
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: hsl(var(--color-primary-900), 0.5);
+  }
 
   .Date {
     font-size: var(--text-sm);

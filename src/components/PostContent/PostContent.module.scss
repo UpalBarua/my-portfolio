@@ -5,7 +5,7 @@
   color: hsl(var(--color-primary-50), 0.9) !important;
   max-width: 40rem;
   margin-inline: auto !important;
-  padding-block: var(--spacing-16) var(--spacing-20);
+  padding-block: var(--spacing-20) !important;
 
   * {
     border-color: hsl(var(--color-primary-800)) !important;
@@ -13,7 +13,7 @@
 
   .Title {
     font-size: var(--text-3xl);
-    font-weight: var(--fw-medium);
+    font-weight: var(--fw-semibold);
     color: #ffffff;
     border: 0;
   }
