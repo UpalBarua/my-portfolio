@@ -16,7 +16,13 @@ export const Hero = () => {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ type: 'tween', delay: 0.125, duration: 0.3 }}
         className={styles.Avatar}>
-        <Image src="/images/avatar.svg" alt="avatar" quality={95} fill />
+        <Image
+          src="/images/avatar.svg"
+          alt="avatar"
+          quality={95}
+          fill
+          priority
+        />
       </motion.div>
       <motion.h1
         initial={{ y: 100, opacity: 0 }}
