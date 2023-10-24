@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { RiCodeBoxFill } from 'react-icons/ri';
 import { MobileMenu } from '../MobileMenu/MobileMenu';
-import { Container } from '../UI/Container/Container';
 import styles from './Header.module.scss';
 
 export const Header = () => {
