@@ -1,21 +1,22 @@
-import Image from 'next/image';
-import { Button } from '../UI/Button/Button';
-import { motion } from 'framer-motion';
-import styles from './Hero.module.scss';
-import { BsArrowRight, BsArrowUpRight } from 'react-icons/bs';
-import useSectionInView from '@/hooks/useSectionInView';
-import { IoDocumentTextOutline } from 'react-icons/io5';
+import useSectionInView from "@/hooks/useSectionInView";
+import { m } from "framer-motion";
+import Image from "next/image";
+import { BsArrowRight } from "react-icons/bs";
+import { IoDocumentTextOutline } from "react-icons/io5";
+import { Button } from "../UI/Button/Button";
+import styles from "./Hero.module.scss";
 
 export const Hero = () => {
-  const { ref } = useSectionInView('Home');
+  const { ref } = useSectionInView("Home");
 
   return (
     <section className={styles.Hero} ref={ref}>
-      <motion.div
+      <m.div
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ type: 'tween', delay: 0.125, duration: 0.3 }}
-        className={styles.Avatar}>
+        transition={{ type: "tween", delay: 0.125, duration: 0.3 }}
+        className={styles.Avatar}
+      >
         <Image
           src="/images/avatar.svg"
           alt="avatar"
@@ -23,21 +24,23 @@ export const Hero = () => {
           fill
           priority
         />
-      </motion.div>
-      <motion.h1
+      </m.div>
+      <m.h1
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.25 }}
-        className={styles.Heading}>
+        className={styles.Heading}
+      >
         <strong>Hello 👋, I'm Upal.</strong> I bring ideas to life by crafting
         <em> intuitive and dynamic web experiences</em> with an eye for design
         and a <u>passion for coding.</u>
-      </motion.h1>
-      <motion.div
+      </m.h1>
+      <m.div
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5 }}
-        className={styles.ButtonGroup}>
+        className={styles.ButtonGroup}
+      >
         <Button variant="primary" href="#contact" asLink>
           Contact Me
           <BsArrowRight />
@@ -46,10 +49,11 @@ export const Hero = () => {
           variant="secondary"
           href="https://drive.google.com/file/d/1fAZLlu-XvqSaNsEETEspeyUlhd1XvMT6/view?usp=share_link"
           target="_blank"
-          asLink>
+          asLink
+        >
           My Resume <IoDocumentTextOutline />
         </Button>
-      </motion.div>
+      </m.div>
     </section>
   );
 };

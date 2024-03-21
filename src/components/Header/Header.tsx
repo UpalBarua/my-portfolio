@@ -1,20 +1,21 @@
-import { useActiveSectionContext } from '@/context/ActiveSectionContext';
-import { navLinks } from '@/data/data';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { RiCodeBoxFill } from 'react-icons/ri';
-import { MobileMenu } from '../MobileMenu/MobileMenu';
-import styles from './Header.module.scss';
+import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+import { navLinks } from "@/data/data";
+import { m } from "framer-motion";
+import Link from "next/link";
+import { RiCodeBoxFill } from "react-icons/ri";
+import { MobileMenu } from "../MobileMenu/MobileMenu";
+import styles from "./Header.module.scss";
 
 export const Header = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
 
   return (
-    <motion.header
+    <m.header
       className={styles.Header}
       initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}>
+      animate={{ y: 0, opacity: 1 }}
+    >
       <div className="container">
         <Link className={styles.Logo} href="/">
           <RiCodeBoxFill className={styles.Icon} />
@@ -31,13 +32,14 @@ export const Header = () => {
                   onClick={() => {
                     setActiveSection(title);
                     setTimeOfLastClick(Date.now());
-                  }}>
+                  }}
+                >
                   {title}
                   {activeSection === title && (
-                    <motion.span
+                    <m.span
                       layoutId="activeSection"
                       transition={{
-                        type: 'spring',
+                        type: "spring",
                         stiffness: 380,
                         damping: 30,
                       }}
@@ -50,6 +52,6 @@ export const Header = () => {
         </nav>
         <MobileMenu activeSection={activeSection} />
       </div>
-    </motion.header>
+    </m.header>
   );
 };

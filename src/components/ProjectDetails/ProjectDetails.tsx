@@ -1,12 +1,12 @@
-import type { Project } from '@/types/types';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import Link from 'next/link';
-import { BsFillPlayFill, BsGithub } from 'react-icons/bs';
-import { PhotoView } from 'react-photo-view';
-import { TechStack } from '../UI/TechStack/TechStack';
-import { Title } from '../UI/Title/Title';
-import styles from './ProjectDetails.module.scss';
+import type { Project } from "@/types/types";
+import { m } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { BsFillPlayFill, BsGithub } from "react-icons/bs";
+import { PhotoView } from "react-photo-view";
+import { TechStack } from "../UI/TechStack/TechStack";
+import { Title } from "../UI/Title/Title";
+import styles from "./ProjectDetails.module.scss";
 
 export const ProjectDetails = ({
   images,
@@ -17,11 +17,12 @@ export const ProjectDetails = ({
 }: Project) => {
   return (
     <section className={styles.ProjectDetails}>
-      <motion.div
+      <m.div
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         className={styles.Header}
-        style={{ backgroundImage: `url('${images[0]}')` }}>
+        style={{ backgroundImage: `url('${images[0]}')` }}
+      >
         <div className={styles.Content}>
           <div>
             <h3 className={styles.Title}>{title}</h3>
@@ -38,9 +39,9 @@ export const ProjectDetails = ({
             <TechStack techStack={techStack} />
           </div>
         </div>
-      </motion.div>
+      </m.div>
       <p className={styles.Description}>{description.long}</p>
-      <ol className={styles.Features} style={{ listStyle: 'inside' }}>
+      <ol className={styles.Features} style={{ listStyle: "inside" }}>
         {description?.features.map((feature) => (
           <li key={feature}>{feature}</li>
         ))}
