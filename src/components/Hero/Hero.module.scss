@@ -10,7 +10,7 @@
   min-height: 48rem;
   margin-top: var(--spacing-14);
   scroll-margin-top: 20rem;
-  margin-bottom: var(--spacing-20);
+  // margin-bottom: var(--spacing-20);
 
   @include mq("md") {
     min-height: 40rem;

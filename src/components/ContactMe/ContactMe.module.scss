@@ -1,4 +1,4 @@
-@use '../../styles/mixins' as *;
+@use "../../styles/mixins" as *;
 
 .ContactMe {
   padding-bottom: var(--spacing-20);
@@ -6,7 +6,7 @@
   max-width: 50rem;
   margin-inline: auto;
 
-  @include mq('md') {
+  @include mq("md") {
     gap: var(--spacing-7);
     padding-bottom: var(--spacing-28);
   }
@@ -22,7 +22,7 @@
     box-shadow: var(--shadow-sm);
     border: 1px solid hsl((var(--color-primary-800)));
 
-    @include mq('sm') {
+    @include mq("sm") {
       grid-template-columns: repeat(2, 1fr);
       padding: var(--spacing-6);
       gap: var(--spacing-8);

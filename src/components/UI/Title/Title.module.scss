@@ -1,7 +1,7 @@
 @use "../../../styles/mixins" as *;
 
 .Title {
-  font-size: var(--text-3xl);
+  font-size: var(--text-4xl);
   font-weight: var(--fw-medium);
   text-transform: capitalize;
   text-align: center;
@@ -10,7 +10,6 @@
   padding-bottom: var(--spacing-12);
 
   @include mq("md") {
-    font-size: var(--text-4xl);
     padding-bottom: var(--spacing-14);
   }
 }

@@ -1,11 +1,11 @@
 @use "../../styles/mixins" as *;
 
 .Skills {
-  padding-bottom: var(--spacing-28);
-  scroll-margin-top: var(--spacing-20);
+  // padding-bottom: var(--spacing-28);
+  // scroll-margin-top: var(--spacing-20);
 
   @include mq("md") {
-    padding-bottom: var(--spacing-32);
+    // padding-bottom: var(--spacing-32);
   }
 
   .SkillsContainer {

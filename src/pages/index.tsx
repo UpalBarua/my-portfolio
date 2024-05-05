@@ -5,6 +5,7 @@ import { MyProjects } from "@/components/MyProjects/MyProjects";
 import { Skills } from "@/components/Skills/Skills";
 import Head from "next/head";
 import { Fragment } from "react";
+import { SectionDivider } from "@/components/SectionDivider/SectionDivider";
 
 const Home = () => {
   return (
@@ -14,9 +15,13 @@ const Home = () => {
       </Head>
       <main>
         <Hero />
+        <SectionDivider />
         <Skills />
+        <SectionDivider />
         <MyProjects />
+        <SectionDivider />
         <AboutMe />
+        <SectionDivider />
         <ContactMe />
       </main>
     </Fragment>
