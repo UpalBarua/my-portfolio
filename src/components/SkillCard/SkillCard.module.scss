@@ -1,63 +1,31 @@
-@use '../../styles/mixins' as *;
+@use "../../styles/mixins" as *;
 
 .SkillCard {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--spacing-3);
+  gap: var(--spacing-2);
   border-radius: 10px;
   background-color: hsl(var(--color-primary-900), 0.4);
   border: 1px solid hsl(var(--color-primary-800));
   box-shadow: var(--shadow-sm);
-  padding: var(--spacing-2);
+  padding: var(--spacing-1) var(--spacing-3);
   color: hsl(var(--color-primary-200));
-  position: relative;
-  transition: transform 200ms ease;
+  height: 3.25rem;
 
-  &:hover,
-  &:focus-visible {
-    transform: scale(1.05);
-  }
-
-  @include mq('sm') {
+  @include mq("sm") {
+    height: 3.5rem;
     padding: var(--spacing-2) var(--spacing-4);
   }
 
   .Icon {
-    position: relative;
-    width: 2.5rem;
+    width: 1.675rem;
     aspect-ratio: 1/1;
+    object-fit: contain;
+    object-position: center;
 
-    img {
-      object-fit: contain;
-      object-position: center;
-    }
-
-    @include mq('sm') {
-      width: 2rem;
-    }
-  }
-
-  p {
-    display: none;
-
-    @media screen and (min-width: 40em) {
-      display: block;
+    @include mq("sm") {
+      width: 2.125rem;
     }
   }
 }
-
-// &::before {
-//   content: '';
-//   background: rgb(221, 223, 223);
-//   background: radial-gradient(
-//     circle,
-//     hsl(var(--color-primary-50), 0.1),
-//     hsl(var(--color-primary-50), 0.2)
-//   );
-//   height: 100%;
-//   width: 100%;
-//   position: absolute;
-//   inset: 0;
-//   border-radius: 10px;
-// }

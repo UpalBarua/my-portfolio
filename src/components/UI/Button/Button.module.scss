@@ -6,17 +6,18 @@
   font-weight: 500;
   text-transform: capitalize;
   background-color: transparent;
-  padding: var(--spacing-2) var(--spacing-5);
+  padding-inline: var(--spacing-6);
   border: 1px solid transparent;
   border-radius: 0.5rem;
   box-shadow: var(--shadow-sm);
   cursor: pointer;
   transition: all 200ms ease;
+  height: 3.275rem;
 
-  > svg {
+  >svg {
     font-size: var(--text-xl);
     color: hsl(var(--color-primary-50), 0.9);
-    transition: transform 250ms ease;
+    transition: transform 350ms ease;
   }
 
   &:hover,
@@ -24,12 +25,13 @@
     color: #ffffff;
     box-shadow: var(--shadow-lg);
 
-    > svg {
-      transform: translateX(10%);
+    >svg {
+      color: #ffffff;
+      transform: scale(1.1);
     }
   }
 
-  &[data-variant='primary'] {
+  &[data-variant="primary"] {
     background-color: hsl(var(--color-accent-500));
     border-color: hsl(var(--color-accent-500));
     color: #ffffff;
@@ -41,7 +43,7 @@
     }
   }
 
-  &[data-variant='secondary'] {
+  &[data-variant="secondary"] {
     background-color: hsl(var(--color-primary-900), 0.4);
     color: #ffffff;
     border-color: hsl(var(--color-primary-800));
@@ -52,7 +54,7 @@
     }
   }
 
-  &[data-variant='rounded'] {
+  &[data-variant="rounded"] {
     display: inline-flex;
     padding: var(--spacing-2);
     border-radius: 50%;
@@ -60,7 +62,9 @@
     background-color: hsl(var(--color-primary-900), 0.5);
     border-color: hsl(var(--color-primary-50), 0.01);
     box-shadow: none;
-    transition: color 250ms ease-out, background-color 250ms ease-out;
+    transition:
+      color 250ms ease-out,
+      background-color 250ms ease-out;
 
     &:hover,
     &:focus {

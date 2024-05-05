@@ -1,15 +1,15 @@
-import { ProjectDetails } from '@/components/ProjectDetails/ProjectDetails';
-import { projects } from '@/data/data';
-import type { Project } from '@/types/types';
+import { ProjectDetails } from "@/components/ProjectDetails/ProjectDetails";
+import { projects } from "@/config";
+import type { Project } from "@/types";
 
-type projectIdType = (typeof projects)[number]['id'];
+type ProjectId = (typeof projects)[number]["id"];
 
 export const getStaticPaths = async () => {
   try {
-    const paths = projects.map((project) => {
+    const paths = projects.map(({ id }) => {
       return {
         params: {
-          projectId: project.id.toString(),
+          projectId: id.toString(),
         },
       };
     });
@@ -31,7 +31,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({
   params: { projectId },
 }: {
-  params: { projectId: projectIdType };
+  params: { projectId: ProjectId };
 }) => {
   try {
     const filteredProject = projects.find(({ id }) => id == projectId);
