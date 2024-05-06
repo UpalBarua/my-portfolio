@@ -1,31 +1,31 @@
-import useSectionInView from '@/hooks/useSectionInView';
-import Link from 'next/link';
-import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
-import { HiOutlineMail } from 'react-icons/hi';
-import { ContactForm } from '../ContactForm/ContactForm';
-import { Title } from '../UI/Title/Title';
-import styles from './ContactMe.module.scss';
+import useSectionInView from "@/hooks/useSectionInView";
+import Link from "next/link";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { HiOutlineMail } from "react-icons/hi";
+import { ContactForm } from "../ContactForm/ContactForm";
+import { Title } from "../UI/Title/Title";
+import styles from "./ContactMe.module.scss";
 
 const contactLinks = [
   {
-    href: 'https://upalbarua52@gmail.com',
+    href: "https://upalbarua52@gmail.com",
     Icon: <HiOutlineMail />,
-    title: 'upalbarua52@gmail.com',
+    title: "upalbarua52@gmail.com",
   },
   {
-    href: 'https://github.com/upalbarua',
+    href: "https://github.com/upalbarua",
     Icon: <AiFillGithub />,
-    title: 'github.com',
+    title: "github.com",
   },
   {
-    href: 'https://www.linkedin.com/in/upalb',
+    href: "https://www.linkedin.com/in/upalb",
     Icon: <AiFillLinkedin />,
-    title: 'linkedin.com',
+    title: "linkedin.com",
   },
 ];
 
 export const ContactMe = () => {
-  const { ref } = useSectionInView('Contact');
+  const { ref } = useSectionInView("Contact");
 
   return (
     <section className={styles.ContactMe} id="contact" ref={ref}>
@@ -42,7 +42,8 @@ export const ContactMe = () => {
                 key={href}
                 className={styles.Link}
                 href={href}
-                target="_blank">
+                target="_blank"
+              >
                 {Icon}
                 <span>{title}</span>
               </Link>

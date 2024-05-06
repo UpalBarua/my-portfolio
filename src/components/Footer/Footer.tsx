@@ -1,7 +1,7 @@
-import { footerLinks } from "@/data/data";
-import Link from "next/link";
-import styles from "./Footer.module.scss";
-import { m } from "framer-motion";
+import { footerLinks } from '@/config';
+import Link from 'next/link';
+import styles from './Footer.module.scss';
+import { m } from 'framer-motion';
 
 export const Footer = () => {
   return (

@@ -1,6 +1,6 @@
-import styles from './PostsCard.module.scss';
-import type { PostMetadata } from '@/types/types';
-import Link from 'next/link';
+import type { PostMetadata } from "@/types";
+import Link from "next/link";
+import styles from "./PostsCard.module.scss";
 
 const PostsCard = ({ title, date, subtitle, slug }: PostMetadata) => {
   return (

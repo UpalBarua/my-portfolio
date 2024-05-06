@@ -1,8 +1,7 @@
-import { projects } from '@/data/data';
-import { navLinks } from '@/data/data';
+import { navLinks, projects } from "@/config";
 
 export type Project = (typeof projects)[number];
-export type SectionNames = (typeof navLinks)[number]['title'];
+export type SectionNames = (typeof navLinks)[number]["title"];
 
 export type PostMetadata = {
   title: string;
@@ -11,7 +10,7 @@ export type PostMetadata = {
   slug: string;
 };
 
-export type PostType = {
+export type TPost = {
   content: string;
   data: {
     title: string;

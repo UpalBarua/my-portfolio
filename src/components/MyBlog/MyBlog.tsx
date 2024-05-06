@@ -1,4 +1,4 @@
-import type { PostMetadata } from "@/types/types";
+import type { PostMetadata } from "@/types";
 import { m } from "framer-motion";
 import PostsCard from "../PostsCard/PostsCard";
 import { Title } from "../UI/Title/Title";
@@ -15,7 +15,7 @@ const MyBlog = ({ postMetadata }: MyBlogProps) => {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
     >
-      <Title>My Blog</Title>
+      <Title>Personal Blog</Title>
       <p className={styles.Subtitle}>
         Welcome to my personal blog! 🚀 I consistently share weekly posts that
         explore my ongoing projects, the valuable lessons I'm picking up, and

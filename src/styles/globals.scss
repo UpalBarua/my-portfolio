@@ -1,14 +1,9 @@
-@forward 'variables';
-@forward 'resets';
-@forward 'mixins';
+@forward "variables";
+@forward "resets";
+@forward "mixins";
 
 .container {
-  max-width: min(70rem, 100% - 1em);
+  max-width: min(80rem, 100% - 1em);
   margin-inline: auto;
-  padding-inline: var(--spacing-1);
-  // margin-top: var(--spacing-14);
-}
-
-* {
-  // border: 1px solid lime;
+  padding-inline: var(--spacing-2);
 }

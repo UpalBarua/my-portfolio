@@ -1,4 +1,4 @@
-@use '../../styles/mixins' as *;
+@use "../../styles/mixins" as *;
 
 .Header {
   width: 100%;
@@ -7,15 +7,15 @@
   right: 0;
   z-index: 999;
   background-color: hsl(var(--color-primary-950), 0.8);
-  backdrop-filter: blur(1rem) brightness(90%);
+  backdrop-filter: blur(1rem) saturate(200%);
 
-  > div {
+  >div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-block: var(--spacing-2);
 
-    @include mq('md') {
+    @include mq("md") {
       padding-block: var(--spacing-3);
     }
   }
@@ -38,7 +38,7 @@
     display: none;
     gap: var(--spacing-2);
 
-    @include mq('md') {
+    @include mq("md") {
       display: flex;
     }
   }
@@ -50,7 +50,7 @@
     font-weight: var(--fw-medium);
     position: relative;
 
-    > span {
+    >span {
       position: absolute;
       inset: 0;
       height: 100%;
@@ -66,7 +66,7 @@
       color: hsl(var(--color-primary-300));
     }
 
-    &[data-active='true'] {
+    &[data-active="true"] {
       color: #ffffff;
     }
   }

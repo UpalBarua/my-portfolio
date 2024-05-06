@@ -1,9 +1,9 @@
-import type { PostType } from "@/types/types";
+import type { TPost } from "@/types";
 import { m } from "framer-motion";
 import Markdown from "markdown-to-jsx";
 import styles from "./PostContent.module.scss";
 
-const PostContent = ({ content, data: { title, date } }: PostType) => {
+const PostContent = ({ content, data: { title, date } }: TPost) => {
   return (
     <m.article
       className={`${styles.PostContent} markdown-body`}

@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { skillsList } from "@/data/data";
 import { m } from "framer-motion";
+=======
+import { skillsList } from "@/config";
+import { motion } from "framer-motion";
+>>>>>>> development
 import Image from "next/image";
 import styles from "./SkillCard.module.scss";
 
@@ -18,7 +23,7 @@ const fadeInAnimationVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.025,
+      duration: 0.05,
       delay: 0.05 * index,
     },
   }),
@@ -36,9 +41,19 @@ export const SkillCard = ({ icon, title, index }: SkillCardProps) => {
       }}
       custom={index}
     >
+<<<<<<< HEAD
       <div className={styles.Icon}>
         <Image src={`/icons/${icon}`} alt={title} fill />
       </div>
+=======
+      <Image
+        className={styles.Icon}
+        src={`/icons/${icon}`}
+        alt={title}
+        height={80}
+        width={80}
+      />
+>>>>>>> development
       <p>{title}</p>
     </m.li>
   );

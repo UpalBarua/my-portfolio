@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 import { navLinks } from "@/data/data";
 import { m } from "framer-motion";
+=======
+import { navLinks } from "@/config";
+import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+import { motion } from "framer-motion";
+>>>>>>> development
 import Link from "next/link";
 import { RiCodeBoxFill } from "react-icons/ri";
 import { MobileMenu } from "../MobileMenu/MobileMenu";

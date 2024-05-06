@@ -1,4 +1,4 @@
-import type { Project } from "@/types/types";
+import type { Project } from "@/types";
 import { m } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";

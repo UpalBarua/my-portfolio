@@ -1,0 +1,10 @@
+@use "../../styles/mixins" as *;
+
+.SectionDivider {
+  height: 7rem;
+  width: 0.25rem;
+  margin-inline: auto;
+  border-radius: 25%;
+  background-color: hsl(var(--color-primary-900), 0.5);
+  margin-block: var(--spacing-16);
+}

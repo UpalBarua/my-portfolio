@@ -1,5 +1,9 @@
 import useSectionInView from "@/hooks/useSectionInView";
+<<<<<<< HEAD
 import { m } from "framer-motion";
+=======
+import { motion } from "framer-motion";
+>>>>>>> development
 import { Title } from "../UI/Title/Title";
 import styles from "./AboutMe.module.scss";
 

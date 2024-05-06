@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import type { Project } from "@/types/types";
 import Link from "next/link";
 import { TechStack } from "../UI/TechStack/TechStack";
 import styles from "./ProjectCard.module.scss";
 import { useRef } from "react";
 import { m, useScroll, useTransform } from "framer-motion";
+=======
+import type { Project } from "@/types/";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { TechStack } from "../UI/TechStack/TechStack";
+import styles from "./ProjectCard.module.scss";
+>>>>>>> development
 
 export const ProjectCard = ({
   id,
@@ -12,6 +20,7 @@ export const ProjectCard = ({
   techStack,
   images,
 }: Project) => {
+<<<<<<< HEAD
   const ref = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -30,6 +39,10 @@ export const ProjectCard = ({
         opacity: opacityProgress,
       }}
     >
+=======
+  return (
+    <motion.div>
+>>>>>>> development
       <Link
         className={styles.ProjectCard}
         href={`projects/${id}`}

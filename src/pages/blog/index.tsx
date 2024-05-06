@@ -1,9 +1,7 @@
-import { UnderConstruction } from '@/components/UnderConstruction/UnderConstruction';
-import Head from 'next/head';
-import { Title } from '@/components/UI/Title/Title';
-import MyBlog from '@/components/MyBlog/MyBlog';
-import getPostMetadata from '@/lib/getPostMetadta';
-import { PostMetadata } from '@/types/types';
+import MyBlog from "@/components/MyBlog/MyBlog";
+import getPostMetadata from "@/lib/getPostMetadta";
+import { PostMetadata } from "@/types";
+import Head from "next/head";
 
 export const getStaticProps = () => {
   try {

@@ -1,9 +1,9 @@
-import PostContent from '@/components/PostContent/PostContent';
-import getPostMetadata from '@/lib/getPostMetadta';
-import type { PostType } from '@/types/types';
-import fs from 'fs';
-import 'github-markdown-css';
-import matter from 'gray-matter';
+import PostContent from "@/components/PostContent/PostContent";
+import getPostMetadata from "@/lib/getPostMetadta";
+import type { TPost } from "@/types";
+import fs from "fs";
+import "github-markdown-css";
+import matter from "gray-matter";
 
 export const getStaticPaths = () => {
   try {
@@ -35,7 +35,7 @@ export const getStaticProps = ({
   params: { slug: string };
 }) => {
   try {
-    const file = fs.readFileSync(`src/data/posts/${slug}.md`, 'utf-8');
+    const file = fs.readFileSync(`src/config/posts/${slug}.md`, "utf-8");
     const { orig, ...fileContent } = matter(file);
 
     return {
@@ -54,7 +54,7 @@ export const getStaticProps = ({
   }
 };
 
-const Post = ({ post }: { post: PostType }) => {
+const Post = ({ post }: { post: TPost }) => {
   return <PostContent {...post} />;
 };
 

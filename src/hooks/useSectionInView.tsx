@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
-import { useActiveSectionContext } from '@/context/ActiveSectionContext';
-import type { SectionNames } from '@/types/types';
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+import type { SectionNames } from "@/types";
 
 const useSectionInView = (sectionName: SectionNames, threshold = 0.75) => {
   const { setActiveSection, timeOfLastClick } = useActiveSectionContext();

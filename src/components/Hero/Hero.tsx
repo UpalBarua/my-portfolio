@@ -1,8 +1,7 @@
 import useSectionInView from "@/hooks/useSectionInView";
 import { m } from "framer-motion";
 import Image from "next/image";
-import { BsArrowRight } from "react-icons/bs";
-import { IoDocumentTextOutline } from "react-icons/io5";
+import { IoDocumentTextOutline, IoMailOutline } from "react-icons/io5";
 import { Button } from "../UI/Button/Button";
 import styles from "./Hero.module.scss";
 
@@ -42,8 +41,8 @@ export const Hero = () => {
         className={styles.ButtonGroup}
       >
         <Button variant="primary" href="#contact" asLink>
-          Contact Me
-          <BsArrowRight />
+          <IoMailOutline />
+          <span>Contact Me</span>
         </Button>
         <Button
           variant="secondary"
@@ -51,7 +50,7 @@ export const Hero = () => {
           target="_blank"
           asLink
         >
-          My Resume <IoDocumentTextOutline />
+          <IoDocumentTextOutline /> <span>My Resume</span>
         </Button>
       </m.div>
     </section>

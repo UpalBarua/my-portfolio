@@ -1,10 +1,10 @@
-import { navLinks } from "@/data/data";
-import { outfit } from "@/pages/_app";
+import { navLinks } from "@/config";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { m } from "framer-motion";
 import Link from "next/link";
 import { HiDotsHorizontal } from "react-icons/hi";
 import styles from "./MobileMenu.module.scss";
+import { m } from "framer-motion";
+import { outfit } from "@/pages/_app";
 
 type MobileMenuProps = {
   activeSection: string;
