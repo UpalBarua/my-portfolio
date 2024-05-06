@@ -3,11 +3,14 @@ import matter from "gray-matter";
 import type { PostMetadata } from "@/types";
 
 const getPostMetadata = (): PostMetadata[] => {
-  const files = fs.readdirSync("src/data/posts");
+  const files = fs.readdirSync("src/config/posts");
   const mdFiles = files.filter((file) => file.endsWith(".md"));
 
   const posts = mdFiles.map((fileName) => {
-    const fileContents = fs.readFileSync(`src/data/posts/${fileName}`, "utf-8");
+    const fileContents = fs.readFileSync(
+      `src/config/posts/${fileName}`,
+      "utf-8",
+    );
 
     const {
       data: { title, subtitle, date },

@@ -9,7 +9,7 @@ export const Skills = () => {
 
   return (
     <section className={styles.Skills} id="skills" ref={ref}>
-      <Title>Tech Stack 🧰</Title>
+      <Title>Tech Stack</Title>
       <ul className={styles.SkillsContainer}>
         {skillsList.map((skill, index) => (
           <SkillCard key={skill.icon} index={index} {...skill} />

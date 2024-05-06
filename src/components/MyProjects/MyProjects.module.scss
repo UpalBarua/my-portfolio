@@ -1,18 +1,16 @@
 @use "../../styles/mixins" as *;
 
 .MyProjects {
-  // padding-bottom: var(--spacing-20);
   scroll-margin-top: var(--spacing-20);
-  max-width: 50rem;
+  max-width: 45rem;
   margin-inline: auto;
 
   @include mq("md") {
     gap: var(--spacing-7);
-    // padding-bottom: var(--spacing-28);
   }
 
   .Grid {
     display: grid;
-    gap: var(--spacing-7);
+    gap: var(--spacing-8);
   }
 }

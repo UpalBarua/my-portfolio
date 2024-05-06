@@ -9,7 +9,7 @@ export const MyProjects = () => {
 
   return (
     <section className={styles.MyProjects} id="projects" ref={ref}>
-      <Title>Recent Projects 🏗️</Title>
+      <Title>Recent Projects</Title>
       <div className={styles.Grid}>
         {projects.map((project) => (
           <ProjectCard key={project.id} {...project} />

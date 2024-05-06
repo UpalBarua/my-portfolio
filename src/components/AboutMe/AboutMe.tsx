@@ -15,7 +15,7 @@ export const AboutMe = () => {
       transition={{ delay: 0.175 }}
       ref={ref}
     >
-      <Title>About Me 🧑‍💻</Title>
+      <Title>About Me</Title>
       <div className={styles.Text}>
         <p>
           Hello, I'm Upal Barua, a dedicated <strong>developer</strong>{" "}

@@ -29,7 +29,7 @@ export const ContactMe = () => {
 
   return (
     <section className={styles.ContactMe} id="contact" ref={ref}>
-      <Title>Contact Me 📫</Title>
+      <Title>Contact Me</Title>
       <div className={styles.Grid}>
         <div className={styles.Column}>
           <p className={styles.Text}>
