@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-import { useActiveSectionContext } from "@/context/ActiveSectionContext";
-import { navLinks } from "@/data/data";
-import { m } from "framer-motion";
-=======
-import { navLinks } from "@/config";
-import { useActiveSectionContext } from "@/context/ActiveSectionContext";
-import { motion } from "framer-motion";
->>>>>>> development
-import Link from "next/link";
-import { RiCodeBoxFill } from "react-icons/ri";
-import { MobileMenu } from "../MobileMenu/MobileMenu";
-import styles from "./Header.module.scss";
+import { navLinks } from '@/config';
+import { useActiveSectionContext } from '@/context/ActiveSectionContext';
+import { m } from 'framer-motion';
+import Link from 'next/link';
+import { RiCodeBoxFill } from 'react-icons/ri';
+import { MobileMenu } from '../MobileMenu/MobileMenu';
+import styles from './Header.module.scss';
 
 export const Header = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -45,7 +39,7 @@ export const Header = () => {
                     <m.span
                       layoutId="activeSection"
                       transition={{
-                        type: "spring",
+                        type: 'spring',
                         stiffness: 380,
                         damping: 30,
                       }}

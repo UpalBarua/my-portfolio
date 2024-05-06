@@ -1,16 +1,11 @@
-<<<<<<< HEAD
-import { skillsList } from "@/data/data";
-import { m } from "framer-motion";
-=======
-import { skillsList } from "@/config";
-import { motion } from "framer-motion";
->>>>>>> development
-import Image from "next/image";
-import styles from "./SkillCard.module.scss";
+import { skillsList } from '@/config';
+import { m } from 'framer-motion';
+import Image from 'next/image';
+import styles from './SkillCard.module.scss';
 
 type SkillCardProps = {
-  icon: (typeof skillsList)[number]["icon"];
-  title: (typeof skillsList)[number]["title"];
+  icon: (typeof skillsList)[number]['icon'];
+  title: (typeof skillsList)[number]['title'];
   index: number;
 };
 
@@ -41,11 +36,6 @@ export const SkillCard = ({ icon, title, index }: SkillCardProps) => {
       }}
       custom={index}
     >
-<<<<<<< HEAD
-      <div className={styles.Icon}>
-        <Image src={`/icons/${icon}`} alt={title} fill />
-      </div>
-=======
       <Image
         className={styles.Icon}
         src={`/icons/${icon}`}
@@ -53,7 +43,6 @@ export const SkillCard = ({ icon, title, index }: SkillCardProps) => {
         height={80}
         width={80}
       />
->>>>>>> development
       <p>{title}</p>
     </m.li>
   );
