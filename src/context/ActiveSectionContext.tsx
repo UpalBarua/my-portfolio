@@ -1,4 +1,4 @@
-import type { SectionNames } from '@/types/types';
+import type { SectionNames } from "@/types";
 import {
   Dispatch,
   ReactNode,
@@ -6,7 +6,7 @@ import {
   createContext,
   useContext,
   useState,
-} from 'react';
+} from "react";
 
 type ActiveSectionContextType = {
   activeSection: string;
@@ -16,7 +16,7 @@ type ActiveSectionContextType = {
 };
 
 const ActiveSectionContext = createContext<ActiveSectionContextType | null>(
-  null
+  null,
 );
 
 type ActiveSectionContextProviderProps = {
@@ -26,7 +26,7 @@ type ActiveSectionContextProviderProps = {
 export const ActiveSectionContextProvider = ({
   children,
 }: ActiveSectionContextProviderProps) => {
-  const [activeSection, setActiveSection] = useState<SectionNames>('Home');
+  const [activeSection, setActiveSection] = useState<SectionNames>("Home");
   const [timeOfLastClick, setTimeOfLastClick] = useState(0);
 
   return (
@@ -36,7 +36,8 @@ export const ActiveSectionContextProvider = ({
         setActiveSection,
         timeOfLastClick,
         setTimeOfLastClick,
-      }}>
+      }}
+    >
       {children}
     </ActiveSectionContext.Provider>
   );
@@ -46,7 +47,7 @@ export const useActiveSectionContext = () => {
   const context = useContext(ActiveSectionContext);
 
   if (!context) {
-    throw new Error('ActiveSectionContext not found');
+    throw new Error("ActiveSectionContext not found");
   }
 
   return context;
