@@ -1,3 +1,5 @@
+"use client";
+
 import type { SectionNames } from "@/types";
 import {
   Dispatch,

@@ -1,3 +1,5 @@
+"use client";
+
 import type { PostMetadata } from "@/types";
 import { motion } from "framer-motion";
 import PostsCard from "../PostsCard/PostsCard";

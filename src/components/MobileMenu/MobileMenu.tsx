@@ -4,7 +4,7 @@ import Link from "next/link";
 import { HiDotsHorizontal } from "react-icons/hi";
 import styles from "./MobileMenu.module.scss";
 import { motion } from "framer-motion";
-import { outfit } from "@/pages/_app";
+import { outfit } from "@/app/fonts";
 
 type MobileMenuProps = {
   activeSection: string;
