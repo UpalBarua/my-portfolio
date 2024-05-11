@@ -1,13 +1,9 @@
-"use client";
-
-import { Footer } from "@/components/Footer/Footer";
-import { Header } from "@/components/Header/Header";
+import PhotoProvider from "@/components/photo-provider";
 import { ActiveSectionContextProvider } from "@/context/ActiveSectionContext";
+import "@/styles/globals.scss";
 import { ReactNode } from "react";
 import { Toaster } from "react-hot-toast";
-import { PhotoProvider } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
-import "@/styles/globals.scss";
 import { outfit } from "./fonts";
 
 const TOASTER_STYLES = {
@@ -22,21 +18,17 @@ type RootLayoutProps = {
   children: ReactNode;
 };
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang="en">
-      <body>
+      <body className={outfit.className + " container"}>
         <ActiveSectionContextProvider>
-          <div className={outfit.className + " container"}>
-            <Header />
-            <PhotoProvider>{children}</PhotoProvider>
-            <Footer />
-            <Toaster
-              toastOptions={{
-                style: TOASTER_STYLES,
-              }}
-            />
-          </div>
+          <PhotoProvider>{children}</PhotoProvider>
+          <Toaster
+            toastOptions={{
+              style: TOASTER_STYLES,
+            }}
+          />
         </ActiveSectionContextProvider>
       </body>
     </html>
