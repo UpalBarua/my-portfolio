@@ -1,3 +1,5 @@
+"use client";
+
 import useSectionInView from "@/hooks/useSectionInView";
 import { motion } from "framer-motion";
 import { Title } from "../UI/Title/Title";

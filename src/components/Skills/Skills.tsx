@@ -1,3 +1,5 @@
+"use client";
+
 import { skillsList } from "@/config";
 import useSectionInView from "@/hooks/useSectionInView";
 import { SkillCard } from "../SkillCard/SkillCard";

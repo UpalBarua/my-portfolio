@@ -1,3 +1,5 @@
+"use client";
+
 import { projects } from "@/config";
 import useSectionInView from "@/hooks/useSectionInView";
 import { ProjectCard } from "../ProjectCard/ProjectCard";
