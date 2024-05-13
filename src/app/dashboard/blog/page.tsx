@@ -1,27 +1,28 @@
 "use client";
 
+import { DashboardPostsCard } from "@/components/DashboardPostsCard/DashboardPostsCard";
+import { Button } from "@/components/UI/Button/Button";
 import { db } from "@/firebase/firebase.config";
+import { Post } from "@/types";
 import { collection, onSnapshot, query } from "firebase/firestore";
 import { useState } from "react";
 import styles from "./blog.module.scss";
-import { NewPost } from "@/components/new-post/new-post";
-import { Button } from "@/components/UI/Button/Button";
 
 export default function BlogPage() {
-  // const [skillsList, setSkillsList] = useState([]);
-  //
-  // const q = query(collection(db, "skills"));
-  //
-  // onSnapshot(q, (querySnapshot) => {
-  //   const skills: Skill[] = [];
-  //   querySnapshot.forEach((doc) => {
-  //     skills.push({
-  //       id: doc.id,
-  //       ...doc.data(),
-  //     } as Skill);
-  //   });
-  //   setSkillsList(skills);
-  // });
+  const [posts, setPosts] = useState<Post[]>([]);
+
+  const q = query(collection(db, "posts"));
+
+  onSnapshot(q, (querySnapshot) => {
+    const posts: Post[] = [];
+    querySnapshot.forEach((doc) => {
+      posts.push({
+        id: doc.id,
+        ...doc.data(),
+      } as Post);
+    });
+    setPosts(posts);
+  });
 
   return (
     <section>
@@ -31,11 +32,11 @@ export default function BlogPage() {
           Add New Post
         </Button>
       </div>
-      {/* <ul className={styles.skills}> */}
-      {/*   {skillsList.map((skill) => ( */}
-      {/*     <DashboardSkillCard key={skill.iconUrl} {...skill} /> */}
-      {/*   ))} */}
-      {/* </ul> */}
+      <ul className={styles.skills}>
+        {posts.map((post) => (
+          <DashboardPostsCard key={post.id} {...post} />
+        ))}
+      </ul>
     </section>
   );
 }

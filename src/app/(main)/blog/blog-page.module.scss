@@ -1,11 +1,11 @@
-@use '../../styles/mixins' as *;
+@use "../../../styles/mixins" as *;
 
 .MyBlog {
   padding-block: var(--spacing-24) var(--spacing-20);
   max-width: 50rem;
   margin-inline: auto;
 
-  @include mq('md') {
+  @include mq("md") {
     padding-bottom: var(--spacing-28);
   }
 
@@ -22,7 +22,7 @@
     gap: var(--spacing-4);
     padding-block: var(--spacing-12);
 
-    @include mq('sm') {
+    @include mq("sm") {
       padding-block: var(--spacing-14);
       grid-template-columns: repeat(2, 1fr);
       gap: var(--spacing-5);

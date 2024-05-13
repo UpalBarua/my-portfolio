@@ -1,13 +1,9 @@
 @use "../../../styles/mixins" as *;
 
 .skills {
-  max-width: 54rem;
-  margin-inline: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: var(--spacing-3);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-4);
 }
 
 .header {
