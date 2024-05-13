@@ -90,7 +90,7 @@ export function NewSkill() {
                 close
               </Button>
               <Button variant="primary" type="submit">
-                Add Skill
+                {isSubmitting ? "Please Wait" : "Add Skill"}
               </Button>
             </div>
           </form>

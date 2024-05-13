@@ -96,7 +96,7 @@ export default function NewPostPage() {
           Clear
         </Button>
         <Button variant="primary" type="submit">
-          Publish Post
+          {isSubmitting ? "Please Wait" : "Publish Post"}
         </Button>
       </div>
     </form>
