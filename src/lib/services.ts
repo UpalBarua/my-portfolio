@@ -1,5 +1,6 @@
 import { db, storage } from "@/firebase/firebase.config";
 import { addDoc, collection, deleteDoc, doc, getDoc } from "firebase/firestore";
+import type { Post } from "@/types";
 import { deleteObject, ref } from "firebase/storage";
 
 export type Skill = {
@@ -20,4 +21,8 @@ export const removeSkill = async (id: string) => {
   await deleteObject(docRef);
 
   await deleteDoc(doc(db, "skills", id));
+};
+
+export const addNewPost = async (newPost: Post) => {
+  await addDoc(collection(db, "posts"), newPost);
 };

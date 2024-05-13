@@ -1,0 +1,17 @@
+.editor {
+  font-size: var(--text-sm);
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid hsl(var(--color-primary-100), 0.25);
+  border-radius: 6px;
+  background-color: hsl(var(--color-primary-900), 0.8);
+  color: hsl(var(--color-primary-100));
+  outline: 0;
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 1px 1px,
+    rgba(0, 0, 0, 0.15) 0px 1px 1px;
+  transition: border-color 100ms ease;
+
+  &:focus {
+    border-color: hsl(var(--color-accent-400));
+  }
+}

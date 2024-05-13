@@ -1,5 +1,6 @@
 import PhotoProvider from "@/components/photo-provider";
 import { ActiveSectionContextProvider } from "@/context/ActiveSectionContext";
+import "react-quill/dist/quill.snow.css";
 import "@/styles/globals.scss";
 import { ReactNode } from "react";
 import { Toaster } from "react-hot-toast";

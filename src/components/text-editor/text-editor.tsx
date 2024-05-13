@@ -1,14 +1,17 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useState } from "react";
-import "react-quill/dist/quill.snow.css";
+import { Dispatch, SetStateAction } from "react";
+import styles from "./text-editor.module.scss";
 
 const QuillEditor = dynamic(() => import("react-quill"), { ssr: false });
 
-export function TextEditor() {
-  const [content, setContent] = useState("");
+type TextEditorProps = {
+  content: string;
+  setContent: Dispatch<SetStateAction<string>>;
+};
 
+export function TextEditor({ content, setContent }: Readonly<TextEditorProps>) {
   const quillModules = {
     toolbar: [
       [{ header: [1, 2, 3, false] }],
@@ -38,16 +41,14 @@ export function TextEditor() {
     "code-block",
   ];
 
-  const handleEditorChange = (newContent: string) => {
-    setContent(newContent);
-  };
-
   return (
-    <QuillEditor
-      value={content}
-      onChange={handleEditorChange}
-      modules={quillModules}
-      formats={quillFormats}
-    />
+    <div className={styles.editor}>
+      <QuillEditor
+        value={content}
+        onChange={(val) => setContent(val)}
+        modules={quillModules}
+        formats={quillFormats}
+      />
+    </div>
   );
 }
