@@ -24,7 +24,7 @@ const fadeInAnimationVariants = {
 
 export const SkillCard = ({ name, iconUrl, index }: SkillCardProps) => {
   return (
-    <motion.li
+    <m.li
       className={styles.SkillCard}
       variants={fadeInAnimationVariants}
       initial="initial"

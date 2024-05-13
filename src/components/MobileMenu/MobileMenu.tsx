@@ -23,7 +23,7 @@ export const MobileMenu = ({ activeSection }: MobileMenuProps) => {
           className={`${styles.Content}  ${outfit.className}`}
           asChild
         >
-          <motion.div
+          <m.div
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.1 }}
@@ -37,7 +37,7 @@ export const MobileMenu = ({ activeSection }: MobileMenuProps) => {
                 <Link href={link}>{title}</Link>
               </DropdownMenu.Item>
             ))}
-          </motion.div>
+          </m.div>
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
     </DropdownMenu.Root>
