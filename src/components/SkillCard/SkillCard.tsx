@@ -1,11 +1,9 @@
-import { skillsList } from '@/config';
-import { m } from 'framer-motion';
-import Image from 'next/image';
-import styles from './SkillCard.module.scss';
+import { Skill } from "@/lib/services";
+import Image from "next/image";
+import { MotionDiv } from "../motion-div";
+import styles from "./SkillCard.module.scss";
 
-type SkillCardProps = {
-  icon: (typeof skillsList)[number]['icon'];
-  title: (typeof skillsList)[number]['title'];
+type SkillCardProps = Skill & {
   index: number;
 };
 
@@ -24,9 +22,9 @@ const fadeInAnimationVariants = {
   }),
 };
 
-export const SkillCard = ({ icon, title, index }: SkillCardProps) => {
+export const SkillCard = ({ name, iconUrl, index }: SkillCardProps) => {
   return (
-    <m.li
+    <MotionDiv
       className={styles.SkillCard}
       variants={fadeInAnimationVariants}
       initial="initial"
@@ -38,12 +36,12 @@ export const SkillCard = ({ icon, title, index }: SkillCardProps) => {
     >
       <Image
         className={styles.Icon}
-        src={`/icons/${icon}`}
-        alt={title}
+        src={iconUrl}
+        alt={name}
         height={80}
         width={80}
       />
-      <p>{title}</p>
-    </m.li>
+      <p>{name}</p>
+    </MotionDiv>
   );
 };

@@ -1,3 +1,5 @@
+"use client";
+
 import useSectionInView from "@/hooks/useSectionInView";
 import Link from "next/link";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";

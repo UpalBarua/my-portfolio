@@ -1,0 +1,112 @@
+@use "../../styles/mixins" as *;
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 100%;
+  width: 80%;
+  max-width: 18rem;
+  padding: var(--spacing-4);
+  background-color: hsl(var(--color-primary-900), 0.4);
+  backdrop-filter: blur(1rem) saturate(200%);
+  transform: translateX(-100%);
+  transition: transform 200ms ease;
+
+  div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: var(--spacing-6);
+  }
+
+  &[data-open="true"] {
+    transform: translateX(0);
+  }
+
+  @include mq("md") {
+    transform: translateX(0);
+    padding: var(--spacing-8) var(--spacing-6);
+  }
+}
+
+.title {
+  font-size: var(--text-2xl);
+  font-weight: var(--fw-medium);
+  text-transform: capitalize;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: var(--spacing-1);
+  font-size: var(--text-2xl);
+  background-color: hsl(var(--color-primary-900));
+  color: hsl(var(--color-primary-50));
+  border: 1px solid hsl(var(--color-primary-900), 0.5);
+  outline: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background-color: hsl(var(--color-primary-900), 0.8);
+  }
+
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: var(--spacing-3);
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--text-lg);
+
+  &[data-active="true"] {
+    color: hsl(var(--color-accent-500)) !important;
+  }
+}
+
+.icon {
+  color: hsl(var(--color-primary-50), 0.6);
+}
+
+.content {
+  padding-top: var(--spacing-20);
+
+  @include mq("md") {
+    position: absolute;
+    left: 18rem;
+    width: calc(100% - 18rem);
+    padding: var(--spacing-4) var(--spacing-10);
+  }
+}
+
+.content>div:first-child {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  width: 100%;
+  height: 3.675rem;
+  padding-inline: var(--spacing-3);
+  background-color: hsl(var(--color-primary-900), 0.4);
+  backdrop-filter: blur(1rem) saturate(200%);
+
+  @include mq("md") {
+    display: none;
+  }
+}

@@ -1,3 +1,7 @@
+import { BsTools } from "react-icons/bs";
+import { GrArticle } from "react-icons/gr";
+import { IoIosGitBranch } from "react-icons/io";
+
 export const navLinks = [
   {
     title: "Home",
@@ -50,92 +54,92 @@ export const footerLinks = [
 
 export const skillsList = [
   {
-    title: "HTML",
-    icon: "html5.png",
+    name: "HTML",
+    iconUrl: "html5.png",
   },
   {
-    title: "CSS",
-    icon: "css3.png",
+    name: "CSS",
+    iconUrl: "css3.png",
   },
   {
-    title: "SASS",
-    icon: "sass.png",
+    name: "SASS",
+    iconUrl: "sass.png",
   },
   {
-    title: "Bootstrap",
-    icon: "bootstrap-5.png",
+    name: "Bootstrap",
+    iconUrl: "bootstrap-5.png",
   },
   {
-    title: "Tailwind",
-    icon: "tailwind.png",
+    name: "Tailwind",
+    iconUrl: "tailwind.png",
   },
   {
-    title: "ChakraUI",
-    icon: "chakra-ui.png",
+    name: "ChakraUI",
+    iconUrl: "chakra-ui.png",
   },
   {
-    title: "Framer Motion",
-    icon: "framer-motion.svg",
+    name: "Framer Motion",
+    iconUrl: "framer-motion.svg",
   },
   {
-    title: "JavaScript",
-    icon: "javascript.png",
+    name: "JavaScript",
+    iconUrl: "javascript.png",
   },
   {
-    title: "TypeScript",
-    icon: "typescript.png",
+    name: "TypeScript",
+    iconUrl: "typescript.png",
   },
   {
-    title: "React",
-    icon: "react.png",
+    name: "React",
+    iconUrl: "react.png",
   },
   {
-    title: "Next.js",
-    icon: "next-js.png",
+    name: "Next.js",
+    iconUrl: "next-js.png",
   },
   {
-    title: "Redux",
-    icon: "redux.svg",
+    name: "Redux",
+    iconUrl: "redux.svg",
   },
   {
-    title: "Node.js",
-    icon: "node-js.png",
+    name: "Node.js",
+    iconUrl: "node-js.png",
   },
   {
-    title: "Firebase",
-    icon: "firebase.png",
+    name: "Firebase",
+    iconUrl: "firebase.png",
   },
   {
-    title: "Express.js",
-    icon: "express-js.png",
+    name: "Express.js",
+    iconUrl: "express-js.png",
   },
   {
-    title: "MongoDB",
-    icon: "mongodb.png",
+    name: "MongoDB",
+    iconUrl: "mongodb.png",
   },
   {
-    title: "Python",
-    icon: "python.png",
+    name: "Python",
+    iconUrl: "python.png",
   },
   {
-    title: "Linux",
-    icon: "linux.png",
+    name: "Linux",
+    iconUrl: "linux.png",
   },
   {
-    title: "Bash",
-    icon: "bash.png",
+    name: "Bash",
+    iconUrl: "bash.png",
   },
   {
-    title: "Figma",
-    icon: "figma.png",
+    name: "Figma",
+    iconUrl: "figma.png",
   },
   {
-    title: "Git",
-    icon: "git.png",
+    name: "Git",
+    iconUrl: "git.png",
   },
   {
-    title: "Vim",
-    icon: "vim.png",
+    name: "Vim",
+    iconUrl: "vim.png",
   },
 ] as const;
 
@@ -345,4 +349,22 @@ export const projects = [
   //     git: "https://github.com/UpalBarua/quick-quiz",
   //   },
   // },
+] as const;
+
+export const dashboardNavLinks = [
+  {
+    label: "Skills",
+    href: "/dashboard/skills",
+    Icon: BsTools,
+  },
+  {
+    label: "Projects",
+    href: "/dashboard/projects",
+    Icon: IoIosGitBranch,
+  },
+  {
+    label: "Blog",
+    href: "/dashboard/blog",
+    Icon: GrArticle,
+  },
 ] as const;

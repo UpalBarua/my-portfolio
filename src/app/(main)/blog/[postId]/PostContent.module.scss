@@ -1,0 +1,32 @@
+@use "../../../../styles/mixins";
+
+.PostContent {
+  background-color: var(--color-primary-950) !important;
+  color: hsl(var(--color-primary-50), 0.9) !important;
+  max-width: 40rem;
+  margin-inline: auto !important;
+  padding-block: var(--spacing-20) !important;
+
+  * {
+    border-color: hsl(var(--color-primary-800)) !important;
+  }
+
+  .Title {
+    font-size: var(--text-3xl);
+    font-weight: var(--fw-semibold);
+    color: #ffffff;
+    border: 0;
+  }
+
+  .Date {
+    display: none;
+    font-size: var(--text-lg);
+    color: hsl(var(--color-primary-400));
+  }
+
+  // h2 {
+  //   font-size: var(--text-xl);
+  //   font-weight: var(--fw-medium);
+  //   padding-block: var(--spacing-5);
+  // }
+}

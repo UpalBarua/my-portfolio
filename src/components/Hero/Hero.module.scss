@@ -16,24 +16,30 @@
     min-height: 40rem;
   }
 
-  .Avatar {
-    position: relative;
-    aspect-ratio: 1/1;
-    width: min(60dvw, 14rem);
-    background-color: hsl(var(--color-primary-900));
-    border-radius: 50%;
-    border: 2px solid hsl(var(--color-accent-400));
-    box-shadow: var(--shadow-lg);
+  // .Avatar {
+  //   position: relative;
+  //   aspect-ratio: 1/1;
+  //   width: min(60dvw, 14rem);
+  //   background-color: hsl(var(--color-primary-900));
+  //   border-radius: 50%;
+  //   border: 2px solid hsl(var(--color-accent-400));
+  //   box-shadow: var(--shadow-lg);
+  //
+  //   &::before {
+  //     content: "";
+  //     position: absolute;
+  //     height: 100%;
+  //     width: 100%;
+  //     inset: 0;
+  //     border-radius: 50%;
+  //     background-color: hsl(var(--color-accent-400), 0.125);
+  //     animation: pulse 10s ease infinite;
+  //   }
+  // }
 
-    &::before {
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      inset: 0;
+  .Avatar {
+    img {
       border-radius: 50%;
-      background-color: hsl(var(--color-accent-400), 0.125);
-      animation: pulse 10s ease infinite;
     }
   }
 
