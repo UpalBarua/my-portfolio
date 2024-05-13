@@ -1,5 +1,5 @@
 import { db, storage } from "@/firebase/firebase.config";
-import type { Post } from "@/types";
+import type { Post, Project } from "@/types";
 import { addDoc, collection, deleteDoc, doc, getDoc } from "firebase/firestore";
 import { deleteObject, ref } from "firebase/storage";
 
@@ -34,4 +34,17 @@ export const getPostById = async (id: string) => {
 
 export const removePost = async (id: string) => {
   await deleteDoc(doc(db, "posts", id));
+};
+
+export const addNewProject = async (newProject: Project) => {
+  await addDoc(collection(db, "projects"), newProject);
+};
+
+export const removeProject = async (id: string) => {
+  await deleteDoc(doc(db, "projects", id));
+};
+
+export const getProjectById = async (id: string) => {
+  const docSnapshot = await getDoc(doc(db, "projects", id));
+  return { id: docSnapshot.id, ...docSnapshot.data() } as Project;
 };

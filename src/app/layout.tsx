@@ -1,4 +1,4 @@
-import PhotoProvider from "@/components/photo-provider";
+import { PhotoProvider } from "@/components/photo-provider";
 import { ActiveSectionContextProvider } from "@/context/ActiveSectionContext";
 import "react-quill/dist/quill.snow.css";
 import "@/styles/globals.scss";

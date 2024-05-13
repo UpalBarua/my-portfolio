@@ -1,6 +1,5 @@
 import { navLinks, projects } from "@/config";
 
-export type Project = (typeof projects)[number];
 export type SectionNames = (typeof navLinks)[number]["title"];
 
 export type Post = {
@@ -11,4 +10,16 @@ export type Post = {
     date: string;
   };
   content: string;
+};
+
+export type Project = {
+  id?: string;
+  images: string[];
+  title: string;
+  description: string;
+  techStack: string[];
+  links: {
+    live: string;
+    git: string;
+  };
 };

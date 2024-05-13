@@ -1,4 +1,4 @@
-@use '../../styles/mixins' as *;
+@use "../../../../styles/mixins" as *;
 
 .ProjectDetails {
   display: grid;
@@ -7,7 +7,7 @@
   margin-inline: auto;
   padding-bottom: var(--spacing-20);
 
-  @include mq('md') {
+  @include mq("md") {
     padding-bottom: var(--spacing-28);
   }
 
@@ -24,17 +24,15 @@
     .Content {
       width: 100%;
       background: hsl(var(--color-primary-950));
-      background: linear-gradient(
-        0deg,
-        hsl(var(--color-primary-950), 0.9),
-        hsl(var(--color-primary-950), 0.6),
-        hsl(var(--color-primary-950), 0.3)
-      );
+      background: linear-gradient(0deg,
+          hsl(var(--color-primary-950), 0.9),
+          hsl(var(--color-primary-950), 0.6),
+          hsl(var(--color-primary-950), 0.3));
       backdrop-filter: blur(1rem) brightness(90%);
       padding: var(--spacing-3) var(--spacing-2);
       border-radius: 0 0 10px 10px;
 
-      > div {
+      >div {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -46,7 +44,7 @@
       font-size: var(--text-2xl);
       font-weight: var(--fw-bold);
 
-      @include mq('sm') {
+      @include mq("sm") {
         font-size: var(--text-3xl);
       }
     }
@@ -67,7 +65,9 @@
       background-color: hsl(var(--color-primary-900), 0.5);
       border-color: hsl(var(--color-primary-50), 0.01);
       box-shadow: none;
-      transition: color 200ms ease, background-color 200ms ease;
+      transition:
+        color 200ms ease,
+        background-color 200ms ease;
 
       &:hover,
       &:focus {
@@ -75,7 +75,7 @@
         color: #ffffff;
       }
 
-      @include mq('sm') {
+      @include mq("sm") {
         font-size: var(--text-2xl);
       }
     }
@@ -91,7 +91,7 @@
       height: 15rem;
       cursor: pointer;
 
-      @include mq('md') {
+      @include mq("md") {
         height: 20rem;
       }
 

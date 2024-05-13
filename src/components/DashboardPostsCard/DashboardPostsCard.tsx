@@ -1,7 +1,6 @@
 import { formatDate } from "@/lib/format-date";
 import { removePost } from "@/lib/services";
 import type { Post } from "@/types";
-import Link from "next/link";
 import toast from "react-hot-toast";
 import { FaRegTrashAlt } from "react-icons/fa";
 import styles from "./DashboardPostCard.module.scss";
@@ -21,7 +20,7 @@ export function DashboardPostsCard({
   };
 
   return (
-    <Link className={styles.PostCard} href={`/blog/${id}`}>
+    <div className={styles.PostCard}>
       <p className={styles.Date}>{formatDate(date)}</p>
       <h3 className={styles.Title}>{title}</h3>
       <p className={styles.Subtitle}>{subtitle}</p>
@@ -32,6 +31,6 @@ export function DashboardPostsCard({
         <FaRegTrashAlt />
         <span>Remove</span>
       </button>
-    </Link>
+    </div>
   );
 }
