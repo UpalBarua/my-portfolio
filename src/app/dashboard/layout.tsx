@@ -16,9 +16,6 @@ export default function DashboardLayout({
   children,
 }: Readonly<DashboardLayoutProps>) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const pathname = usePathname();
-
-  console.log(pathname);
 
   return (
     <main className={styles.dashboard}>
@@ -35,11 +32,7 @@ export default function DashboardLayout({
         </div>
         <nav className={styles.navigation}>
           {dashboardNavLinks.map(({ label, href, Icon }) => (
-            <Link
-              className={styles.link}
-              href={href}
-              data-active={pathname?.startsWith("/dashboard" + href)}
-            >
+            <Link className={styles.link} href={href}>
               <Icon className={styles.icon} />
               <span>{label}</span>
             </Link>
