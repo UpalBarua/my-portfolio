@@ -38,7 +38,7 @@ export default function DashboardLayout({
             <Link
               className={styles.link}
               href={href}
-              data-active={pathname.startsWith("/dashboard" + href)}
+              data-active={pathname?.startsWith("/dashboard" + href)}
             >
               <Icon className={styles.icon} />
               <span>{label}</span>
