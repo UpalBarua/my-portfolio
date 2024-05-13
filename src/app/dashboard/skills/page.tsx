@@ -1,17 +1,14 @@
 "use client";
 
-import useSectionInView from "@/hooks/useSectionInView";
-import { SkillCard } from "../SkillCard/SkillCard";
-import { Title } from "../UI/Title/Title";
-import styles from "./Skills.module.scss";
-import { useState } from "react";
+import { DashboardSkillCard } from "@/components/dashboard-skill-card/dashboard-skill-card";
+import { NewSkill } from "@/components/new-skill/new-skill";
 import { db } from "@/firebase/firebase.config";
 import { Skill } from "@/lib/services";
 import { collection, onSnapshot, query } from "firebase/firestore";
+import { useState } from "react";
+import styles from "./skills-page.module.scss";
 
-export const Skills = () => {
-  const { ref } = useSectionInView("Skills");
-
+export default function SkillsPage() {
   const [skillsList, setSkillsList] = useState<Skill[]>([]);
 
   const q = query(collection(db, "skills"));
@@ -28,13 +25,16 @@ export const Skills = () => {
   });
 
   return (
-    <section className={styles.Skills} id="skills" ref={ref}>
-      <Title>Tech Stack</Title>
-      <ul className={styles.SkillsContainer}>
-        {skillsList.map((skill, index) => (
-          <SkillCard key={skill.iconUrl} index={index} {...skill} />
+    <section>
+      <div className={styles.header}>
+        <h2 className={styles.title}>Manage Skills</h2>
+        <NewSkill />
+      </div>
+      <ul className={styles.skills}>
+        {skillsList.map((skill) => (
+          <DashboardSkillCard key={skill.iconUrl} {...skill} />
         ))}
       </ul>
     </section>
   );
-};
+}

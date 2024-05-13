@@ -1,0 +1,55 @@
+@use "../../styles/mixins" as *;
+
+.SkillCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  border-radius: 10px;
+  background-color: hsl(var(--color-primary-900), 0.4);
+  border: 1px solid hsl(var(--color-primary-800));
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-1) var(--spacing-3);
+  color: hsl(var(--color-primary-200));
+  height: 3.25rem;
+  position: relative;
+
+  @include mq("sm") {
+    height: 3.5rem;
+    padding: var(--spacing-2) var(--spacing-4);
+  }
+
+  .Icon {
+    width: 1.675rem;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    object-position: center;
+
+    @include mq("sm") {
+      width: 2rem;
+    }
+  }
+
+  .delete_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    background-color: hsl(var(--color-danger), 0.6);
+    backdrop-filter: blur(1rem) saturate(200%);
+    border: 0;
+    border-radius: inherit;
+    font-size: var(--text-lg);
+    color: var(--color-primary-50);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 250ms ease;
+    gap: var(--spacing-2);
+
+    &:hover,
+    &:focus-visible {
+      opacity: 1;
+    }
+  }
+}

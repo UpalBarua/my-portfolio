@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 10;
   height: 100%;
   width: 80%;
   max-width: 18rem;
@@ -72,6 +72,10 @@
   align-items: center;
   gap: var(--spacing-2);
   font-size: var(--text-lg);
+
+  &[data-active="true"] {
+    color: hsl(var(--color-accent-500)) !important;
+  }
 }
 
 .icon {

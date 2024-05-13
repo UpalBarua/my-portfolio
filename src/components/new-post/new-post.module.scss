@@ -1,0 +1,93 @@
+@use "../../styles/mixins" as *;
+
+.dialog_overlay {
+  background-color: hsl(var(--color-primary-950), 0.6);
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+}
+
+.dialog_content {
+  background-color: hsl(var(--color-primary-900), 0.8);
+  backdrop-filter: blur(1rem) saturate(200%);
+  border-radius: var(--border-radius);
+  box-shadow:
+    hsl(206 22% 7% / 35%) 0px 10px 38px -10px,
+    hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 450px;
+  max-height: 85vh;
+  padding: 25px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.dialog_title {
+  margin: 0;
+  font-weight: var(--font-medium);
+  font-size: var(--text-2xl);
+  padding-bottom: var(--spacing-4);
+}
+
+.form {
+  display: grid;
+  gap: var(--spacing-4);
+
+  .field {
+    display: grid;
+    gap: var(--spacing-2);
+    border: 0;
+
+    @include mq("md") {
+      gap: var(--spacing-2);
+    }
+
+    >label {
+      text-transform: capitalize;
+      padding-left: 2px;
+    }
+
+    >input {
+      font-size: var(--text-sm);
+      padding: var(--spacing-2) var(--spacing-3);
+      border: 1px solid hsl(var(--color-primary-100), 0.25);
+      border-radius: 6px;
+      background-color: hsl(var(--color-primary-900), 0.8);
+      color: hsl(var(--color-primary-100));
+      outline: 0;
+      height: 3.125rem;
+      box-shadow:
+        rgba(0, 0, 0, 0.1) 0px 1px 1px,
+        rgba(0, 0, 0, 0.15) 0px 1px 1px;
+      transition: border-color 100ms ease;
+
+      &:focus {
+        border-color: hsl(var(--color-accent-400));
+      }
+    }
+  }
+
+  .error_message {
+    color: hsl(var(--color-danger));
+    font-size: var(--text-sm);
+  }
+}
+
+.btn_group {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: var(--spacing-4);
+  padding-top: var(--spacing-8);
+
+  button:first-child {
+    color: hsl(var(--color-danger));
+  }
+}

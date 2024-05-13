@@ -1,31 +1,12 @@
 "use client";
 
+import { dashboardNavLinks } from "@/config";
 import Link from "next/link";
-import { ReactNode } from "react";
-import { BsTools } from "react-icons/bs";
-import { GrArticle } from "react-icons/gr";
+import { ReactNode, useState } from "react";
 import { HiDotsHorizontal } from "react-icons/hi";
-import { IoIosGitBranch, IoMdClose } from "react-icons/io";
+import { IoMdClose } from "react-icons/io";
 import styles from "./layout.module.scss";
-import { useState } from "react";
-
-const dashboardNavLinks = [
-  {
-    label: "Skills",
-    href: "/dashboard/skills",
-    Icon: BsTools,
-  },
-  {
-    label: "Projects",
-    href: "/dashboard/projects",
-    Icon: IoIosGitBranch,
-  },
-  {
-    label: "Blog",
-    href: "/dashboard/blog",
-    Icon: GrArticle,
-  },
-] as const;
+import { usePathname } from "next/navigation";
 
 type DashboardLayoutProps = {
   children: ReactNode;
@@ -35,6 +16,9 @@ export default function DashboardLayout({
   children,
 }: Readonly<DashboardLayoutProps>) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const pathname = usePathname();
+
+  console.log(pathname);
 
   return (
     <main className={styles.dashboard}>
@@ -51,7 +35,11 @@ export default function DashboardLayout({
         </div>
         <nav className={styles.navigation}>
           {dashboardNavLinks.map(({ label, href, Icon }) => (
-            <Link className={styles.link} href={href}>
+            <Link
+              className={styles.link}
+              href={href}
+              data-active={pathname.startsWith("/dashboard" + href)}
+            >
               <Icon className={styles.icon} />
               <span>{label}</span>
             </Link>
