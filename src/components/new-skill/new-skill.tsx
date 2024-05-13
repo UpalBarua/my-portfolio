@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/UI/Button/Button";
+import { addNewSkill } from "@/lib/services";
 import { uploadFile } from "@/lib/upload-files";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as Dialog from "@radix-ui/react-dialog";
@@ -9,7 +10,6 @@ import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import * as z from "zod";
 import styles from "./new-skill.module.scss";
-import { addNewSkill } from "@/lib/services";
 
 const newSkillFormSchema = z.object({
   name: z
@@ -17,9 +17,7 @@ const newSkillFormSchema = z.object({
     .trim()
     .min(3, { message: "Name must be at least 3 characters." })
     .max(20, { message: "Name cannot exceed 20 characters." }),
-  iconFile: z
-    .instanceof(FileList)
-    .refine((file) => file?.length == 1, "Icon is required."),
+  iconFile: z.any().refine((file) => file?.length == 1, "Icon is required."),
 });
 
 type NewSkillForm = z.infer<typeof newSkillFormSchema>;
@@ -82,11 +80,6 @@ export function NewSkill() {
                 accept="image/*"
                 {...register("iconFile")}
               />
-              {errors.iconFile?.message ? (
-                <span className={styles.error_message}>
-                  {errors.iconFile.message}
-                </span>
-              ) : null}
             </fieldset>
             <div className={styles.btn_group}>
               <Button

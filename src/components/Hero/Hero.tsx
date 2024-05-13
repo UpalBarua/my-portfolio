@@ -19,10 +19,11 @@ export const Hero = () => {
         className={styles.Avatar}
       >
         <Image
-          src="/images/avatar.svg"
+          src="/images/picture.png"
           alt="avatar"
           quality={95}
-          fill
+          height="200"
+          width="200"
           priority
         />
       </motion.div>

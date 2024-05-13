@@ -27,7 +27,10 @@ export function DashboardSkillCard({ id, name, iconUrl }: Skill) {
         width={80}
       />
       <p>{name}</p>
-      <button className={styles.delete_button} onClick={() => handleRemove(id)}>
+      <button
+        className={styles.delete_button}
+        onClick={() => handleRemove(id as string)}
+      >
         <FaRegTrashAlt />
         <span>Remove</span>
       </button>
