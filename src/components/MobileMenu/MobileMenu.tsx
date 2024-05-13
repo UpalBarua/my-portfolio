@@ -3,7 +3,7 @@ import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import Link from "next/link";
 import { HiDotsHorizontal } from "react-icons/hi";
 import styles from "./MobileMenu.module.scss";
-import { motion } from "framer-motion";
+import { MotionDiv } from "../motion-div";
 import { outfit } from "@/app/fonts";
 
 type MobileMenuProps = {
@@ -23,7 +23,7 @@ export const MobileMenu = ({ activeSection }: MobileMenuProps) => {
           className={`${styles.Content}  ${outfit.className}`}
           asChild
         >
-          <m.div
+          <MotionDiv
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.1 }}
@@ -37,7 +37,7 @@ export const MobileMenu = ({ activeSection }: MobileMenuProps) => {
                 <Link href={link}>{title}</Link>
               </DropdownMenu.Item>
             ))}
-          </m.div>
+          </MotionDiv>
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
     </DropdownMenu.Root>

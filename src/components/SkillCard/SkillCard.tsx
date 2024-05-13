@@ -1,6 +1,6 @@
 import { Skill } from "@/lib/services";
-import { motion } from "framer-motion";
 import Image from "next/image";
+import { MotionDiv } from "../motion-div";
 import styles from "./SkillCard.module.scss";
 
 type SkillCardProps = Skill & {
@@ -24,7 +24,7 @@ const fadeInAnimationVariants = {
 
 export const SkillCard = ({ name, iconUrl, index }: SkillCardProps) => {
   return (
-    <m.li
+    <MotionDiv
       className={styles.SkillCard}
       variants={fadeInAnimationVariants}
       initial="initial"
@@ -42,6 +42,6 @@ export const SkillCard = ({ name, iconUrl, index }: SkillCardProps) => {
         width={80}
       />
       <p>{name}</p>
-    </motion.li>
+    </MotionDiv>
   );
 };
