@@ -1,0 +1,119 @@
+@use "../../styles/mixins" as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  width: 100%;
+  overflow: hidden;
+  background-color: hsl(var(--color-primary-950), 0.8);
+  backdrop-filter: blur(1rem) saturate(200%);
+
+  >header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: var(--spacing-2);
+    flex-wrap: wrap;
+
+    @include mq("md") {
+      padding-block: var(--spacing-3);
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-3);
+  font-size: var(--text-lg);
+  font-weight: var(--fw-bold);
+
+  .icon {
+    font-size: var(--text-3xl);
+    color: hsl(var(--color-accent-400));
+  }
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  order: 1;
+  height: 0;
+  width: 100%;
+  opacity: 0;
+  transition:
+    height 300ms ease,
+    padding 300ms ease,
+    opacity 250ms ease;
+
+  &[data-open="true"] {
+    height: 100%;
+    opacity: 1;
+    padding-top: var(--spacing-6);
+    padding-bottom: var(--spacing-4);
+  }
+
+  @include mq("md") {
+    flex-direction: row;
+    height: 100%;
+    opacity: 1;
+    order: 0;
+    width: max-content;
+  }
+
+  .navLink {
+    padding: var(--spacing-2) var(--spacing-3);
+    border-radius: 8px;
+    transition: color 200ms ease;
+    font-weight: var(--fw-medium);
+    position: relative;
+
+    >span {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      border-radius: 8px;
+      background-color: hsl(var(--color-primary-900), 0.4);
+      border: 1px solid hsl(var(--color-primary-900), 0.5);
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: hsl(var(--color-primary-300));
+    }
+
+    &[data-active="true"] {
+      color: #ffffff;
+    }
+  }
+}
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: var(--spacing-1);
+  font-size: var(--text-2xl);
+  background-color: hsl(var(--color-primary-950), 0.5);
+  color: hsl(var(--color-primary-100));
+  border: 1px solid hsl(var(--color-primary-900), 0.5);
+  box-shadow: var(--shadow-sm);
+  outline: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background-color: hsl(var(--color-primary-950), 0.8);
+  }
+
+  @include mq("md") {
+    display: none;
+  }
+}

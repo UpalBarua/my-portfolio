@@ -1,6 +1,9 @@
+import { ReactNode } from "react";
+
 import { Footer } from "@/components/Footer/Footer";
-import { Header } from "@/components/Header/Header";
-import { Fragment, ReactNode } from "react";
+import { Navbar } from "@/components/navbar/navbar";
+
+import styles from "@/styles/main-layout.module.scss";
 
 type MainLayoutProps = {
   children: ReactNode;
@@ -8,10 +11,10 @@ type MainLayoutProps = {
 
 export default function MainLayout({ children }: Readonly<MainLayoutProps>) {
   return (
-    <Fragment>
-      <Header />
-      {children}
+    <div className={styles.mainLayout}>
+      <Navbar />
+      <div>{children}</div>
       <Footer />
-    </Fragment>
+    </div>
   );
 }
