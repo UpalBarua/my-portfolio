@@ -1,6 +1,13 @@
 import { db, storage } from "@/firebase/firebase.config";
 import type { Post, Project } from "@/types";
-import { addDoc, collection, deleteDoc, doc, getDoc } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  deleteDoc,
+  doc,
+  getDoc,
+  getDocs,
+} from "firebase/firestore";
 import { deleteObject, ref } from "firebase/storage";
 
 export type Skill = {
@@ -11,6 +18,34 @@ export type Skill = {
 
 export const addNewSkill = async (newSkill: Skill) => {
   await addDoc(collection(db, "skills"), newSkill);
+};
+
+export const getAllSkills = async () => {
+  const skills: Skill[] = [];
+  const querySnapshot = await getDocs(collection(db, "skills"));
+
+  querySnapshot.forEach((doc) => {
+    skills.push({
+      id: doc.id,
+      ...doc.data(),
+    } as Skill);
+  });
+
+  return skills;
+};
+
+export const getRecentProjects = async () => {
+  const projects: Project[] = [];
+  const querySnapshot = await getDocs(collection(db, "projects"));
+
+  querySnapshot.forEach((doc) => {
+    projects.push({
+      id: doc.id,
+      ...doc.data(),
+    } as Project);
+  });
+
+  return projects;
 };
 
 export const removeSkill = async (id: string) => {

@@ -1,6 +1,6 @@
 @use "../../styles/mixins" as *;
 
-.MyProjects {
+.projects {
   scroll-margin-top: var(--spacing-20);
   max-width: 45rem;
   margin-inline: auto;
@@ -8,9 +8,9 @@
   @include mq("md") {
     gap: var(--spacing-7);
   }
+}
 
-  .Grid {
-    display: grid;
-    gap: var(--spacing-8);
-  }
+.container {
+  display: grid;
+  gap: var(--spacing-8);
 }

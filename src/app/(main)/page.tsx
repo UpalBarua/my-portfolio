@@ -1,9 +1,9 @@
-import { AboutMe } from "@/components/AboutMe/AboutMe";
-import { ContactMe } from "@/components/ContactMe/ContactMe";
-import { Hero } from "@/components/Hero/Hero";
-import { MyProjects } from "@/components/MyProjects/MyProjects";
+import { AboutMe } from "@/components/about-me/about-me";
+import { ContactMe } from "@/components/contact-me/contact-me";
+import { Hero } from "@/components/hero/hero";
+import { RecentProjects } from "@/components/recent-projects/recent-projects";
 import { SectionDivider } from "@/components/SectionDivider/SectionDivider";
-import { Skills } from "@/components/Skills/Skills";
+import { Skills } from "@/components/skills/skills";
 
 export default function HomePage() {
   return (
@@ -12,7 +12,7 @@ export default function HomePage() {
       <SectionDivider />
       <Skills />
       <SectionDivider />
-      <MyProjects />
+      <RecentProjects />
       <SectionDivider />
       <AboutMe />
       <SectionDivider />

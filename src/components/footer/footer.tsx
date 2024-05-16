@@ -1,7 +1,9 @@
+import Link from "next/link";
+
 import { MotionDiv } from "@/components/motion-div";
 import { footerLinks } from "@/config";
-import Link from "next/link";
-import styles from "./Footer.module.scss";
+
+import styles from "./footer.module.scss";
 
 export const Footer = () => {
   return (

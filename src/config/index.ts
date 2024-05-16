@@ -1,6 +1,8 @@
 import { BsTools } from "react-icons/bs";
 import { GrArticle } from "react-icons/gr";
 import { IoIosGitBranch } from "react-icons/io";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { HiOutlineMail } from "react-icons/hi";
 
 export const navLinks = [
   {
@@ -49,6 +51,24 @@ export const footerLinks = [
     href: "/contact",
     label: "Contact",
     target: "",
+  },
+] as const;
+
+export const contactLinks = [
+  {
+    href: "https://upalbarua52@gmail.com",
+    Icon: HiOutlineMail,
+    title: "upalbarua52@gmail.com",
+  },
+  {
+    href: "https://github.com/upalbarua",
+    Icon: AiFillGithub,
+    title: "github.com",
+  },
+  {
+    href: "https://www.linkedin.com/in/upalb",
+    Icon: AiFillLinkedin,
+    title: "linkedin.com",
   },
 ] as const;
 

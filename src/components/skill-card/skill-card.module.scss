@@ -1,6 +1,6 @@
 @use "../../styles/mixins" as *;
 
-.SkillCard {
+.skillCard {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,15 +17,15 @@
     height: 3.5rem;
     padding: var(--spacing-2) var(--spacing-4);
   }
+}
 
-  .Icon {
-    width: 1.675rem;
-    aspect-ratio: 1/1;
-    object-fit: contain;
-    object-position: center;
+.icon {
+  width: 1.675rem;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  object-position: center;
 
-    @include mq("sm") {
-      width: 2rem;
-    }
+  @include mq("sm") {
+    width: 2rem;
   }
 }

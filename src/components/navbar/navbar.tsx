@@ -1,8 +1,9 @@
-import { MotionDiv } from "@/components/motion-div";
-import Link from "next/link";
 import { CodeXml } from "lucide-react";
+import Link from "next/link";
 
+import { MotionDiv } from "@/components/motion-div";
 import { NavMenu } from "./nav-menu";
+
 import styles from "./navbar.module.scss";
 
 export function Navbar() {

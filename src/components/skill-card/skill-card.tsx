@@ -1,7 +1,11 @@
-import { Skill } from "@/lib/services";
+"use client";
+
 import Image from "next/image";
-import { MotionDiv } from "../motion-div";
-import styles from "./SkillCard.module.scss";
+
+import { MotionDiv } from "@/components/motion-div";
+import { Skill } from "@/lib/services";
+
+import styles from "./skill-card.module.scss";
 
 type SkillCardProps = Skill & {
   index: number;
@@ -22,10 +26,10 @@ const fadeInAnimationVariants = {
   }),
 };
 
-export const SkillCard = ({ name, iconUrl, index }: SkillCardProps) => {
+export function SkillCard({ name, iconUrl, index }: Readonly<SkillCardProps>) {
   return (
     <MotionDiv
-      className={styles.SkillCard}
+      className={styles.skillCard}
       variants={fadeInAnimationVariants}
       initial="initial"
       whileInView="animate"
@@ -35,7 +39,7 @@ export const SkillCard = ({ name, iconUrl, index }: SkillCardProps) => {
       custom={index}
     >
       <Image
-        className={styles.Icon}
+        className={styles.icon}
         src={iconUrl}
         alt={name}
         height={80}
@@ -44,4 +48,4 @@ export const SkillCard = ({ name, iconUrl, index }: SkillCardProps) => {
       <p>{name}</p>
     </MotionDiv>
   );
-};
+}

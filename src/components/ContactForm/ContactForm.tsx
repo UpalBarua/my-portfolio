@@ -1,9 +1,11 @@
-import emailjs from '@emailjs/browser';
-import React from 'react';
-import { toast } from 'react-hot-toast';
-import { Button } from '../UI/Button/Button';
-import styles from './ContactForm.module.scss';
-import { LiaTelegramPlane } from 'react-icons/lia';
+"use client";
+
+import emailjs from "@emailjs/browser";
+import React from "react";
+import { toast } from "react-hot-toast";
+import { Button } from "../UI/Button/Button";
+import styles from "./ContactForm.module.scss";
+import { LiaTelegramPlane } from "react-icons/lia";
 
 type FormEventTarget = EventTarget & {
   name: {
@@ -28,7 +30,7 @@ export const ContactForm = () => {
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
     if (!serviceId || !templateId || !publicKey) {
-      return toast.error('something went wrong');
+      return toast.error("something went wrong");
     }
 
     const newMessage = {
@@ -38,12 +40,12 @@ export const ContactForm = () => {
     };
 
     if (!newMessage.name || !newMessage.email || !newMessage.message) {
-      return toast.error('Something is missing');
+      return toast.error("Something is missing");
     }
 
     toast
       .promise(emailjs.send(serviceId, templateId, newMessage, publicKey), {
-        loading: 'Sending...',
+        loading: "Sending...",
         success: <b>Message sent</b>,
         error: <b>Failed to send</b>,
       })
@@ -53,7 +55,7 @@ export const ContactForm = () => {
         }
       })
       .catch((error) => {
-        toast.error('Failed to send');
+        toast.error("Failed to send");
         console.log(error);
       });
   };
