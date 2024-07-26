@@ -1,0 +1,16 @@
+@use "../../styles/mixins" as *;
+
+.projects {
+  scroll-margin-top: var(--spacing-20);
+  max-width: 45rem;
+  margin-inline: auto;
+
+  @include mq("md") {
+    gap: var(--spacing-7);
+  }
+}
+
+.container {
+  display: grid;
+  gap: var(--spacing-8);
+}

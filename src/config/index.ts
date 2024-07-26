@@ -1,3 +1,4 @@
+import { Github, Linkedin, Mail } from "lucide-react";
 import { BsTools } from "react-icons/bs";
 import { GrArticle } from "react-icons/gr";
 import { IoIosGitBranch } from "react-icons/io";
@@ -49,6 +50,24 @@ export const footerLinks = [
     href: "/contact",
     label: "Contact",
     target: "",
+  },
+] as const;
+
+export const contactLinks = [
+  {
+    href: "mailto:upalbarua52@gmail.com",
+    Icon: Mail,
+    title: "upalbarua52@gmail.com",
+  },
+  {
+    href: "https://github.com/upalbarua",
+    Icon: Github,
+    title: "github.com",
+  },
+  {
+    href: "https://www.linkedin.com/in/upalb",
+    Icon: Linkedin,
+    title: "linkedin.com",
   },
 ] as const;
 

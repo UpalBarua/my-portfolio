@@ -1,0 +1,102 @@
+@use "../../styles/mixins" as *;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-10);
+  text-align: center;
+  min-height: 48rem;
+  margin-top: var(--spacing-14);
+  scroll-margin-top: 20rem;
+
+  @include mq("md") {
+    min-height: 40rem;
+  }
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  aspect-ratio: 1/1;
+  width: min(60dvw, 14rem);
+  border-radius: 50%;
+  object-position: center;
+  object-fit: cover;
+
+  img {
+    border-radius: 50%;
+    position: relative;
+    z-index: 10;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    inset: 0;
+    border-radius: 50%;
+    background-color: hsl(var(--color-accent-400), 0.25);
+    animation: pulse 10s ease infinite;
+  }
+}
+
+.heading {
+  max-width: min(95%, 50rem);
+  line-height: 1.6;
+  font-size: clamp(var(--text-2xl), 5.5vw + 0.5rem, var(--text-4xl));
+  margin-inline: auto;
+
+  >strong {
+    font-weight: 700;
+  }
+
+  >em {
+    font-style: italic;
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  gap: var(--spacing-4);
+  font-size: var(--text-lg);
+
+  @media screen and (min-width: 22em) {
+    flex-direction: row;
+    width: initial;
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    scale: 1;
+    border-radius: 50%;
+    rotate: 0deg;
+  }
+
+  25% {
+    scale: 1.125;
+    border-radius: 20rem 22rem 18rem 24rem;
+    rotate: 90deg;
+  }
+
+  50% {
+    scale: 1.1875;
+    border-radius: 24rem 18rem 22rem 20rem;
+    rotate: 180deg;
+  }
+
+  75% {
+    scale: 1.25;
+    border-radius: 18rem 24rem 20rem 22rem;
+    rotate: 360deg;
+  }
+}

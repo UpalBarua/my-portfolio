@@ -1,0 +1,31 @@
+@use "../../styles/mixins" as *;
+
+.skillCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  border-radius: 10px;
+  background-color: hsl(var(--color-primary-900), 0.4);
+  border: 1px solid hsl(var(--color-primary-800));
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-1) var(--spacing-3);
+  color: hsl(var(--color-primary-200));
+  height: 3.25rem;
+
+  @include mq("sm") {
+    height: 3.5rem;
+    padding: var(--spacing-2) var(--spacing-4);
+  }
+}
+
+.icon {
+  width: 1.675rem;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  object-position: center;
+
+  @include mq("sm") {
+    width: 2rem;
+  }
+}
