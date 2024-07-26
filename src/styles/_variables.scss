@@ -20,31 +20,15 @@
   --fw-bold: 700;
 
   // COLORS
-  --color-primary-50: 180, 6%, 93%;
-  --color-primary-100: 180, 3%, 87%;
-  --color-primary-200: 200, 3%, 79%;
-  --color-primary-300: 206, 4%, 66%;
-  --color-primary-400: 206, 3%, 50%;
-  --color-primary-500: 203, 4%, 40%;
-  --color-primary-600: 204, 3%, 33%;
-  --color-primary-700: 216, 3%, 28%;
-  --color-primary-800: 210, 3%, 24%;
-  --color-primary-900: 220, 3%, 21%;
-  --color-primary-950: 180, 2%, 10%;
+  --color-bg: hsl(235, 19%, 13%);
+  --color-fg: hsl(229, 35%, 75%);
+  --color-cyan: hsl(189, 73%, 52%);
+  --color-purple: hsl(261, 85%, 79%);
 
-  --color-accent-50: 188, 80%, 96%;
-  --color-accent-100: 186, 73%, 90%;
-  --color-accent-200: 187, 74%, 82%;
-  --color-accent-300: 188, 73%, 69%;
-  --color-accent-400: 189, 68%, 53%;
-  --color-accent-500: 190, 74%, 44%;
-  --color-accent-600: 193, 72%, 36%;
-  --color-accent-700: 194, 66%, 31%;
-  --color-accent-800: 195, 58%, 27%;
-  --color-accent-900: 198, 54%, 24%;
-  --color-accent-950: 198, 63%, 15%;
-
-  --color-danger: 8, 100%, 59%;
+  --color-blue: hsl(221, 89%, 72%);
+  --color-yellow: hsl(36, 66%, 64%);
+  --color-red: hsl(349, 89%, 72%);
+  --color-green: hsl(89, 51%, 61%);
 
   // SPACING
   --spacing-0: 0px;
@@ -79,11 +63,8 @@
   --spacing-96: 24rem;
 
   // BOX SHADOW
-  --shadow-sm: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  --shadow-md: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-    rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  --shadow-lg: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  --shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
+  // MISC
   --border-radius: 10px;
 }

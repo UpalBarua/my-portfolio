@@ -13,9 +13,12 @@ body {
   font-size: var(--fs-base);
   font-weight: var(--fw-regular);
   line-height: 1.6;
-  background-color: hsl(var(--color-primary-950));
-  color: hsl(var(--color-primary-50), 0.9);
+  // background-color: hsl(var(--color-bg));
+  // color: hsl(var(--color-fg), 0.9);
   scroll-behavior: smooth !important;
+
+  background-color: var(--color-bg);
+  color: var(--color-fg);
 
   h1,
   h2,
