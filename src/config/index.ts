@@ -1,8 +1,7 @@
+import { Github, Linkedin, Mail } from "lucide-react";
 import { BsTools } from "react-icons/bs";
 import { GrArticle } from "react-icons/gr";
 import { IoIosGitBranch } from "react-icons/io";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { HiOutlineMail } from "react-icons/hi";
 
 export const navLinks = [
   {
@@ -56,18 +55,18 @@ export const footerLinks = [
 
 export const contactLinks = [
   {
-    href: "https://upalbarua52@gmail.com",
-    Icon: HiOutlineMail,
+    href: "mailto:upalbarua52@gmail.com",
+    Icon: Mail,
     title: "upalbarua52@gmail.com",
   },
   {
     href: "https://github.com/upalbarua",
-    Icon: AiFillGithub,
+    Icon: Github,
     title: "github.com",
   },
   {
     href: "https://www.linkedin.com/in/upalb",
-    Icon: AiFillLinkedin,
+    Icon: Linkedin,
     title: "linkedin.com",
   },
 ] as const;

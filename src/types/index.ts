@@ -1,4 +1,5 @@
 import { navLinks, projects } from "@/config";
+import { contactFormSchema } from "@/schemas";
 
 export type SectionNames = (typeof navLinks)[number]["title"];
 

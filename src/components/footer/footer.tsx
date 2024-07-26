@@ -22,7 +22,7 @@ export const Footer = () => {
           ))}
         </div>
         <p className={styles.Copyright}>
-          &copy; 2023 Upal Barua. All rights reserved
+          &copy; 2024 Upal Barua. All rights reserved
         </p>
       </MotionDiv>
     </footer>

@@ -3,7 +3,7 @@
 .ContactMe {
   padding-bottom: var(--spacing-20);
   scroll-margin-top: var(--spacing-20);
-  max-width: 50rem;
+  max-width: 40rem;
   margin-inline: auto;
 
   @include mq("md") {
@@ -22,7 +22,7 @@
     border: 1px solid hsl((var(--color-primary-800)));
 
     @include mq("sm") {
-      grid-template-columns: repeat(2, 1fr);
+      // grid-template-columns: repeat(2, 1fr);
       padding: var(--spacing-6);
     }
   }

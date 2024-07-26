@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { ContactForm } from "@/components/ContactForm/ContactForm";
+import { ContactForm } from "@/components/contact-form/contact-form";
 import { Title } from "@/components/UI/Title/Title";
 import { SectionInView } from "@/components/section-in-view";
 import { contactLinks } from "@/config";
@@ -26,7 +26,7 @@ export const ContactMe = () => {
                   href={href}
                   target="_blank"
                 >
-                  <Icon />
+                  <Icon size={18} />
                   <span>{title}</span>
                 </Link>
               ))}
