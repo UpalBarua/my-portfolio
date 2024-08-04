@@ -8,13 +8,13 @@
   background-color: transparent;
   padding-inline: var(--spacing-6);
   border: 1px solid transparent;
-  border-radius: 0.5rem;
-  box-shadow: var(--shadow-sm);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
   cursor: pointer;
   transition: all 200ms ease;
   height: 3.125rem;
 
-  >svg {
+  > svg {
     font-size: var(--text-xl);
     color: hsl(var(--color-primary-50), 0.9);
     transition: transform 350ms ease;
@@ -25,16 +25,16 @@
     color: #ffffff;
     box-shadow: var(--shadow-lg);
 
-    >svg {
+    > svg {
       color: #ffffff;
       transform: scale(1.1);
     }
   }
 
   &[data-variant="primary"] {
-    background-color: hsl(var(--color-accent-500));
-    border-color: hsl(var(--color-accent-500));
-    color: #ffffff;
+    background-color: var(--color-blue);
+    border-color: var(--color-border);
+    color: var(--color-bg);
 
     &:hover,
     &:focus {
@@ -44,9 +44,9 @@
   }
 
   &[data-variant="secondary"] {
-    background-color: hsl(var(--color-primary-900), 0.4);
+    background-color: var(--color-bg-secondary);
+    border-color: var(--color-border);
     color: #ffffff;
-    border-color: hsl(var(--color-primary-800));
 
     &:hover,
     &:focus {

@@ -7,7 +7,7 @@
   z-index: 999;
   width: 100%;
   overflow: hidden;
-  background-color: hsl(var(--color-primary-950), 0.8);
+  background-color: var(--color-bg);
   backdrop-filter: blur(1rem) saturate(200%);
 
   >header {
@@ -30,10 +30,11 @@
   gap: var(--spacing-3);
   font-size: var(--text-lg);
   font-weight: var(--fw-bold);
+  color: var(--color-blue);
 
   .icon {
     font-size: var(--text-3xl);
-    color: hsl(var(--color-accent-400));
+    color: var(--color-purple);
   }
 }
 

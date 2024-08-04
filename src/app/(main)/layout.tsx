@@ -13,8 +13,8 @@ export default function MainLayout({ children }: Readonly<MainLayoutProps>) {
   return (
     <div className={styles.mainLayout}>
       <Navbar />
-      <div>{children}</div>
-      <Footer />
+      {/* <div>{children}</div> */}
+      {/* <Footer /> */}
     </div>
   );
 }

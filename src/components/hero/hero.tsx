@@ -17,7 +17,7 @@ export const Hero = () => {
         className={styles.avatar}
       >
         <Image
-          src="/images/picture.png"
+          src="/images/avatar.svg"
           alt="avatar"
           quality={95}
           height="200"
