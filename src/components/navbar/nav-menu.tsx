@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import Link from "next/link";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 
 import { navLinks } from "@/config";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
@@ -11,21 +11,15 @@ import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 import styles from "./navbar.module.scss";
 
 export function NavMenu() {
-  const [isNavOpen, setIsNavOpen] = useState(false);
-
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
 
   return (
     <Fragment>
-      <button
-        className={styles.toggle}
-        aria-label="Nav Toggle"
-        onClick={() => setIsNavOpen((prev) => !prev)}
-      >
-        {isNavOpen ? <X /> : <Menu />}
+      <button className={styles.toggle} aria-label="Nav Toggle">
+        <Menu />
       </button>
-      <nav className={styles.navMenu} data-open={isNavOpen}>
+      <nav className={styles.navMenu}>
         {navLinks.map(({ title, link }) => (
           <Link
             key={link}

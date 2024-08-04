@@ -1,26 +1,22 @@
 @use "../../styles/mixins" as *;
 
 .navbar {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
-  right: 0;
-  z-index: 999;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  margin-block: var(--spacing-3);
+  padding: var(--spacing-3) var(--spacing-4);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  min-height: 3.5rem;
   width: 100%;
-  overflow: hidden;
-  background-color: var(--color-bg);
-  backdrop-filter: blur(1rem) saturate(200%);
-
-  >header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-block: var(--spacing-2);
-    flex-wrap: wrap;
-
-    @include mq("md") {
-      padding-block: var(--spacing-3);
-    }
-  }
+  background-color: var(--color-bg-secondary);
 }
 
 .logo {
@@ -28,9 +24,9 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-3);
-  font-size: var(--text-lg);
-  font-weight: var(--fw-bold);
-  color: var(--color-blue);
+  font-size: var(--text-xl);
+  font-weight: var(--fw-medium);
+  color: var(--color-cyan);
 
   .icon {
     font-size: var(--text-3xl);
@@ -39,39 +35,17 @@
 }
 
 .navMenu {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-2);
-  order: 1;
-  height: 0;
-  width: 100%;
-  opacity: 0;
-  transition:
-    height 350ms ease,
-    padding 400ms ease,
-    opacity 400ms ease;
-
-  &[data-open="true"] {
-    height: 100%;
-    opacity: 1;
-    padding-top: var(--spacing-6);
-    padding-bottom: var(--spacing-4);
-  }
+  display: none;
+  gap: var(--spacing-1);
 
   @include mq("md") {
-    flex-direction: row;
-    height: 100%;
-    opacity: 1;
-    order: 0;
-    width: max-content;
+    display: flex;
   }
 }
 
 .navLink {
-  padding: var(--spacing-2) var(--spacing-3);
-  border-radius: 8px;
+  padding: var(--spacing-2) var(--spacing-4);
   transition: color 200ms ease;
-  font-weight: var(--fw-medium);
   position: relative;
 
   >span {
@@ -80,9 +54,9 @@
     height: 100%;
     width: 100%;
     z-index: -1;
-    border-radius: 8px;
-    background-color: hsl(var(--color-primary-900), 0.4);
-    border: 1px solid hsl(var(--color-primary-900), 0.5);
+    // background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
   }
 
   &:hover,
@@ -91,7 +65,7 @@
   }
 
   &[data-active="true"] {
-    color: #ffffff;
+    color: var(--color-cyan);
   }
 }
 
