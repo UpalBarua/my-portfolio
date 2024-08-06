@@ -25,7 +25,7 @@ export function Navbar() {
           rounded: "xl",
           border: "1px solid",
           borderColor: "fg/15",
-          minH: "3.5rem",
+          minH: "3.75rem",
           w: "full",
           bg: "dark.darker",
         })}
