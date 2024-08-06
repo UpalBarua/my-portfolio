@@ -6,9 +6,9 @@ import { PhotoProvider } from "@/components/photo-provider";
 import { ActiveSectionContextProvider } from "@/context/ActiveSectionContext";
 import { outfit } from "./fonts";
 
-import "@/styles/globals.scss";
 import "react-photo-view/dist/react-photo-view.css";
 import "react-quill/dist/quill.snow.css";
+import "./globals.css";
 
 const TOASTER_STYLES = {
   backgroundColor: "hsl(210, 3%, 16%)",
