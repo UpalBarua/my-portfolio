@@ -7,8 +7,8 @@ import { Fragment } from "react";
 
 import { navLinks } from "@/config";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
-
-import styles from "./navbar.module.scss";
+import { css } from "styled-system/css";
+import { flex, hstack } from "styled-system/patterns";
 
 export function NavMenu() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -16,14 +16,39 @@ export function NavMenu() {
 
   return (
     <Fragment>
-      <button className={styles.toggle} aria-label="Nav Toggle">
+      <button
+        aria-label="Nav Toggle"
+        className={flex({
+          justify: "center",
+          alignItems: "center",
+          hideFrom: "md",
+        })}
+      >
         <Menu />
       </button>
-      <nav className={styles.navMenu}>
+      <nav
+        className={css({
+          hideBelow: "md",
+        })}
+      >
         {navLinks.map(({ title, link }) => (
           <Link
             key={link}
-            className={styles.navLink}
+            className={css({
+              px: 4,
+              py: 2,
+              transition: "color 200ms ease",
+              pos: "relative",
+              _focusVisible: {
+                color: "accent",
+              },
+              _hover: {
+                color: "accent",
+              },
+              "&[data-active='true']": {
+                color: "accent",
+              },
+            })}
             href={link}
             data-active={activeSection === title}
             onClick={() => {
@@ -34,6 +59,17 @@ export function NavMenu() {
             {title}
             {activeSection === title && (
               <motion.span
+                className={css({
+                  pos: "absolute",
+                  inset: 0,
+                  h: "full",
+                  w: "full",
+                  zIndex: -1,
+                  bg: "accent/5",
+                  rounded: "lg",
+                  border: "1px solid",
+                  borderColor: "accent/5",
+                })}
                 layoutId="activeSection"
                 transition={{
                   type: "spring",
