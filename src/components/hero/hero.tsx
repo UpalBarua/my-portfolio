@@ -8,22 +8,22 @@ export function Hero() {
   return (
     <section
       className={grid({
-        columns: 12,
         gap: 4,
+        columns: 12,
       })}
     >
       <div
         className={gridItem({
           colStart: 1,
           colEnd: 9,
-          bg: "dark.darker",
-          p: "10",
-          shadow: "sm",
           border: "2px solid",
           borderColor: "fg/10",
           rounded: "2xl",
           roundedTopRight: "3rem",
           roundedBottomLeft: "3rem",
+          p: "10",
+          bg: "dark.darker",
+          shadow: "sm",
         })}
       >
         <div
@@ -42,14 +42,14 @@ export function Hero() {
               className={circle({
                 border: "2px solid",
                 borderColor: "fg",
+                size: "3.5rem",
                 bg: "accent/20",
                 overflow: "hidden",
-                size: "3.5rem",
               })}
               src="/images/avatar.svg"
               alt="avatar"
-              height="100"
               width="100"
+              height="100"
             />
             <div>
               <h4
@@ -85,12 +85,12 @@ export function Hero() {
         </div>
         <h1
           className={css({
+            pb: 6,
+            letterSpacing: "tight",
+            textTransform: "capitalize",
             fontSize: "5xl",
             fontWeight: "medium",
-            textTransform: "capitalize",
             lineHeight: "snug",
-            letterSpacing: "tight",
-            pb: 6,
           })}
         >
           I craft intuitive and dynamic web experiences with an eye for design
@@ -98,11 +98,11 @@ export function Hero() {
         </h1>
         <p
           className={css({
-            fontSize: "lg",
-            lineHeight: "relaxed",
+            maxW: "40rem",
             color: "fg/60",
             textWrap: "pretty",
-            maxW: "40rem",
+            fontSize: "lg",
+            lineHeight: "relaxed",
           })}
         >
           Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
@@ -116,21 +116,21 @@ export function Hero() {
           colStart: 9,
           colEnd: -1,
           display: "grid",
-          gridTemplateRows: "auto max-content",
           gap: 4,
+          gridTemplateRows: "auto max-content",
         })}
       >
         <div
           className={css({
-            bg: "dark.darker",
-            p: "8",
-            shadow: "sm",
+            pos: "relative",
             border: "2px solid",
             borderColor: "fg/10",
-            pos: "relative",
-            overflow: "hidden",
             rounded: "2xl",
             roundedTopLeft: "3rem",
+            p: "8",
+            bg: "dark.darker",
+            shadow: "sm",
+            overflow: "hidden",
           })}
         >
           <div
@@ -141,19 +141,19 @@ export function Hero() {
           >
             <h2
               className={css({
+                letterSpacing: "tight",
+                textTransform: "capitalize",
                 fontSize: "3xl",
                 fontWeight: "medium",
-                textTransform: "capitalize",
                 lineHeight: "snug",
-                letterSpacing: "tight",
               })}
             >
               My Resume
             </h2>
             <div
               className={circle({
-                bg: "fg/15",
                 size: "12",
+                bg: "fg/15",
               })}
             >
               <ExternalLink />
@@ -161,12 +161,12 @@ export function Hero() {
           </div>
           <p
             className={css({
-              fontSize: "lg",
-              lineHeight: "relaxed",
-              color: "fg/60",
-              textWrap: "pretty",
               maxW: "40rem",
               pr: "16",
+              color: "fg/60",
+              textWrap: "pretty",
+              fontSize: "lg",
+              lineHeight: "relaxed",
             })}
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
@@ -174,45 +174,45 @@ export function Hero() {
           </p>
           <ScrollText
             className={css({
-              color: "yellow",
-              height: "10rem",
-              width: "10rem",
               pos: "absolute",
               right: 0,
               bottom: "-10%",
               rotate: "-20deg",
+              width: "10rem",
+              height: "10rem",
+              color: "yellow",
             })}
             strokeWidth={1}
           />
         </div>
         <div
           className={css({
-            bg: "dark.darker",
-            p: "8",
-            shadow: "sm",
             border: "2px solid",
             borderColor: "fg/10",
             rounded: "2xl",
             roundedBottomRight: "3rem",
+            p: "8",
+            bg: "dark.darker",
+            shadow: "sm",
           })}
         >
           <span
             className={css({
-              color: "blue",
               display: "block",
               pb: "4",
+              color: "blue",
             })}
           >
             My Latest Blog Post
           </span>
           <h2
             className={css({
+              pb: "4",
+              letterSpacing: "tight",
+              textTransform: "capitalize",
               fontSize: "2xl",
               fontWeight: "medium",
-              textTransform: "capitalize",
               lineHeight: "snug",
-              letterSpacing: "tight",
-              pb: "4",
             })}
           >
             The Power of Paying Attention to Details in Software Development.

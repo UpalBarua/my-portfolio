@@ -11,9 +11,14 @@ export function Navbar() {
     <MotionDiv initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
       <header
         className={hstack({
-          justify: "space-between",
-          pos: "relative",
           zIndex: 10,
+          pos: "relative",
+          justify: "space-between",
+          border: "1px solid",
+          borderColor: "fg/15",
+          rounded: "xl",
+          w: "full",
+          minH: "3.75rem",
           //   position: fixed;
           //   top: 0;
           //   left: 50%;
@@ -22,19 +27,14 @@ export function Navbar() {
           my: 3,
           py: 3,
           px: 4,
-          rounded: "xl",
-          border: "1px solid",
-          borderColor: "fg/15",
-          minH: "3.75rem",
-          w: "full",
           bg: "dark.darker",
         })}
       >
         <Link
           className={css({
+            color: "accent",
             fontSize: "xl",
             fontWeight: "medium",
-            color: "accent",
           })}
           href="/"
         >
