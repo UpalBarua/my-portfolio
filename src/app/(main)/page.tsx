@@ -9,10 +9,10 @@ export default function HomePage() {
   return (
     <main>
       <Hero />
+      <RecentProjects />
       {/* <SectionDivider /> */}
       {/* <Skills /> */}
       {/* <SectionDivider /> */}
-      {/* <RecentProjects /> */}
       {/* <SectionDivider /> */}
       {/* <AboutMe /> */}
       {/* <SectionDivider /> */}
