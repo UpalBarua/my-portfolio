@@ -10,7 +10,7 @@ export type Post = {
     subtitle: string;
     date: string;
   };
-  content: string;
+  content?: string;
 };
 
 export type Project = {

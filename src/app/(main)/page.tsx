@@ -4,6 +4,7 @@ import { Hero } from "@/components/hero/hero";
 import { RecentProjects } from "@/components/recent-projects/recent-projects";
 import { Skills } from "@/components/skills/skills";
 import { grid } from "styled-system/patterns";
+import { LatestBlogPosts } from "@/components/latest-blog-posts";
 
 export default function HomePage() {
   return (
@@ -20,6 +21,7 @@ export default function HomePage() {
         <AboutMe />
         <ContactMe />
       </section>
+      <LatestBlogPosts />
     </main>
   );
 }

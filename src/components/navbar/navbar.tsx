@@ -32,9 +32,8 @@ export function Navbar() {
           py: 3,
           px: 4,
           bg: "dark.darker/80",
-          backdropFilter: "blur(0.75rem)",
+          backdropFilter: "blur(0.675rem) saturate(200%)",
         })}
-        // style={{ backdropFilter: "blur(10rem)" }}
       >
         <Link
           className={css({
