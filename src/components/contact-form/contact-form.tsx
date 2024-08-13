@@ -8,8 +8,9 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { z } from "zod";
 
+import { button } from "@/recipes/button";
 import { css } from "styled-system/css";
-import { vstack, hstack } from "styled-system/patterns";
+import { hstack, vstack } from "styled-system/patterns";
 
 type ContactForm = z.infer<typeof contactFormSchema>;
 
@@ -136,31 +137,10 @@ export function ContactForm() {
           pt: 2,
         })}
       >
-        <button
-          className={hstack({
-            border: "1px solid",
-            borderColor: "fg/10",
-            rounded: "xl",
-            h: "12",
-            px: 4,
-            fontWeight: "medium",
-            bg: "bg/50",
-          })}
-        >
+        <button className={button({ variant: "secondary" })}>
           <span>Clear</span>
         </button>
-        <button
-          className={hstack({
-            border: "1px solid",
-            borderColor: "fg/10",
-            rounded: "xl",
-            h: "12",
-            px: 4,
-            color: "bg",
-            fontWeight: "medium",
-            bg: "accent",
-          })}
-        >
+        <button className={button()}>
           <Send size={18} />
           <span>Send Message</span>
         </button>
