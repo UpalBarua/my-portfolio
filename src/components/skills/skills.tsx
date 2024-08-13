@@ -16,6 +16,7 @@ export async function Skills() {
         rounded: "2xl",
         roundedTopLeft: "3rem",
         roundedTopRight: "3rem",
+        mb: 2,
         p: "10",
         bg: "dark.darker",
         columns: 2,

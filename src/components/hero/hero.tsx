@@ -9,6 +9,7 @@ export function Hero() {
     <section
       className={grid({
         gap: 4,
+        pt: 20,
         columns: 12,
       })}
     >

@@ -1,20 +1,47 @@
 import { MotionDiv } from "@/components/motion-div";
 import { SectionInView } from "@/components/section-in-view";
-import { Title } from "@/components/UI/Title/Title";
 
-import styles from "./about-me.module.scss";
+import { css } from "styled-system/css";
+import { vstack } from "styled-system/patterns";
 
-export const AboutMe = () => {
+export function AboutMe() {
   return (
-    <SectionInView id="about" sectionName="About">
+    <SectionInView
+      className={css({
+        border: "2px solid",
+        borderColor: "fg/10",
+        rounded: "2xl",
+        roundedBottomLeft: "3rem",
+        p: "10",
+        bg: "dark.darker",
+      })}
+      id="about"
+      sectionName="About"
+    >
       <MotionDiv
-        className={styles.AboutMe}
+        className={css({
+          textWrap: "pretty",
+          // max-width: 60ch;
+          fontSize: "lg",
+          lineHeight: "relaxed",
+        })}
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.175 }}
       >
-        <Title>About Me</Title>
-        <div className={styles.Text}>
+        <h2
+          className={css({
+            pb: 6,
+            letterSpacing: "tight",
+            textTransform: "capitalize",
+            fontSize: "5xl",
+            fontWeight: "medium",
+            lineHeight: "snug",
+          })}
+        >
+          About Me 🧑‍💻
+        </h2>
+        <div className={vstack({ gap: 4 })}>
           <p>
             Hello, I'm Upal Barua, a dedicated <strong>developer</strong>{" "}
             passionate about creating{" "}
@@ -43,4 +70,4 @@ export const AboutMe = () => {
       </MotionDiv>
     </SectionInView>
   );
-};
+}
