@@ -1,4 +1,4 @@
-import { ExternalLink, ScrollText, Twitter } from "lucide-react";
+import { ExternalLink, Hourglass, ScrollText, Twitter } from "lucide-react";
 import Image from "next/image";
 
 import { css } from "styled-system/css";
@@ -197,34 +197,34 @@ export function Hero() {
             shadow: "sm",
           })}
         >
-          <span
+          <Hourglass
             className={css({
-              display: "block",
-              pb: "4",
-              color: "blue",
+              w: 10,
+              h: 10,
+              mb: 4,
+              color: "accent",
             })}
-          >
-            My Latest Blog Post
-          </span>
+          />
           <h2
             className={css({
               pb: "4",
-              letterSpacing: "tight",
+              // letterSpacing: "tight",
               textTransform: "capitalize",
               fontSize: "2xl",
-              fontWeight: "medium",
-              lineHeight: "snug",
+              // fontWeight: "medium",
+              lineHeight: "relaxed",
             })}
           >
-            The Power of Paying Attention to Details in Software Development.
+            I am currently wokring as a freelance developer working on projects
+            of local businesses.
           </h2>
-          <time
-            className={css({
-              color: "fg/60",
-            })}
-          >
-            7 June 2024 / 5 min read
-          </time>
+          {/* <time */}
+          {/*   className={css({ */}
+          {/*     color: "fg/60", */}
+          {/*   })} */}
+          {/* > */}
+          {/*   7 June 2024 / 5 min read */}
+          {/* </time> */}
         </div>
       </div>
     </section>

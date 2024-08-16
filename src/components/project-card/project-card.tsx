@@ -4,8 +4,10 @@ import Link from "next/link";
 import type { Project } from "@/types/";
 import { TechStack } from "../UI/tech-stack/tech-stack";
 
-import { css } from "styled-system/css";
-import { grid } from "styled-system/patterns";
+import { blurredBg } from "@/recipes/blurred-bg";
+import { Github, Radio } from "lucide-react";
+import { css, cx } from "styled-system/css";
+import { grid, hstack } from "styled-system/patterns";
 
 export function ProjectCard({
   id,
@@ -15,27 +17,85 @@ export function ProjectCard({
 }: Readonly<Project>) {
   return (
     <Link
-      className={css({
-        border: "2px solid",
-        borderColor: "fg/10",
-        rounded: "2xl",
-        p: "10",
-        pb: 0,
-        bg: "dark.darker",
-        shadow: "sm",
-        overflow: "hidden",
-      })}
+      className={cx(
+        blurredBg(),
+        css({
+          border: "2px solid",
+          borderColor: "fg/10",
+          rounded: "2xl",
+          p: "10",
+          pb: 0,
+          bg: "dark.darker",
+          shadow: "sm",
+          overflow: "hidden",
+        }),
+      )}
       href={`projects/${id}`}
     >
-      <h3
-        className={css({
-          display: "block",
-          pb: "4",
-          fontSize: "lg",
+      <div
+        className={grid({
+          gap: 6,
+          gridTemplateColumns: "auto repeat(2, max-content)",
+          pb: 8,
         })}
       >
-        {title}
-      </h3>
+        <h3
+          className={css({
+            display: "block",
+            fontSize: "lg",
+          })}
+        >
+          {title}
+        </h3>
+        <a
+          href="#"
+          className={hstack({
+            gap: "1.5",
+            fontSize: "sm",
+            _focusVisible: {
+              outline: 0,
+              textDecoration: "underline",
+              textUnderlineOffset: 2,
+            },
+            _hover: {
+              textDecoration: "underline",
+              textUnderlineOffset: 2,
+            },
+          })}
+        >
+          <Github
+            className={css({
+              w: 4,
+              h: 4,
+            })}
+          />
+          <span>GitHub</span>
+        </a>
+        <a
+          href="#"
+          className={hstack({
+            gap: "1.5",
+            fontSize: "sm",
+            _focusVisible: {
+              outline: 0,
+              textDecoration: "underline",
+              textUnderlineOffset: 2,
+            },
+            _hover: {
+              textDecoration: "underline",
+              textUnderlineOffset: 2,
+            },
+          })}
+        >
+          <Radio
+            className={css({
+              w: 4,
+              h: 4,
+            })}
+          />
+          <span>Live</span>
+        </a>
+      </div>
       <p
         className={css({
           pb: 6,
@@ -59,7 +119,7 @@ export function ProjectCard({
           pt: 14,
           columns: 2,
           "&>*:nth-of-type(2),&>*:nth-of-type(4)": {
-            translate: "0 1.5rem",
+            translate: "0 1.675rem",
           },
         })}
       >
