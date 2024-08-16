@@ -65,7 +65,7 @@ export function NavMenu() {
                   h: "full",
                   w: "full",
                   zIndex: -1,
-                  bg: "accent/5",
+                  bg: "bg",
                   rounded: "lg",
                   border: "1px solid",
                   borderColor: "accent/5",
