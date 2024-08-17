@@ -10,22 +10,21 @@ export const TechStack = ({ techStack }: TechStackProps) => {
   return (
     <div
       className={hstack({
+        gap: 2,
         justify: "start",
         alignItems: "center",
-        gap: 2,
-        flexWrap: "wrap",
         maxW: "90%",
+        flexWrap: "wrap",
       })}
     >
       {techStack.map((tool) => (
         <span
           className={css({
-            bg: "bg",
-            border: "1px solid",
-            borderColor: "fg/10",
-            paddingX: 4,
-            paddingY: 1,
+            border: "1px solid {colors.border}",
             rounded: "lg",
+            paddingY: 1,
+            paddingX: 4,
+            bgColor: "background.muted",
           })}
           key={tool}
         >

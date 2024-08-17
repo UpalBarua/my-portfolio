@@ -8,7 +8,7 @@ import { Fragment } from "react";
 import { navLinks } from "@/config";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 import { css } from "styled-system/css";
-import { flex, hstack } from "styled-system/patterns";
+import { flex } from "styled-system/patterns";
 
 export function NavMenu() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -19,9 +19,9 @@ export function NavMenu() {
       <button
         aria-label="Nav Toggle"
         className={flex({
+          hideFrom: "md",
           justify: "center",
           alignItems: "center",
-          hideFrom: "md",
         })}
       >
         <Menu />
@@ -33,22 +33,23 @@ export function NavMenu() {
       >
         {navLinks.map(({ title, link }) => (
           <Link
-            key={link}
             className={css({
-              px: 4,
-              py: 2,
-              transition: "color 200ms ease",
               pos: "relative",
+              py: 2,
+              px: 4,
+              color: "foreground.secondary",
+              transition: "color 300ms ease",
               _focusVisible: {
-                color: "accent",
+                color: "foreground",
               },
               _hover: {
-                color: "accent",
+                color: "foreground",
               },
               "&[data-active='true']": {
-                color: "accent",
+                color: "foreground",
               },
             })}
+            key={link}
             href={link}
             data-active={activeSection === title}
             onClick={() => {
@@ -60,15 +61,12 @@ export function NavMenu() {
             {activeSection === title && (
               <motion.span
                 className={css({
+                  zIndex: -1,
                   pos: "absolute",
                   inset: 0,
-                  h: "full",
-                  w: "full",
-                  zIndex: -1,
-                  bg: "bg",
+                  border: "1px solid {colors.border}",
                   rounded: "lg",
-                  border: "1px solid",
-                  borderColor: "accent/5",
+                  bgColor: "background.muted/60",
                 })}
                 layoutId="activeSection"
                 transition={{

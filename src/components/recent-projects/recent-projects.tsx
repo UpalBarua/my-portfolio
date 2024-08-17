@@ -1,7 +1,10 @@
-import { SectionInView } from "@/components/section-in-view";
-import { css } from "styled-system/css";
-import { grid } from "styled-system/patterns";
 import { ProjectCard } from "@/components/project-card/project-card";
+import { SectionInView } from "@/components/section-in-view";
+import { blurredBg } from "@/recipes/blurred-bg";
+import { ExternalLink } from "lucide-react";
+import Link from "next/link";
+import { css, cx } from "styled-system/css";
+import { circle, grid, hstack } from "styled-system/patterns";
 
 const PROJECT = {
   id: "thrivenvision",
@@ -45,39 +48,46 @@ export async function RecentProjects() {
   return (
     <SectionInView id="projects" sectionName="Projects" threshold={0.2}>
       <div
-        className={css({
-          bg: "dark.darker",
-          p: "10",
-          shadow: "sm",
-          border: "2px solid",
-          borderColor: "fg/10",
-          rounded: "2xl",
+        className={grid({
+          layerStyle: "container",
+          gridTemplateColumns: "auto max-content",
           roundedTopLeft: "3rem",
           roundedTopRight: "3rem",
-          h: "max-content",
           my: 4,
         })}
       >
         <h2
           className={css({
-            fontSize: "3xl",
-            fontWeight: "medium",
-            textTransform: "capitalize",
-            lineHeight: "snug",
-            letterSpacing: "tight",
+            textStyle: "title",
             pb: 2,
           })}
         >
-          Recent Projects
+          Recent Projects 🏗️
         </h2>
+        <Link
+          className={hstack({
+            rounded: "full",
+            ps: 6,
+            bgColor: "background.muted",
+          })}
+          href="/projects"
+        >
+          <span>View More</span>
+          <div
+            className={circle({
+              size: "12",
+              bgColor: "background",
+            })}
+          >
+            <ExternalLink size={18} />
+          </div>
+        </Link>
         <p
           className={css({
-            fontSize: "xl",
-            lineHeight: "relaxed",
-            color: "fg/60",
-            textWrap: "pretty",
-            maxW: "40rem",
-            pr: "16",
+            textStyle: "text",
+            maxW: "40ch",
+            color: "foreground.secondary",
+            fontSize: "lg",
           })}
         >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
@@ -86,11 +96,11 @@ export async function RecentProjects() {
       </div>
       <div
         className={grid({
+          gap: 4,
+          alignItems: "start",
+          mb: 20,
           columns: 2,
           justifyItems: "start",
-          alignItems: "start",
-          gap: 4,
-          mb: 20,
           "&>*:last-child": {
             roundedBottomRight: "3rem",
           },

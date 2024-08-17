@@ -2,8 +2,6 @@ import { ReactNode } from "react";
 
 import { Footer } from "@/components/footer/footer";
 import { Navbar } from "@/components/navbar/navbar";
-
-import styles from "@/styles/main-layout.module.scss";
 import { vstack } from "styled-system/patterns";
 
 type MainLayoutProps = {
@@ -22,7 +20,7 @@ export default function MainLayout({ children }: Readonly<MainLayoutProps>) {
     >
       <Navbar />
       <div>{children}</div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

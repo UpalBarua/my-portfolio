@@ -35,15 +35,15 @@ export function SkillCard({ name, iconUrl, index }: Readonly<SkillCardProps>) {
         // h: "3.5rem",
         py: 2,
         px: 4,
-        bg: "bg",
+        bg: "background",
       })}
-      // variants={fadeInAnimationVariants}
-      // initial="initial"
-      // whileInView="animate"
-      // viewport={{
-      //   once: true,
-      // }}
-      // custom={index}
+    // variants={fadeInAnimationVariants}
+    // initial="initial"
+    // whileInView="animate"
+    // viewport={{
+    //   once: true,
+    // }}
+    // custom={index}
     >
       <Image
         className={aspectRatio({

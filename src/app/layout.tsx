@@ -19,8 +19,8 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
     <html lang="en" className={outfit.className}>
       <body
         className={container({
-          bg: "bg",
-          color: "fg",
+          color: "foreground",
+          bg: "background",
           scrollBehavior: "smooth",
         })}
       >

@@ -12,9 +12,6 @@ export function Navbar() {
       className={container({
         zIndex: 10,
         pos: "fixed",
-        top: 0,
-        left: "-50%",
-        translate: "50%",
         w: "full",
       })}
       initial={{ y: -100, opacity: 0 }}
@@ -22,17 +19,15 @@ export function Navbar() {
     >
       <header
         className={hstack({
+          layerStyle: "container",
           justify: "space-between",
-          border: "1px solid",
-          borderColor: "fg/15",
-          rounded: "xl",
+          alignContent: "center",
+          rounded: "2xl",
           w: "full",
           minH: "3.75rem",
           my: 3,
           py: 3,
           px: 4,
-          bg: "dark.darker/80",
-          backdropFilter: "blur(0.675rem) saturate(200%)",
         })}
       >
         <Link

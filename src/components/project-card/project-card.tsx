@@ -17,19 +17,11 @@ export function ProjectCard({
 }: Readonly<Project>) {
   return (
     <Link
-      className={cx(
-        blurredBg(),
-        css({
-          border: "2px solid",
-          borderColor: "fg/10",
-          rounded: "2xl",
-          p: "10",
-          pb: 0,
-          bg: "dark.darker",
-          shadow: "sm",
-          overflow: "hidden",
-        }),
-      )}
+      className={css({
+        layerStyle: "container",
+        pb: 0,
+        overflow: "hidden",
+      })}
       href={`projects/${id}`}
     >
       <div
@@ -41,7 +33,6 @@ export function ProjectCard({
       >
         <h3
           className={css({
-            display: "block",
             fontSize: "lg",
           })}
         >
@@ -116,7 +107,7 @@ export function ProjectCard({
           gap: 2,
           justifyContent: "center",
           alignItems: "center",
-          pt: 14,
+          pt: 20,
           columns: 2,
           "&>*:nth-of-type(2),&>*:nth-of-type(4)": {
             translate: "0 1.675rem",
