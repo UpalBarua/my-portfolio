@@ -1,6 +1,8 @@
 import { css } from "styled-system/css";
-import { grid } from "styled-system/patterns";
+import { grid, hstack, circle } from "styled-system/patterns";
 import { PostsCard } from "./PostsCard/PostsCard";
+import Link from "next/link";
+import { ExternalLink } from "lucide-react";
 
 const BLOG_POST = {
   id: "flkajdfl",
@@ -14,53 +16,59 @@ const BLOG_POST = {
 
 export function LatestBlogPosts() {
   return (
-    <section>
+    <section
+      className={css({
+        pb: 20,
+      })}
+    >
       <div
-        className={css({
-          border: "2px solid",
-          borderColor: "fg/10",
-          rounded: "2xl",
-          roundedTopLeft: "3rem",
-          roundedTopRight: "3rem",
-          h: "max-content",
-          my: 4,
-          p: "10",
-          bg: "dark.darker",
-          shadow: "sm",
+        className={hstack({
+          justifyContent: "space-between",
+          alignItems: "center",
+          px: 2,
+          pb: 10,
         })}
       >
         <h2
           className={css({
-            pb: 2,
-            letterSpacing: "tight",
-            textTransform: "capitalize",
-            fontSize: "3xl",
-            fontWeight: "medium",
-            lineHeight: "snug",
+            textStyle: "title",
+            fontSize: "4xl",
           })}
         >
-          Latest Blog Posts
+          Latest Blog Posts 📄
         </h2>
-        <p
-          className={css({
-            maxW: "40rem",
-            pr: "16",
-            color: "fg/60",
-            textWrap: "pretty",
-            fontSize: "xl",
-            lineHeight: "relaxed",
+        <Link
+          className={hstack({
+            rounded: "full",
+            ps: 6,
+            color: "background",
+            fontWeight: "medium",
+            bgColor: "accent",
           })}
+          href="/projects"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-          quod hic perspiciatis aliquid.
-        </p>
+          <span>View All</span>
+          <div
+            className={circle({
+              size: 10,
+              m: 1,
+              color: "foreground",
+              bgColor: "background",
+            })}
+          >
+            <ExternalLink size={18} />
+          </div>
+        </Link>
       </div>
       <div
         className={grid({
           gap: 4,
           alignItems: "start",
           mb: 20,
-          columns: 2,
+          columns: {
+            base: 1,
+            md: 2,
+          },
           justifyItems: "start",
           "&>*:last-child": {
             roundedBottomRight: "3rem",

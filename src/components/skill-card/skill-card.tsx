@@ -4,7 +4,8 @@ import Image from "next/image";
 
 import { MotionDiv } from "@/components/motion-div";
 import { Skill } from "@/lib/services";
-import { hstack, aspectRatio } from "styled-system/patterns";
+import { aspectRatio, hstack } from "styled-system/patterns";
+import { css } from "styled-system/css";
 
 type SkillCardProps = Skill & {
   index: number;
@@ -29,13 +30,11 @@ export function SkillCard({ name, iconUrl, index }: Readonly<SkillCardProps>) {
   return (
     <MotionDiv
       className={hstack({
-        border: "1px solid",
-        borderColor: "fg/15",
-        rounded: "lg",
-        // h: "3.5rem",
+        border: "2px solid {colors.border}",
+        rounded: "xl",
         py: 2,
         px: 4,
-        bg: "background",
+        bgColor: "background.muted",
       })}
     // variants={fadeInAnimationVariants}
     // initial="initial"
@@ -47,12 +46,15 @@ export function SkillCard({ name, iconUrl, index }: Readonly<SkillCardProps>) {
     >
       <Image
         className={aspectRatio({
-          ratio: 1 / 1,
+          ratio: 1,
           objectPosition: "center",
           objectFit: "contain",
-          w: "2rem",
+          w: {
+            base: "1.75rem",
+            md: "2rem",
+          },
         })}
-        src={iconUrl}
+        src={`/icons/${iconUrl}`}
         alt={name}
         width={80}
         height={80}

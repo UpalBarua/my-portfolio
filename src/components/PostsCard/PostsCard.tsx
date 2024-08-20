@@ -2,7 +2,8 @@ import { formatDate } from "@/lib/format-date";
 import type { Post } from "@/types";
 import Link from "next/link";
 import { css } from "styled-system/css";
-import { vstack } from "styled-system/patterns";
+import { hstack, vstack } from "styled-system/patterns";
+import { CalendarClock, Dot } from "lucide-react";
 
 export function PostsCard({
   id,
@@ -11,33 +12,44 @@ export function PostsCard({
   return (
     <Link
       className={vstack({
+        layerStyle: "container",
         gap: 2,
         alignItems: "start",
-        border: "2px solid",
-        borderColor: "fg/10",
-        rounded: "2xl",
-        p: "8",
-        bg: "dark.darker",
-        shadow: "sm",
       })}
       href={`/blog/${id}`}
     >
-      <p
-        className={css({
-          color: "fg/60",
+      <div
+        className={hstack({
+          gap: 0,
+          "&>*:first-child": {
+            me: 2,
+          },
         })}
       >
-        {formatDate(date)} / 5min read
-      </p>
+        <CalendarClock size={18} />
+        <time>{formatDate(date)}</time>
+        <Dot />
+        <time>5min read</time>
+      </div>
       <h3
         className={css({
-          fontSize: "2xl",
-          fontWeight: "medium",
+          fontSize: "3xl",
+          fontWeight: "extrabold",
         })}
       >
         {title}
       </h3>
-      <p>{subtitle}</p>
+      <p
+        className={css({
+          textStyle: "text",
+          color: "foreground.secondary",
+        })}
+      >
+        {subtitle} Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Vitae, libero nobis! Cum nulla velit debitis aliquid labore voluptas
+        suscipit est minus voluptates fugit odit eius, pariatur atque eveniet
+        quod voluptatum!
+      </p>
     </Link>
   );
 }

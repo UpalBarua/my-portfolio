@@ -1,13 +1,12 @@
 import { AboutMe } from "@/components/about-me/about-me";
 import { ContactMe } from "@/components/contact-me/contact-me";
-import { Hero } from "@/components/hero/hero";
+import { CurrentPosition } from "@/components/current-position";
+import { Intro } from "@/components/intro";
 import { LatestBlogPosts } from "@/components/latest-blog-posts";
 import { RecentProjects } from "@/components/recent-projects/recent-projects";
-import { Skills } from "@/components/skills/skills";
-import { Intro } from "@/components/intro";
 import { ResumeLink } from "@/components/resume-link";
-import { CurrentPosition } from "@/components/current-position";
-import { grid, gridItem } from "styled-system/patterns";
+import { Skills } from "@/components/skills/skills";
+import { grid, vstack } from "styled-system/patterns";
 
 export default function HomePage() {
   return (
@@ -23,7 +22,7 @@ export default function HomePage() {
           gridTemplateRows: {
             xl: "max-content auto",
           },
-          pt: 20,
+          py: 20,
         })}
       >
         <Intro />
@@ -31,17 +30,22 @@ export default function HomePage() {
         <CurrentPosition />
       </section>
       <RecentProjects />
-      {/* <Skills /> */}
-      {/* <section */}
-      {/*   className={grid({ */}
-      {/*     gridTemplateColumns: "60ch auto", */}
-      {/*     pb: 20, */}
-      {/*   })} */}
-      {/* > */}
-      {/*   <AboutMe /> */}
-      {/*   <ContactMe /> */}
-      {/* </section> */}
-      {/* <LatestBlogPosts /> */}
+      <Skills />
+      <section
+        className={grid({
+          gap: 4,
+          gridTemplateColumns: {
+            base: "auto",
+            md: "repeat(2, 1fr)",
+            xl: "60ch auto",
+          },
+          pb: 20,
+        })}
+      >
+        <AboutMe />
+        <ContactMe />
+      </section>
+      <LatestBlogPosts />
     </main>
   );
 }

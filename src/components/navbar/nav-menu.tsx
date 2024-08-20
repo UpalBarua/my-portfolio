@@ -66,7 +66,7 @@ export function NavMenu() {
                   inset: 0,
                   border: "1px solid {colors.border}",
                   rounded: "lg",
-                  bgColor: "background.muted/60",
+                  bgColor: "background.muted/80",
                 })}
                 layoutId="activeSection"
                 transition={{

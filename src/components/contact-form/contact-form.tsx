@@ -3,7 +3,7 @@
 import { sendContactMail } from "@/lib/send-contact-mail";
 import { contactFormSchema } from "@/schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Send } from "lucide-react";
+import { Send, X } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { z } from "zod";
@@ -15,12 +15,7 @@ import { hstack, vstack } from "styled-system/patterns";
 type ContactForm = z.infer<typeof contactFormSchema>;
 
 export function ContactForm() {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm<ContactForm>({
+  const { register, handleSubmit, reset } = useForm<ContactForm>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
@@ -43,7 +38,7 @@ export function ContactForm() {
   return (
     <form
       className={vstack({
-        gap: 4,
+        gap: 6,
         alignItems: "start",
         w: "full",
       })}
@@ -51,7 +46,7 @@ export function ContactForm() {
     >
       <fieldset
         className={vstack({
-          gap: 2,
+          gap: 4,
           alignItems: "start",
           w: "full",
         })}
@@ -60,15 +55,14 @@ export function ContactForm() {
         <input
           className={css({
             outline: 0,
-            border: "1px solid",
-            borderColor: "fg/10",
+            border: "1px solid {colors.border}",
             rounded: "lg",
             w: "full",
             h: "12",
             py: "2",
             px: "4",
             fontSize: "sm",
-            bg: "bg",
+            bgColor: "background.muted",
           })}
           id="name"
           type="text"
@@ -78,7 +72,7 @@ export function ContactForm() {
       </fieldset>
       <fieldset
         className={vstack({
-          gap: 2,
+          gap: 4,
           alignItems: "start",
           w: "full",
         })}
@@ -87,15 +81,14 @@ export function ContactForm() {
         <input
           className={css({
             outline: 0,
-            border: "1px solid",
-            borderColor: "fg/10",
+            border: "1px solid {colors.border}",
             rounded: "lg",
             w: "full",
             h: "12",
             py: "2",
             px: "4",
             fontSize: "sm",
-            bg: "bg",
+            bgColor: "background.muted",
           })}
           id="email"
           type="email"
@@ -105,7 +98,7 @@ export function ContactForm() {
       </fieldset>
       <fieldset
         className={vstack({
-          gap: 2,
+          gap: 4,
           alignItems: "start",
           w: "full",
         })}
@@ -114,15 +107,14 @@ export function ContactForm() {
         <textarea
           className={css({
             outline: 0,
-            border: "1px solid",
-            borderColor: "fg/10",
+            border: "1px solid {colors.border}",
             rounded: "lg",
             w: "full",
-            h: "20rem",
+            h: "14rem",
             py: "2",
             px: "4",
             fontSize: "sm",
-            bg: "bg",
+            bgColor: "background.muted",
             resize: "none",
           })}
           id="message"
@@ -138,6 +130,7 @@ export function ContactForm() {
         })}
       >
         <button className={button({ variant: "secondary" })}>
+          <X size={18} />
           <span>Clear</span>
         </button>
         <button className={button()}>

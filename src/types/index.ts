@@ -1,7 +1,10 @@
-import { navLinks, projects } from "@/config";
+import { navLinks } from "@/config";
 import { contactFormSchema } from "@/schemas";
+import { projects } from "@/config/projects";
 
 export type SectionNames = (typeof navLinks)[number]["title"];
+
+export type Project = (typeof projects)[number];
 
 export type Post = {
   id?: string;
@@ -13,14 +16,14 @@ export type Post = {
   content?: string;
 };
 
-export type Project = {
-  id?: string;
-  images: string[];
-  title: string;
-  description: string;
-  techStack: string[];
-  links: {
-    live: string;
-    git: string;
-  };
-};
+// export type Project = {
+//   id?: string;
+//   images: string[];
+//   title: string;
+//   description: string;
+//   techStack: string[];
+//   links: {
+//     live: string;
+//     git: string;
+//   };
+// };

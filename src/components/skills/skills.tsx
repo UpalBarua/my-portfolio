@@ -1,25 +1,32 @@
 import { SectionInView } from "@/components/section-in-view";
 import { SkillCard } from "@/components/skill-card/skill-card";
-import { getAllSkills } from "@/lib/services";
-import { grid, gridItem, flex } from "styled-system/patterns";
+import { skillsList } from "@/config";
+
 import { css } from "styled-system/css";
+import { flex, grid, gridItem } from "styled-system/patterns";
 
-export async function Skills() {
-  const skills = await getAllSkills();
-
+export function Skills() {
   return (
     <SectionInView
       className={grid({
+        layerStyle: "container",
         gap: 16,
-        border: "2px solid",
-        borderColor: "fg/10",
-        rounded: "2xl",
+        justifyContent: {
+          base: "start",
+          mdToXl: "center",
+        },
+        alignItems: "center",
         roundedTopLeft: "3rem",
         roundedTopRight: "3rem",
-        mb: 2,
-        p: "10",
-        bg: "dark.darker",
-        columns: 2,
+        mb: 4,
+        textAlign: {
+          base: "start",
+          mdToXl: "center",
+        },
+        columns: {
+          base: 1,
+          xl: 2,
+        },
       })}
       id="skills"
       sectionName="Skills"
@@ -29,30 +36,26 @@ export async function Skills() {
           className={css({
             display: "block",
             pb: "4",
-            color: "blue",
+            color: "warning",
+            fontSize: "lg",
           })}
         >
-          Tech Stack
+          My Tech Stack
         </h2>
         <p
           className={css({
+            textStyle: "headline",
             pb: 6,
-            letterSpacing: "tight",
-            textTransform: "capitalize",
-            fontSize: "5xl",
-            fontWeight: "medium",
-            lineHeight: "snug",
           })}
         >
-          Tools that i use to build amazing web experiences.
+          Tools that i use to build these amazing web experiences. 🧰
         </p>
         <p
           className={css({
-            maxW: "40rem",
-            color: "fg/60",
-            textWrap: "pretty",
+            textStyle: "text",
+            mx: "auto",
+            color: "foreground.secondary",
             fontSize: "lg",
-            lineHeight: "relaxed",
           })}
         >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Et reiciendis
@@ -64,13 +67,16 @@ export async function Skills() {
       <ul
         className={flex({
           gap: 3,
-          justify: "center",
+          justify: {
+            base: "start",
+            md: "center",
+          },
           alignItems: "center",
           mx: "auto",
           wrap: "wrap",
         })}
       >
-        {skills.map((skill, index) => (
+        {skillsList.map((skill, index) => (
           <SkillCard key={skill.iconUrl} index={index} {...skill} />
         ))}
       </ul>

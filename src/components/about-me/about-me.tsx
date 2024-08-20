@@ -8,40 +8,32 @@ export function AboutMe() {
   return (
     <SectionInView
       className={css({
-        border: "2px solid",
-        borderColor: "fg/10",
-        rounded: "2xl",
+        layerStyle: "container",
         roundedBottomLeft: "3rem",
-        p: "10",
-        bg: "dark.darker",
       })}
       id="about"
       sectionName="About"
     >
       <MotionDiv
-        className={css({
-          textWrap: "pretty",
-          // max-width: 60ch;
-          fontSize: "lg",
-          lineHeight: "relaxed",
-        })}
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.175 }}
       >
         <h2
           className={css({
+            textStyle: "title",
             pb: 6,
-            letterSpacing: "tight",
-            textTransform: "capitalize",
-            fontSize: "5xl",
-            fontWeight: "medium",
-            lineHeight: "snug",
           })}
         >
           About Me 🧑‍💻
         </h2>
-        <div className={vstack({ gap: 4 })}>
+        <div
+          className={vstack({
+            textStyle: "text",
+            gap: 4,
+            color: "foreground.secondary",
+          })}
+        >
           <p>
             Hello, I'm Upal Barua, a dedicated <strong>developer</strong>{" "}
             passionate about creating{" "}

@@ -4,16 +4,16 @@ import Link from "next/link";
 import type { Project } from "@/types/";
 import { TechStack } from "../UI/tech-stack/tech-stack";
 
-import { blurredBg } from "@/recipes/blurred-bg";
 import { Github, Radio } from "lucide-react";
-import { css, cx } from "styled-system/css";
+import { css } from "styled-system/css";
 import { grid, hstack } from "styled-system/patterns";
 
 export function ProjectCard({
-  id,
+  name,
   title,
   techStack,
   images,
+  links: { git, live },
 }: Readonly<Project>) {
   return (
     <Link
@@ -22,7 +22,7 @@ export function ProjectCard({
         pb: 0,
         overflow: "hidden",
       })}
-      href={`projects/${id}`}
+      href={`projects/${name}`}
     >
       <div
         className={grid({
@@ -36,10 +36,10 @@ export function ProjectCard({
             fontSize: "lg",
           })}
         >
-          {title}
+          {name}
         </h3>
         <a
-          href="#"
+          href={git}
           className={hstack({
             gap: "1.5",
             fontSize: "sm",
@@ -63,7 +63,7 @@ export function ProjectCard({
           <span>GitHub</span>
         </a>
         <a
-          href="#"
+          href={live}
           className={hstack({
             gap: "1.5",
             fontSize: "sm",
@@ -89,15 +89,11 @@ export function ProjectCard({
       </div>
       <p
         className={css({
+          textStyle: "title",
           pb: 6,
-          letterSpacing: "tight",
-          textTransform: "capitalize",
-          fontSize: "3xl",
-          fontWeight: "medium",
-          lineHeight: "snug",
         })}
       >
-        Lorem ipsum dolor sit amet, qui minim labore adipisicing.
+        {title}
       </p>
       <TechStack techStack={techStack} />
       <div
@@ -114,25 +110,23 @@ export function ProjectCard({
           },
         })}
       >
-        {Array(4)
-          .fill("")
-          .map((_, i) => (
-            <Image
-              className={css({
-                aspectRatio: "wide",
-                objectPosition: "center",
-                objectFit: "cover",
-                border: "1px solid",
-                borderColor: "fg/5",
-                rounded: "xl",
-              })}
-              key={i}
-              src={images[i]}
-              alt="project"
-              width={800}
-              height={500}
-            />
-          ))}
+        {images.slice(0, 4).map((image) => (
+          <Image
+            className={css({
+              aspectRatio: "wide",
+              objectPosition: "center",
+              objectFit: "cover",
+              border: "1px solid",
+              borderColor: "fg/5",
+              rounded: "xl",
+            })}
+            key={image}
+            src={image}
+            alt="project"
+            width={800}
+            height={500}
+          />
+        ))}
       </div>
     </Link>
   );
