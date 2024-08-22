@@ -1,20 +1,13 @@
-import { css } from "styled-system/css";
-import { grid, hstack, circle } from "styled-system/patterns";
-import { PostsCard } from "./PostsCard/PostsCard";
-import Link from "next/link";
+import getPostMetadata from "@/lib/get-post-metadata";
 import { ExternalLink } from "lucide-react";
-
-const BLOG_POST = {
-  id: "flkajdfl",
-  metaData: {
-    title: "This is a dummy title for test purposes",
-    subtitle:
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-    date: "Tue Aug 13 2024 22:15:21 GMT+0600 (Bangladesh Standard Time)",
-  },
-};
+import Link from "next/link";
+import { css } from "styled-system/css";
+import { circle, grid, hstack } from "styled-system/patterns";
+import { PostsCard } from "./PostsCard/PostsCard";
 
 export function LatestBlogPosts() {
+  const posts = getPostMetadata();
+
   return (
     <section
       className={css({
@@ -69,7 +62,6 @@ export function LatestBlogPosts() {
             base: 1,
             md: 2,
           },
-          justifyItems: "start",
           "&>*:last-child": {
             roundedBottomRight: "3rem",
           },
@@ -78,10 +70,9 @@ export function LatestBlogPosts() {
           },
         })}
       >
-        <PostsCard {...BLOG_POST} />
-        <PostsCard {...BLOG_POST} />
-        <PostsCard {...BLOG_POST} />
-        <PostsCard {...BLOG_POST} />
+        {posts.map((post) => (
+          <PostsCard key={post.slug} {...post} />
+        ))}
       </div>
     </section>
   );

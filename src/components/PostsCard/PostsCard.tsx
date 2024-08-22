@@ -1,14 +1,16 @@
 import { formatDate } from "@/lib/format-date";
-import type { Post } from "@/types";
+import type { PostMetadata } from "@/types";
+import { CalendarClock, Dot } from "lucide-react";
 import Link from "next/link";
 import { css } from "styled-system/css";
 import { hstack, vstack } from "styled-system/patterns";
-import { CalendarClock, Dot } from "lucide-react";
 
 export function PostsCard({
-  id,
-  metaData: { title, subtitle, date },
-}: Readonly<Post>) {
+  title,
+  subtitle,
+  slug,
+  date,
+}: Readonly<PostMetadata>) {
   return (
     <Link
       className={vstack({
@@ -16,7 +18,7 @@ export function PostsCard({
         gap: 2,
         alignItems: "start",
       })}
-      href={`/blog/${id}`}
+      href={`/blog/${slug}`}
     >
       <div
         className={hstack({
@@ -45,10 +47,7 @@ export function PostsCard({
           color: "foreground.secondary",
         })}
       >
-        {subtitle} Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Vitae, libero nobis! Cum nulla velit debitis aliquid labore voluptas
-        suscipit est minus voluptates fugit odit eius, pariatur atque eveniet
-        quod voluptatum!
+        {subtitle}
       </p>
     </Link>
   );

@@ -27,3 +27,21 @@ export type Post = {
 //     git: string;
 //   };
 // };
+
+export type PostMetadata = {
+  title: string;
+  subtitle: string;
+  date: string;
+  slug: string;
+};
+
+export type PostType = {
+  content: string;
+  data: {
+    title: string;
+    subtitle: string;
+    date: string;
+  };
+  isEmpty: boolean;
+  excerpt: string;
+};

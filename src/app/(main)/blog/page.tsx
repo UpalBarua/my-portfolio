@@ -1,33 +1,15 @@
-"use client";
-
+import { MotionDiv } from "@/components/motion-div";
 import { PostsCard } from "@/components/PostsCard/PostsCard";
-import { db } from "@/firebase/firebase.config";
-import { Post } from "@/types";
-import { collection, onSnapshot, query } from "firebase/firestore";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import getPostMetadata from "@/lib/get-post-metadata";
 
 import { css } from "styled-system/css";
-import { vstack, grid } from "styled-system/patterns";
+import { grid, vstack } from "styled-system/patterns";
 
 export default function BlogPage() {
-  const [posts, setPosts] = useState<Post[]>([]);
-
-  const q = query(collection(db, "posts"));
-
-  onSnapshot(q, (querySnapshot) => {
-    const posts: Post[] = [];
-    querySnapshot.forEach((doc) => {
-      posts.push({
-        id: doc.id,
-        ...doc.data(),
-      } as Post);
-    });
-    setPosts(posts);
-  });
+  const posts = getPostMetadata();
 
   return (
-    <motion.section
+    <MotionDiv
       className={vstack({
         gap: 4,
         maxW: "5xl",
@@ -64,9 +46,9 @@ export default function BlogPage() {
         })}
       >
         {posts.map((post) => (
-          <PostsCard key={post.id} {...post} />
+          <PostsCard key={post.slug} {...post} />
         ))}
       </div>
-    </motion.section>
+    </MotionDiv>
   );
 }
