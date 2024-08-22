@@ -1,6 +1,6 @@
 import { MapPin, Navigation } from "lucide-react";
 import { css } from "styled-system/css";
-import { grid, square } from "styled-system/patterns";
+import { grid, circle } from "styled-system/patterns";
 
 export function CurrentPosition() {
   return (
@@ -8,7 +8,7 @@ export function CurrentPosition() {
       className={grid({
         layerStyle: "container",
         rowGap: 8,
-        columnGap: 5,
+        columnGap: 4,
         gridTemplateColumns: "max-content auto",
         roundedBottomRight: "3rem",
         p: {
@@ -18,16 +18,16 @@ export function CurrentPosition() {
       })}
     >
       <span
-        className={square({
+        className={circle({
           display: "flex",
-          rounded: "md",
           size: 10,
           mt: 1,
           color: "accent",
           bgColor: "background.muted",
+          overflow: "hidden",
         })}
       >
-        <Navigation size={20} />
+        <Navigation size={20} strokeWidth={1} />
       </span>
       <p
         className={css({
@@ -35,19 +35,20 @@ export function CurrentPosition() {
           fontSize: "lg",
         })}
       >
-        I am currently wokring as a freelance developer working on projects of
-        local businesses.
+        Looking for a fresher job or internship to gain professional experience
+        and grow with a like-minded team.
       </p>
       <span
-        className={square({
-          rounded: "md",
+        className={circle({
+          rounded: "full",
           size: 10,
           mt: 1,
           color: "accent",
           bgColor: "background.muted",
+          overflow: "hidden",
         })}
       >
-        <MapPin size={20} />
+        <MapPin size={20} strokeWidth={1} />
       </span>
       <p
         className={css({
@@ -55,8 +56,8 @@ export function CurrentPosition() {
           fontSize: "lg",
         })}
       >
-        I am currently wokring as a freelance developer working on projects of
-        local businesses.
+        Currently working as an indie developer, building websites and web apps
+        for small to medium businesses.
       </p>
     </div>
   );

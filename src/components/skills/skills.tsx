@@ -19,6 +19,7 @@ export function Skills() {
         roundedTopLeft: "3rem",
         roundedTopRight: "3rem",
         mb: 4,
+        p: 14,
         textAlign: {
           base: "start",
           mdToXl: "center",
@@ -32,23 +33,13 @@ export function Skills() {
       sectionName="Skills"
     >
       <div className={gridItem({})}>
-        <h2
-          className={css({
-            display: "block",
-            pb: "4",
-            color: "warning",
-            fontSize: "lg",
-          })}
-        >
-          My Tech Stack
-        </h2>
         <p
           className={css({
             textStyle: "headline",
             pb: 6,
           })}
         >
-          Tools that i use to build these amazing web experiences. 🧰
+          My go-to toolkit for crafting awesome web experiences 🔧
         </p>
         <p
           className={css({
@@ -58,10 +49,9 @@ export function Skills() {
             fontSize: "lg",
           })}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et reiciendis
-          a non, quibusdam illum, sapiente debitis optio aspernatur ad nulla
-          accusamus suscipit ipsam impedit libero! Esse repellendus adipisci non
-          aspernatur.
+          I’m all about the MERN stack, but Next.js, TypeScript, and Tailwind
+          are my faves! Lately, I’m diving into Panda CSS to add a fresh twist
+          to my projects.
         </p>
       </div>
       <ul

@@ -14,7 +14,6 @@ const layerStyles = defineLayerStyles({
         md: 10,
       },
       backgroundColor: "background.secondary/80",
-      // boxShadow: "lg",
       backdropFilter: "blur(0.75rem) saturate(200%)",
     },
   },
@@ -25,9 +24,10 @@ const textStyles = defineTextStyles({
     value: {
       letterSpacing: "tight",
       textTransform: "capitalize",
-      fontSize: "5xl",
+      fontSize: "clamp(2.35rem, 5vw + 0.25rem, 3.125rem)",
       fontWeight: "extrabold",
       lineHeight: "snug",
+      textWrap: "pretty",
     },
   },
   title: {
@@ -37,6 +37,7 @@ const textStyles = defineTextStyles({
       fontSize: "3xl",
       fontWeight: "extrabold",
       lineHeight: "snug",
+      textWrap: "pretty",
     },
   },
   text: {
@@ -76,9 +77,13 @@ export default defineConfig({
           },
           border: {
             DEFAULT: {
+              value: "hsl(229, 22%, 14%)",
+            },
+            hover: {
               value: "hsl(229, 20%, 16%)",
             },
           },
+
           accent: {
             DEFAULT: {
               value: "hsl(189, 73%, 52%)",

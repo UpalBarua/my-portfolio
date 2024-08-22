@@ -26,19 +26,18 @@ export function RecentProjects() {
       >
         <h2
           className={css({
-            textStyle: "title",
-            fontSize: "5xl",
+            textStyle: "headline",
           })}
         >
-          Recent Projects 🏗️
+          Recent Projects
         </h2>
         <Link
           className={hstack({
+            border: "2px solid {colors.border}",
             rounded: "full",
             ps: 6,
-            color: "background",
             fontWeight: "medium",
-            bgColor: "accent",
+            bgColor: "background.muted",
           })}
           href="/projects"
         >
@@ -58,7 +57,6 @@ export function RecentProjects() {
       <div
         className={grid({
           gap: 4,
-          alignItems: "start",
           mb: 20,
           columns: {
             base: 1,

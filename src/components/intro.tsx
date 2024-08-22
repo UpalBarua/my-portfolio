@@ -1,27 +1,8 @@
-import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import Image from "next/image";
 
+import { socialLinks } from "@/config";
 import { css } from "styled-system/css";
 import { circle, grid, gridItem, hstack } from "styled-system/patterns";
-
-const socialLinks = [
-  {
-    icon: Github,
-    href: "github.com",
-  },
-  {
-    icon: Linkedin,
-    href: "linkedin.com",
-  },
-  {
-    icon: Mail,
-    href: "upalbarua52@gmail.com",
-  },
-  {
-    icon: Phone,
-    href: "01782734",
-  },
-] as const;
 
 export function Intro() {
   return (
@@ -41,17 +22,17 @@ export function Intro() {
     >
       <div
         className={grid({
+          rowGap: 2,
           columnGap: {
             base: 6,
             md: 4,
           },
-          rowGap: 2,
           alignItems: "center",
           gridTemplateColumns: {
             base: "max-content auto",
             md: "max-content auto max-content",
           },
-          pb: 8,
+          pb: 10,
         })}
       >
         <Image
@@ -63,7 +44,7 @@ export function Intro() {
             border: "2px solid {colors.foreground.secondary}",
             size: {
               base: "7.5rem",
-              md: "3.75rem",
+              md: "3.675rem",
             },
             bg: "background.muted",
             overflow: "hidden",
@@ -88,14 +69,13 @@ export function Intro() {
               color: "foreground.secondary",
             })}
           >
-            Frontend developer
+            Front-end developer
           </span>
         </div>
         <div
           className={hstack({
             gap: {
-              base: 4,
-              md: 6,
+              base: 1,
             },
             alignSelf: "start",
             gridColumn: {
@@ -106,17 +86,18 @@ export function Intro() {
         >
           {socialLinks.map(({ icon: Icon, href }) => (
             <a
-              className={css({
-                transition: "opacity 300ms ease",
+              className={circle({
+                size: 12,
+                transition: "background-color 300ms ease",
                 "&:hover,&:focus-visible": {
-                  opacity: 0.6,
+                  bgColor: "background.muted",
                 },
               })}
               key={href}
               href={href}
               target="_blank"
             >
-              <Icon size={26} />
+              <Icon size={24} />
             </a>
           ))}
         </div>
@@ -124,12 +105,7 @@ export function Intro() {
       <h1
         className={css({
           textStyle: "headline",
-          pb: 6,
-          fontSize: {
-            base: "3xl",
-            md: "4xl",
-            lg: "5xl",
-          },
+          pb: 8,
         })}
       >
         I craft intuitive and dynamic web experiences with an eye for design and
@@ -140,13 +116,12 @@ export function Intro() {
           textStyle: "text",
           maxW: "60ch",
           color: "foreground.secondary",
-          fontSize: "lg",
         })}
       >
-        Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
-        enim labore culpa sint ad nisi Lorem pariatur mollit ex in Lorem sunt
-        duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis
-        sunt velit enim. Voluptate laboris sint.
+        I’m all about turning ideas into fun, interactive web experiences that
+        really stand out. With a mix of creativity, design, and code, I craft
+        sites that aren’t just functional but genuinely enjoyable to use. Let’s
+        team up and create something amazing together!
       </p>
     </div>
   );

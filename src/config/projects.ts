@@ -76,4 +76,33 @@ export const projects = [
       "https://firebasestorage.googleapis.com/v0/b/personal-portfolio-b730b.appspot.com/o/savvy-pulse-00.png-ddf826c2-25e9-4dd6-910d-0c8895903b25?alt=media&token=87eeb049-9bb1-4d65-943f-195cfe019537",
     ],
   },
+  {
+    images: [
+      "/images/projects/urban-mart-00.png",
+      "/images/projects/urban-mart-01.png",
+      "/images/projects/urban-mart-02.png",
+      "/images/projects/urban-mart-03.png",
+      "/images/projects/urban-mart-04.png",
+      "/images/projects/urban-mart-05.png",
+      "/images/projects/urban-mart-06.png",
+      "/images/projects/urban-mart-07.png",
+    ],
+    title:
+      "This website was built for Thrivenvision, a company providing various digital services.",
+    name: "Urban Mart",
+    description:
+      "Urban Mart is a practice project built with Next.js where users can search and sort groceries, add them to wishlist or cart, checkout with Stripe, and administrators manage products, orders, and users from the admin dashboard.",
+    techStack: [
+      "Nextjs",
+      "TypeScript",
+      "TailwindCSS",
+      "Firebase",
+      "Exprees",
+      "Mongoose",
+    ],
+    links: {
+      live: "https://urban-mart.vercel.app/",
+      git: "https://github.com/UpalBarua/urban-mart",
+    },
+  },
 ] as const;

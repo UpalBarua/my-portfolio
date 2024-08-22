@@ -19,6 +19,7 @@ export function ProjectCard({
     <Link
       className={css({
         layerStyle: "container",
+        p: 8,
         pb: 0,
         overflow: "hidden",
       })}
@@ -26,9 +27,9 @@ export function ProjectCard({
     >
       <div
         className={grid({
-          gap: 6,
+          gap: 2,
           gridTemplateColumns: "auto repeat(2, max-content)",
-          pb: 8,
+          pb: 10,
         })}
       >
         <h3
@@ -41,16 +42,16 @@ export function ProjectCard({
         <a
           href={git}
           className={hstack({
-            gap: "1.5",
-            fontSize: "sm",
+            gap: 1.5,
+            rounded: "100vmin",
+            py: 1,
+            px: 3,
+            transition: "background-color 300ms",
             _focusVisible: {
-              outline: 0,
-              textDecoration: "underline",
-              textUnderlineOffset: 2,
+              bgColor: "background.muted",
             },
             _hover: {
-              textDecoration: "underline",
-              textUnderlineOffset: 2,
+              bgColor: "background.muted",
             },
           })}
         >
@@ -65,16 +66,16 @@ export function ProjectCard({
         <a
           href={live}
           className={hstack({
-            gap: "1.5",
-            fontSize: "sm",
+            gap: 1.5,
+            rounded: "100vmin",
+            py: 1,
+            px: 3,
+            transition: "background-color 300ms",
             _focusVisible: {
-              outline: 0,
-              textDecoration: "underline",
-              textUnderlineOffset: 2,
+              bgColor: "background.muted",
             },
             _hover: {
-              textDecoration: "underline",
-              textUnderlineOffset: 2,
+              bgColor: "background.muted",
             },
           })}
         >
@@ -90,7 +91,9 @@ export function ProjectCard({
       <p
         className={css({
           textStyle: "title",
-          pb: 6,
+          pb: 8,
+          fontWeight: "medium",
+          lineHeight: "relaxed",
         })}
       >
         {title}
@@ -103,7 +106,7 @@ export function ProjectCard({
           gap: 2,
           justifyContent: "center",
           alignItems: "center",
-          pt: 20,
+          pt: 24,
           columns: 2,
           "&>*:nth-of-type(2),&>*:nth-of-type(4)": {
             translate: "0 1.675rem",

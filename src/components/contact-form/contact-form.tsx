@@ -51,7 +51,7 @@ export function ContactForm() {
           w: "full",
         })}
       >
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">Your Name</label>
         <input
           className={css({
             outline: 0,
@@ -66,7 +66,7 @@ export function ContactForm() {
           })}
           id="name"
           type="text"
-          placeholder="John Doe"
+          placeholder="Who do I have the pleasure of chatting with?"
           {...register("name")}
         />
       </fieldset>
@@ -77,7 +77,7 @@ export function ContactForm() {
           w: "full",
         })}
       >
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">Your Email</label>
         <input
           className={css({
             outline: 0,
@@ -92,7 +92,7 @@ export function ContactForm() {
           })}
           id="email"
           type="email"
-          placeholder="john@example.com"
+          placeholder="Where can I reach you?"
           {...register("email")}
         />
       </fieldset>
@@ -103,7 +103,7 @@ export function ContactForm() {
           w: "full",
         })}
       >
-        <label htmlFor="message">Message</label>
+        <label htmlFor="message">Your Message</label>
         <textarea
           className={css({
             outline: 0,
@@ -118,7 +118,7 @@ export function ContactForm() {
             resize: "none",
           })}
           id="message"
-          placeholder="A simple message"
+          placeholder="What’s on your mind?"
           {...register("message")}
         />
       </fieldset>

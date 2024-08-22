@@ -10,17 +10,16 @@ export function ContactMe() {
         className={css({
           layerStyle: "container",
           roundedBottomRight: "3rem",
+          h: "full",
         })}
       >
         <h2
           className={css({
-            textStyle: "text",
+            textStyle: "title",
             pb: 6,
-            fontSize: "xl",
           })}
         >
-          If you want to work together on a project or just have a chat, please
-          don&apos;t hesitate to contact me via email below.
+          Drop a Message
         </h2>
         <ContactForm />
       </section>

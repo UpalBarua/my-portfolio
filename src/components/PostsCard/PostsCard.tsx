@@ -17,12 +17,15 @@ export function PostsCard({
         layerStyle: "container",
         gap: 2,
         alignItems: "start",
+        p: 8,
       })}
       href={`/blog/${slug}`}
     >
       <div
         className={hstack({
           gap: 0,
+          pb: 4,
+          color: "foreground.secondary",
           "&>*:first-child": {
             me: 2,
           },
@@ -35,8 +38,8 @@ export function PostsCard({
       </div>
       <h3
         className={css({
-          fontSize: "3xl",
-          fontWeight: "extrabold",
+          textStyle: "title",
+          fontWeight: "medium",
         })}
       >
         {title}
@@ -44,10 +47,10 @@ export function PostsCard({
       <p
         className={css({
           textStyle: "text",
-          color: "foreground.secondary",
         })}
       >
-        {subtitle}
+        {subtitle} Lorem ipsum dolor sit amet, qui minim labore adipisicing
+        minim sint cillum sint consectetur cupidatat.
       </p>
     </Link>
   );

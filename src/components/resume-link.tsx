@@ -31,6 +31,7 @@ export function ResumeLink() {
         className={circle({
           border: "1px solid {colors.border}",
           size: "12",
+          color: "accent",
           bg: "background.muted",
         })}
       >
@@ -40,13 +41,11 @@ export function ResumeLink() {
         className={css({
           textStyle: "text",
           gridColumn: "full",
-          maxW: "25ch",
-          color: "foreground.secondary",
           fontSize: "lg",
         })}
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-        quod hic perspiciatis aliquid.
+        A snapshot of my journey, showcasing skills, experiences, and
+        achievements in web development.
       </p>
       <FileText
         className={css({
@@ -57,6 +56,7 @@ export function ResumeLink() {
           width: "10rem",
           height: "10rem",
           color: "accent",
+          opacity: 0.125,
         })}
         strokeWidth={1}
       />

@@ -6,7 +6,7 @@ import { LatestBlogPosts } from "@/components/latest-blog-posts";
 import { RecentProjects } from "@/components/recent-projects/recent-projects";
 import { ResumeLink } from "@/components/resume-link";
 import { Skills } from "@/components/skills/skills";
-import { grid, vstack } from "styled-system/patterns";
+import { grid } from "styled-system/patterns";
 
 export default function HomePage() {
   return (

@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import { BsTools } from "react-icons/bs";
 import { GrArticle } from "react-icons/gr";
 import { IoIosGitBranch } from "react-icons/io";
@@ -385,5 +385,24 @@ export const dashboardNavLinks = [
     label: "Blog",
     href: "/dashboard/blog",
     Icon: GrArticle,
+  },
+] as const;
+
+export const socialLinks = [
+  {
+    icon: Github,
+    href: "github.com",
+  },
+  {
+    icon: Linkedin,
+    href: "linkedin.com",
+  },
+  {
+    icon: Mail,
+    href: "upalbarua52@gmail.com",
+  },
+  {
+    icon: Phone,
+    href: "01782734",
   },
 ] as const;
