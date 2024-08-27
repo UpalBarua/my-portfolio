@@ -13,7 +13,9 @@ export const TechStack = ({ techStack }: TechStackProps) => {
         gap: 2,
         justify: "start",
         alignItems: "center",
-        maxW: "90%",
+        maxW: {
+          sm: "90%",
+        },
         flexWrap: "wrap",
       })}
     >

@@ -12,12 +12,11 @@ export function Navbar() {
   return (
     <MotionDiv
       className={container({
-        zIndex: 10,
+        zIndex: 20,
         pos: "fixed",
         w: "full",
-        bgColor:
-          window.scrollY > 100 ? "background.secondary/80" : "background",
-        backdropFilter: "blur(0.675rem) saturate(200%)",
+        bgColor: "background.secondary/75",
+        backdropFilter: "blur(2rem) saturate(200%)",
       })}
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}

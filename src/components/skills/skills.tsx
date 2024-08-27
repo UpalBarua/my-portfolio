@@ -16,10 +16,14 @@ export function Skills() {
           mdToXl: "center",
         },
         alignItems: "center",
-        roundedTopLeft: "3rem",
-        roundedTopRight: "3rem",
-        mb: 4,
-        p: 14,
+        gridColumn: {
+          md: "1/3",
+        },
+        roundedTopLeft: { md: "3rem" },
+        roundedTopRight: { md: "3rem" },
+        p: {
+          lg: 14,
+        },
         textAlign: {
           base: "start",
           mdToXl: "center",

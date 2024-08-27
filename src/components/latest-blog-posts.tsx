@@ -2,22 +2,26 @@ import getPostMetadata from "@/lib/get-post-metadata";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { css } from "styled-system/css";
-import { circle, grid, hstack } from "styled-system/patterns";
+import { stack, circle, grid, hstack } from "styled-system/patterns";
 import { PostsCard } from "./PostsCard/PostsCard";
 
 export function LatestBlogPosts() {
   const posts = getPostMetadata();
 
   return (
-    <section
-      className={css({
-        pb: 20,
-      })}
-    >
+    <section>
       <div
-        className={hstack({
+        className={stack({
+          gap: 4,
+          direction: {
+            base: "column",
+            md: "row",
+          },
           justifyContent: "space-between",
-          alignItems: "center",
+          alignItems: {
+            base: "start",
+            md: "center",
+          },
           px: 2,
           pb: 10,
         })}
@@ -61,10 +65,10 @@ export function LatestBlogPosts() {
             md: 2,
           },
           "&>*:last-child": {
-            roundedBottomRight: "3rem",
+            roundedBottomRight: { md: "3rem" },
           },
           "&>*:nth-child(3)": {
-            roundedBottomLeft: "3rem",
+            roundedBottomLeft: { md: "3rem" },
           },
         })}
       >

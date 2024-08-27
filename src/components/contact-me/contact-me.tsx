@@ -9,13 +9,13 @@ export function ContactMe() {
       <section
         className={css({
           layerStyle: "container",
-          roundedBottomRight: "3rem",
+          roundedBottomRight: { md: "3rem" },
           h: "full",
         })}
       >
         <h2
           className={css({
-            textStyle: "title",
+            textStyle: "headline",
             pb: 6,
           })}
         >

@@ -6,11 +6,15 @@ import { LatestBlogPosts } from "@/components/latest-blog-posts";
 import { RecentProjects } from "@/components/recent-projects/recent-projects";
 import { ResumeLink } from "@/components/resume-link";
 import { Skills } from "@/components/skills/skills";
-import { grid } from "styled-system/patterns";
+import { grid, vstack } from "styled-system/patterns";
 
 export default function HomePage() {
   return (
-    <main>
+    <main
+      className={vstack({
+        gap: "min(10vw, 8rem)",
+      })}
+    >
       <section
         className={grid({
           gap: 4,
@@ -22,7 +26,7 @@ export default function HomePage() {
           gridTemplateRows: {
             xl: "max-content auto",
           },
-          py: 20,
+          pt: 20,
         })}
       >
         <Intro />
@@ -30,7 +34,6 @@ export default function HomePage() {
         <CurrentPosition />
       </section>
       <RecentProjects />
-      <Skills />
       <section
         className={grid({
           gap: 4,
@@ -39,9 +42,9 @@ export default function HomePage() {
             md: "repeat(2, 1fr)",
             xl: "60ch auto",
           },
-          pb: 20,
         })}
       >
+        <Skills />
         <AboutMe />
         <ContactMe />
       </section>

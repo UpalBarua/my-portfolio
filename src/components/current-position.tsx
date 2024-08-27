@@ -10,7 +10,7 @@ export function CurrentPosition() {
         rowGap: 8,
         columnGap: 4,
         gridTemplateColumns: "max-content auto",
-        roundedBottomRight: "3rem",
+        roundedBottomRight: { md: "3rem" },
         p: {
           base: 6,
           md: 8,

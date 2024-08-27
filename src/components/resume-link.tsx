@@ -11,7 +11,7 @@ export function ResumeLink() {
         pos: "relative",
         alignContent: "start",
         gridTemplateColumns: "1fr max-content",
-        roundedTopLeft: "3rem",
+        roundedTopLeft: { md: "3rem" },
         p: {
           base: 6,
           md: 8,
@@ -51,7 +51,7 @@ export function ResumeLink() {
         className={css({
           pos: "absolute",
           right: 0,
-          bottom: "-20%",
+          bottom: "-10%",
           rotate: "-20deg",
           width: "10rem",
           height: "10rem",

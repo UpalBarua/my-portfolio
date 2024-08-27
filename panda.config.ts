@@ -13,8 +13,8 @@ const layerStyles = defineLayerStyles({
         base: 8,
         md: 10,
       },
-      backgroundColor: "background.secondary/80",
-      backdropFilter: "blur(0.75rem) saturate(200%)",
+      backgroundColor: "background.secondary/75",
+      backdropFilter: "blur(2rem) saturate(200%)",
     },
   },
 });
@@ -61,18 +61,18 @@ export default defineConfig({
               value: "hsl(235, 19%, 13%)",
             },
             secondary: {
-              value: "hsl(235, 19%, 10%)",
+              value: "hsl(235, 10%, 11%)",
             },
             muted: {
-              value: "hsl(235, 20%, 16%)",
+              value: "hsl(235, 15%, 20%)",
             },
           },
           foreground: {
             DEFAULT: {
-              value: "hsl(229, 35%, 75%)",
+              value: "hsl(229, 18%, 80%)",
             },
             secondary: {
-              value: "hsl(229, 22%, 55%)",
+              value: "hsl(229, 15%, 65%)",
             },
           },
           border: {

@@ -10,7 +10,7 @@ export function AboutMe() {
     <SectionInView
       className={css({
         layerStyle: "container",
-        roundedBottomLeft: "3rem",
+        roundedBottomLeft: { md: "3rem" },
       })}
       id="about"
       sectionName="About"
@@ -22,7 +22,7 @@ export function AboutMe() {
       >
         <h2
           className={css({
-            textStyle: "title",
+            textStyle: "headline",
             pb: 6,
           })}
         >

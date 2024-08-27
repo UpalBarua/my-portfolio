@@ -6,20 +6,23 @@ import { SectionInView } from "@/components/section-in-view";
 import { projects } from "@/config/projects";
 
 import { css } from "styled-system/css";
-import { circle, grid, hstack } from "styled-system/patterns";
+import { circle, grid, hstack, stack } from "styled-system/patterns";
 
 export function RecentProjects() {
   return (
-    <SectionInView
-      className={css({ pb: 20 })}
-      id="projects"
-      sectionName="Projects"
-      threshold={0.2}
-    >
+    <SectionInView id="projects" sectionName="Projects" threshold={0.2}>
       <div
-        className={hstack({
+        className={stack({
+          gap: 4,
+          direction: {
+            base: "column",
+            md: "row",
+          },
           justifyContent: "space-between",
-          alignItems: "center",
+          alignItems: {
+            base: "start",
+            md: "center",
+          },
           px: 2,
           pb: 10,
         })}
@@ -64,10 +67,10 @@ export function RecentProjects() {
           },
           justifyItems: "start",
           "&>*:last-child": {
-            roundedBottomRight: "3rem",
+            roundedBottomRight: { md: "3rem" },
           },
           "&>*:nth-child(3)": {
-            roundedBottomLeft: "3rem",
+            roundedBottomLeft: { md: "3rem" },
           },
         })}
       >

@@ -16,8 +16,8 @@ export function Intro() {
         gridRow: {
           lg: "1/3",
         },
-        roundedTopRight: "3rem",
-        roundedBottomLeft: "3rem",
+        roundedTopRight: { md: "3rem" },
+        roundedBottomLeft: { md: "3rem" },
       })}
     >
       <div

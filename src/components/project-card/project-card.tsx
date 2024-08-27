@@ -55,12 +55,12 @@ export function ProjectCard({
             },
           })}
         >
-          <Github
-            className={css({
-              w: 4,
-              h: 4,
-            })}
-          />
+          {/* <Github */}
+          {/*   className={css({ */}
+          {/*     w: 4, */}
+          {/*     h: 4, */}
+          {/*   })} */}
+          {/* /> */}
           <span>GitHub</span>
         </a>
         <a
