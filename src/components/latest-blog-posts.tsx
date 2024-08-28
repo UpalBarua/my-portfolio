@@ -1,9 +1,9 @@
+import { PostsCard } from "@/components/post-card";
 import getPostMetadata from "@/lib/get-post-metadata";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { css } from "styled-system/css";
-import { stack, circle, grid, hstack } from "styled-system/patterns";
-import { PostsCard } from "./PostsCard/PostsCard";
+import { circle, grid, hstack, stack } from "styled-system/patterns";
 
 export function LatestBlogPosts() {
   const posts = getPostMetadata();

@@ -1,5 +1,5 @@
 import { SectionInView } from "@/components/section-in-view";
-import { SkillCard } from "@/components/skill-card/skill-card";
+import { SkillCard } from "@/components/skill-card";
 import { skillsList } from "@/config";
 
 import { css } from "styled-system/css";

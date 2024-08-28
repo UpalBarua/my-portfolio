@@ -1,11 +1,11 @@
-import { AboutMe } from "@/components/about-me/about-me";
-import { ContactMe } from "@/components/contact-me/contact-me";
+import { About } from "@/components/about";
+import { Contact } from "@/components/contact";
 import { CurrentPosition } from "@/components/current-position";
 import { Intro } from "@/components/intro";
 import { LatestBlogPosts } from "@/components/latest-blog-posts";
-import { RecentProjects } from "@/components/recent-projects/recent-projects";
+import { RecentProjects } from "@/components/recent-projects";
 import { ResumeLink } from "@/components/resume-link";
-import { Skills } from "@/components/skills/skills";
+import { Skills } from "@/components/skills";
 import { grid, vstack } from "styled-system/patterns";
 
 export default function HomePage() {
@@ -45,8 +45,8 @@ export default function HomePage() {
         })}
       >
         <Skills />
-        <AboutMe />
-        <ContactMe />
+        <About />
+        <Contact />
       </section>
       <LatestBlogPosts />
     </main>

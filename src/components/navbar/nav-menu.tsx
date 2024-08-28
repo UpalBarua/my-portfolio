@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Fragment } from "react";
 
 import { navLinks } from "@/config";
-import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+import { useActiveSectionContext } from "@/context/active-section-context";
 import { css } from "styled-system/css";
 import { flex } from "styled-system/patterns";
 

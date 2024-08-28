@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { TechStack } from "@/components/tech-stack";
 import type { Project } from "@/types/";
-import { TechStack } from "../UI/tech-stack/tech-stack";
 
-import { Github, Radio } from "lucide-react";
+import { IconBrandGithub, IconAccessPoint } from "@tabler/icons-react";
 import { css } from "styled-system/css";
 import { grid, hstack } from "styled-system/patterns";
 
@@ -39,32 +39,31 @@ export function ProjectCard({
         >
           {name}
         </h3>
-        <a
+        <Link
+          className={hstack({
+            gap: 1.5,
+            rounded: "100vmin",
+            py: 1,
+            px: 3,
+            transition: "background-color 300ms",
+            _focusVisible: {
+              bgColor: "background.muted",
+            },
+            _hover: {
+              bgColor: "background.muted",
+            },
+          })}
           href={git}
-          className={hstack({
-            gap: 1.5,
-            rounded: "100vmin",
-            py: 1,
-            px: 3,
-            transition: "background-color 300ms",
-            _focusVisible: {
-              bgColor: "background.muted",
-            },
-            _hover: {
-              bgColor: "background.muted",
-            },
-          })}
         >
-          {/* <Github */}
-          {/*   className={css({ */}
-          {/*     w: 4, */}
-          {/*     h: 4, */}
-          {/*   })} */}
-          {/* /> */}
+          <IconBrandGithub
+            className={css({
+              w: 4,
+              h: 4,
+            })}
+          />
           <span>GitHub</span>
-        </a>
-        <a
-          href={live}
+        </Link>
+        <Link
           className={hstack({
             gap: 1.5,
             rounded: "100vmin",
@@ -78,15 +77,16 @@ export function ProjectCard({
               bgColor: "background.muted",
             },
           })}
+          href={live}
         >
-          <Radio
+          <IconAccessPoint
             className={css({
               w: 4,
               h: 4,
             })}
           />
           <span>Live</span>
-        </a>
+        </Link>
       </div>
       <p
         className={css({

@@ -3,9 +3,9 @@ import { SectionInView } from "@/components/section-in-view";
 
 import { css } from "styled-system/css";
 import { vstack, hstack, circle } from "styled-system/patterns";
-import { socialLinks } from "@/config";
+import { contactLinks } from "@/config";
 
-export function AboutMe() {
+export function About() {
   return (
     <SectionInView
       className={css({
@@ -76,7 +76,7 @@ export function AboutMe() {
             alignSelf: "start",
           })}
         >
-          {socialLinks.map(({ icon: Icon, href }) => (
+          {contactLinks.map(({ icon: Icon, href }) => (
             <a
               className={circle({
                 size: 12,

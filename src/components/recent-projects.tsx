@@ -1,7 +1,7 @@
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
-import { ProjectCard } from "@/components/project-card/project-card";
+import { ProjectCard } from "@/components/project-card";
 import { SectionInView } from "@/components/section-in-view";
 import { projects } from "@/config/projects";
 

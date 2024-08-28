@@ -1,5 +1,5 @@
 import { MotionDiv } from "@/components/motion-div";
-import { PostsCard } from "@/components/PostsCard/PostsCard";
+import { PostsCard } from "@/components/post-card";
 import getPostMetadata from "@/lib/get-post-metadata";
 
 import { css } from "styled-system/css";

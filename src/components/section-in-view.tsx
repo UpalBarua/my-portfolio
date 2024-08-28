@@ -2,7 +2,7 @@
 
 import { HTMLAttributes, ReactNode } from "react";
 
-import useSectionInView from "@/hooks/useSectionInView";
+import useSectionInView from "@/hooks/use-section-in-view";
 import type { SectionNames } from "@/types";
 
 type SectionInViewProps = HTMLAttributes<HTMLDivElement> & {

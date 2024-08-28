@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { socialLinks } from "@/config";
+import { contactLinks } from "@/config";
 import { css } from "styled-system/css";
 import { circle, grid, gridItem, hstack } from "styled-system/patterns";
 
@@ -84,7 +84,7 @@ export function Intro() {
             },
           })}
         >
-          {socialLinks.map(({ icon: Icon, href }) => (
+          {contactLinks.map(({ icon: Icon, href }) => (
             <a
               className={circle({
                 size: 12,
