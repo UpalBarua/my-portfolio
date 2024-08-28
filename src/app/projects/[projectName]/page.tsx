@@ -1,4 +1,4 @@
-import { TechStack } from "@/components/UI/tech-stack/tech-stack";
+import { TechStack } from "@/components/tech-stack";
 import Image from "next/image";
 
 import { Github, Radio } from "lucide-react";

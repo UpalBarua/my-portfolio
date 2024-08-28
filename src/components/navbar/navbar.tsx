@@ -1,12 +1,11 @@
-"use client";
-
+import { IconCode } from "@tabler/icons-react";
 import Link from "next/link";
 
 import { MotionDiv } from "@/components/motion-div";
-import { NavMenu } from "./nav-menu";
-
+import { NavMenu } from "@/components/navbar/nav-menu";
+import { MobileNav } from "@/components/navbar/mobile-nav";
 import { css } from "styled-system/css";
-import { container, hstack } from "styled-system/patterns";
+import { container, hstack, square } from "styled-system/patterns";
 
 export function Navbar() {
   return (
@@ -30,17 +29,24 @@ export function Navbar() {
           px: 2,
         })}
       >
-        <Link
-          className={css({
-            color: "accent",
-            fontSize: "xl",
-            fontWeight: "medium",
-          })}
-          href="/"
-        >
-          ~/upal-barua
+        <Link className={hstack()} href="/">
+          <IconCode
+            className={square({
+              size: "1.675rem",
+              color: "accent",
+            })}
+          />
+          <span
+            className={css({
+              fontSize: "xl",
+              fontWeight: "medium",
+            })}
+          >
+            Upal Barua
+          </span>
         </Link>
         <NavMenu />
+        <MobileNav />
       </header>
     </MotionDiv>
   );

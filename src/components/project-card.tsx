@@ -39,54 +39,54 @@ export function ProjectCard({
         >
           {name}
         </h3>
-        <Link
-          className={hstack({
-            gap: 1.5,
-            rounded: "100vmin",
-            py: 1,
-            px: 3,
-            transition: "background-color 300ms",
-            _focusVisible: {
-              bgColor: "background.muted",
-            },
-            _hover: {
-              bgColor: "background.muted",
-            },
-          })}
-          href={git}
-        >
-          <IconBrandGithub
-            className={css({
-              w: 4,
-              h: 4,
-            })}
-          />
-          <span>GitHub</span>
-        </Link>
-        <Link
-          className={hstack({
-            gap: 1.5,
-            rounded: "100vmin",
-            py: 1,
-            px: 3,
-            transition: "background-color 300ms",
-            _focusVisible: {
-              bgColor: "background.muted",
-            },
-            _hover: {
-              bgColor: "background.muted",
-            },
-          })}
-          href={live}
-        >
-          <IconAccessPoint
-            className={css({
-              w: 4,
-              h: 4,
-            })}
-          />
-          <span>Live</span>
-        </Link>
+        {/* <Link */}
+        {/*   className={hstack({ */}
+        {/*     gap: 1.5, */}
+        {/*     rounded: "100vmin", */}
+        {/*     py: 1, */}
+        {/*     px: 3, */}
+        {/*     transition: "background-color 300ms", */}
+        {/*     _focusVisible: { */}
+        {/*       bgColor: "background.muted", */}
+        {/*     }, */}
+        {/*     _hover: { */}
+        {/*       bgColor: "background.muted", */}
+        {/*     }, */}
+        {/*   })} */}
+        {/*   href={git} */}
+        {/* > */}
+        {/*   <IconBrandGithub */}
+        {/*     className={css({ */}
+        {/*       w: 4, */}
+        {/*       h: 4, */}
+        {/*     })} */}
+        {/*   /> */}
+        {/*   <span>GitHub</span> */}
+        {/* </Link> */}
+        {/* <Link */}
+        {/*   className={hstack({ */}
+        {/*     gap: 1.5, */}
+        {/*     rounded: "100vmin", */}
+        {/*     py: 1, */}
+        {/*     px: 3, */}
+        {/*     transition: "background-color 300ms", */}
+        {/*     _focusVisible: { */}
+        {/*       bgColor: "background.muted", */}
+        {/*     }, */}
+        {/*     _hover: { */}
+        {/*       bgColor: "background.muted", */}
+        {/*     }, */}
+        {/*   })} */}
+        {/*   href={live} */}
+        {/* > */}
+        {/*   <IconAccessPoint */}
+        {/*     className={css({ */}
+        {/*       w: 4, */}
+        {/*       h: 4, */}
+        {/*     })} */}
+        {/*   /> */}
+        {/*   <span>Live</span> */}
+        {/* </Link> */}
       </div>
       <p
         className={css({

@@ -24,6 +24,7 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
           color: "foreground",
           bg: "background",
           scrollBehavior: "smooth",
+          scrollbarWidth: "0",
         })}
       >
         <ActiveSectionContextProvider>
