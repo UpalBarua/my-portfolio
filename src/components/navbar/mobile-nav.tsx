@@ -20,7 +20,7 @@ export function MobileNav() {
       direction="top"
     >
       <Drawer.Trigger asChild>
-        <button>
+        <button className={css({ hideFrom: "md" })}>
           <IconMenu3 className={square({ size: "1.675rem" })} />
         </button>
       </Drawer.Trigger>

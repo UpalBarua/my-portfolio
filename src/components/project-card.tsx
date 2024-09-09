@@ -4,9 +4,8 @@ import Link from "next/link";
 import { TechStack } from "@/components/tech-stack";
 import type { Project } from "@/types/";
 
-import { IconBrandGithub, IconAccessPoint } from "@tabler/icons-react";
 import { css } from "styled-system/css";
-import { grid, hstack } from "styled-system/patterns";
+import { grid } from "styled-system/patterns";
 
 export function ProjectCard({
   name,
@@ -29,7 +28,7 @@ export function ProjectCard({
         className={grid({
           gap: 2,
           gridTemplateColumns: "auto repeat(2, max-content)",
-          pb: 10,
+          pb: 6,
         })}
       >
         <h3
@@ -91,7 +90,7 @@ export function ProjectCard({
       <p
         className={css({
           textStyle: "title",
-          pb: 8,
+          pb: 4,
           fontWeight: "medium",
           lineHeight: "relaxed",
         })}
@@ -106,7 +105,7 @@ export function ProjectCard({
           gap: 2,
           justifyContent: "center",
           alignItems: "center",
-          pt: 24,
+          pt: 16,
           columns: 2,
           "&>*:nth-of-type(2),&>*:nth-of-type(4)": {
             translate: "0 1.675rem",

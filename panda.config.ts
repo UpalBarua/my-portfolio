@@ -1,5 +1,6 @@
 import {
   defineConfig,
+  defineKeyframes,
   defineLayerStyles,
   defineTextStyles,
 } from "@pandacss/dev";
@@ -48,6 +49,13 @@ const textStyles = defineTextStyles({
   },
 });
 
+const keyframes = defineKeyframes({
+  fadeIn: {
+    "0%": { opacity: "0" },
+    "100%": { opacity: "1" },
+  },
+});
+
 export default defineConfig({
   preflight: true,
   include: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -77,7 +85,7 @@ export default defineConfig({
           },
           border: {
             DEFAULT: {
-              value: "hsl(229, 22%, 14%)",
+              value: "hsl(229, 22%, 20%)",
             },
             hover: {
               value: "hsl(229, 20%, 16%)",
@@ -118,6 +126,7 @@ export default defineConfig({
       },
       layerStyles,
       textStyles,
+      keyframes,
     },
   },
   outdir: "styled-system",

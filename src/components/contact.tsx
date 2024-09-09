@@ -62,24 +62,22 @@ export function Contact() {
         >
           <fieldset
             className={vstack({
-              gap: 4,
+              gap: 1,
               alignItems: "start",
+              outline: 0,
+              rounded: "xl",
               w: "full",
+              py: 3,
+              px: 4,
+              bgColor: "background.muted",
+              "&>label": {
+                color: "foreground.secondary",
+              },
             })}
           >
             <label htmlFor="name">Your Name</label>
             <input
-              className={css({
-                outline: 0,
-                border: "1px solid {colors.border}",
-                rounded: "lg",
-                w: "full",
-                h: "12",
-                py: "2",
-                px: "4",
-                fontSize: "sm",
-                bgColor: "background.muted",
-              })}
+              className={css({ outline: 0, w: "full" })}
               id="name"
               type="text"
               placeholder="Who do I have the pleasure of chatting with?"
@@ -88,23 +86,24 @@ export function Contact() {
           </fieldset>
           <fieldset
             className={vstack({
-              gap: 4,
+              gap: 1,
               alignItems: "start",
+              outline: 0,
+              rounded: "xl",
               w: "full",
+              py: 3,
+              px: 4,
+              bgColor: "background.muted",
+              "&>label": {
+                color: "foreground.secondary",
+              },
             })}
           >
             <label htmlFor="email">Your Email</label>
             <input
               className={css({
                 outline: 0,
-                border: "1px solid {colors.border}",
-                rounded: "lg",
                 w: "full",
-                h: "12",
-                py: "2",
-                px: "4",
-                fontSize: "sm",
-                bgColor: "background.muted",
               })}
               id="email"
               type="email"
@@ -114,23 +113,25 @@ export function Contact() {
           </fieldset>
           <fieldset
             className={vstack({
-              gap: 4,
+              gap: 1,
               alignItems: "start",
+              outline: 0,
+              rounded: "xl",
               w: "full",
+              py: 3,
+              px: 4,
+              bgColor: "background.muted",
+              "&>label": {
+                color: "foreground.secondary",
+              },
             })}
           >
             <label htmlFor="message">Your Message</label>
             <textarea
               className={css({
                 outline: 0,
-                border: "1px solid {colors.border}",
-                rounded: "lg",
                 w: "full",
                 h: "14rem",
-                py: "2",
-                px: "4",
-                fontSize: "sm",
-                bgColor: "background.muted",
                 resize: "none",
               })}
               id="message"

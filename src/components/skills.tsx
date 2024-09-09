@@ -63,11 +63,12 @@ export function Skills() {
           gap: 3,
           justify: {
             base: "start",
-            md: "center",
+            md: "end",
           },
           alignItems: "center",
           mx: "auto",
           wrap: "wrap",
+          animation: "fadeIn",
         })}
       >
         {skillsList.map((skill, index) => (
